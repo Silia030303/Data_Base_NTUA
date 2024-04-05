@@ -8,10 +8,10 @@ CREATE TABLE equipment(
     instructions VARCHAR(500) ,
     PRIMARY KEY(equipment_id)
 );  
--- id INT AUTO_INCREMENT PRIMARY KEY
+
 
 CREATE TABLE meal(
-    meal_id INT(20) NOT NULL,
+    meal_id INT AUTO_INCREMENT  NOT NULL,
     mealName VARCHAR(50) NOT NULL,
     mealCalories INT(10) NOT NULL,
     mealType VARCHAR(50) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE ingedient_VS_recipe(
     caloriesPer100ml INT(20) NOT NULL, -- Κανονικοποιηση στα 100 ml 
     calories INT(20) NOT NULL ,-- Ανα ποσοτητα που δινεται πχ 1 αυγo
 
-)
+);
 
 
 
