@@ -3,11 +3,12 @@ use masterchef;
 
 
 CREATE TABLE equipment(
-    equipment_id INT(20) NOT NULL, 
+    equipment_id INT AUTO_INCREMENT NOT NULL, 
     equipmentName VARCHAR(50) NOT NULL ,
-    instructions VARCHAR(50) ,
+    instructions VARCHAR(500) ,
     PRIMARY KEY(equipment_id)
-);
+);  
+-- id INT AUTO_INCREMENT PRIMARY KEY
 
 CREATE TABLE meal(
     meal_id INT(20) NOT NULL,
