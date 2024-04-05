@@ -10,11 +10,18 @@ CREATE TABLE equipment(
 );  
 
 
+CREATE TABLE national_cuisina(
+    natcuis_id INT AUTO_INCREMENT  NOT NULL,
+    natcuis_name VARCHAR(50) NOT NULL,
+    PRIMARY KEY(natcuis_id)
+);
+
+
 CREATE TABLE meal(
     meal_id INT AUTO_INCREMENT  NOT NULL,
-    mealName VARCHAR(50) NOT NULL,
-    mealCalories INT(10) NOT NULL,
-    mealType VARCHAR(50) NOT NULL,
+    meal_name VARCHAR(50) NOT NULL,
+    meal_calories INT(10) NOT NULL,
+    meal_type VARCHAR(50) NOT NULL,
     PRIMARY KEY(meal_id)
 );
 
@@ -70,7 +77,7 @@ CREATE TABLE episodes(
 CREATE TABLE winner(
   episode_id INT NOT NULL,
   cookID INT NOT NULL,
-  evaluation INT NOT NULL
+  evaluation INT NOT NULL,
   FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
   FOREIGN KEY(cookID) REFERENCES cook(cookID),
 
