@@ -58,7 +58,14 @@ CREATE TABLE ingedient_VS_recipe(
 
 );
 
+CREATE TABLE winner(
+  episode_id INT NOT NULL,
+  cookID INT NOT NULL,
+  evaluation INT NOT NULL
+  FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
+  FOREIGN KEY(cookID) REFERENCES cook(cookID),
 
+);
 
 
 
