@@ -20,7 +20,7 @@ CREATE TABLE national_cuisina(
 CREATE TABLE meal(
     meal_id INT AUTO_INCREMENT  NOT NULL,
     meal_name VARCHAR(50) NOT NULL,
-    meal_calories INT(10) NOT NULL,
+    meal_calories INT(10) NOT NULL CHECK (meal_calories >= 0),
     meal_type VARCHAR(50) NOT NULL,
     PRIMARY KEY(meal_id)
 );
@@ -58,10 +58,10 @@ CREATE TABLE ingedient_VS_recipe(
     FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
     FOREIGN KEY (ingredient_id) REFERENCES ingredients(ingredient_id),
 
-    quantity INT  NULL,
-    unitOfMeasurement INT(20) NOT NULL,
-    caloriesPer100ml INT(20) NOT NULL, -- Κανονικοποιηση στα 100 ml 
-    calories INT(20) NOT NULL ,-- Ανα ποσοτητα που δινεται πχ 1 αυγo
+    quantity INT NULL CHECK (quantity >= 0),
+    unit_of_measurement INT(20) NOT NULL CHECK (unit_of_measurement >= 0),
+    calories_per_100ml INT(20) NOT NULL CHECK (calories_per_100ml >= 0), -- Κανονικοποιηση στα 100 ml 
+    calories INT(20) NOT NULL CHECK (calories >= 0) ,-- Ανα ποσοτητα που δινεται πχ 1 αυγo
 
 );
 
@@ -76,8 +76,8 @@ CREATE TABLE judges(
 CREATE TABLE episodes(
    episode_id INT AUTO_INCREMENT NOT NULL,
    episode_name VARCHAR(50) NOT NULL,
-   episode_date date not null,
-   season INT NOT NULL,
+   episode_date date NOT NULL,
+   season INT NOT NULL CHECK (season >= 0),
    --winner VARCHAR(50),
    
 );
@@ -85,7 +85,7 @@ CREATE TABLE episodes(
 CREATE TABLE winner(
   episode_id INT NOT NULL,
   cookID INT NOT NULL,
-  evaluation INT NOT NULL,
+  evaluation INT NOT NULL CHECK (evaluation >= 0),
   FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
   FOREIGN KEY(cookID) REFERENCES cook(cookID),
 
