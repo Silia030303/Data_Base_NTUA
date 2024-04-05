@@ -4,7 +4,7 @@ use masterchef;
 
 CREATE TABLE equipment(
     equipment_id INT AUTO_INCREMENT NOT NULL, 
-    equipmentName VARCHAR(50) NOT NULL ,
+    equipment_name VARCHAR(50) NOT NULL ,
     instructions VARCHAR(500) ,
     PRIMARY KEY(equipment_id)
 );  
@@ -27,19 +27,19 @@ CREATE TABLE meal(
 
 CREATE TABLE recipe(
     recipe_id INT AUTO_INCREMENT NOT NULL,
-    recipeName VARCHAR(50) NOT NULL,
-    recipeCategory VARCHAR(20) NOT NULL,
+    recipe_name VARCHAR(50) NOT NULL,
+    recipe_category VARCHAR(20) NOT NULL,
     CONSTRAINT Check_YourColumn CHECK (recipeCategory IN ('Μαγειρικής', 'Ζαχαροπλαστικής')) ,
-    nationalCuisine VARCHAR (50) ,
-    recipeDescription VARCHAR(1000) ,
-    primaryIngredient VARCHAR(50),
+    national_cuisine VARCHAR (50) ,
+    recipe_description VARCHAR(1000) ,
+    primary_ingredient VARCHAR(50),
     PRIMARY KEY(recipe_id)
 );
 
 CREATE TABLE ingredient(
     ingredient_id INT AUTO_INCREMENT NOT NULL,
-    ingredientName VARCHAR(50) NOT NULL,
-    unitOfMeasurement INT(20) NOT NULL,
+    ingredient_name VARCHAR(50) NOT NULL,
+    unit_of_measurement INT(20) NOT NULL CHECK (unit_of_measurement >= 0) ,
     PRIMARY KEY(ingredient_id)
 );
 
