@@ -65,6 +65,13 @@ CREATE TABLE ingedient_VS_recipe(
 
 );
 
+CREATE TABLE judges(
+   judges_id INT AUTO_INCREMENT NOT NULL,
+   first_name VARCHAR(50) NOT NULL,
+   last_name VARCHAR(50) NOT NULL,
+   PRIMARY KEY(judges_id)
+   
+);
 
 CREATE TABLE episodes(
    episode_id INT AUTO_INCREMENT NOT NULL,
@@ -74,6 +81,7 @@ CREATE TABLE episodes(
    --winner VARCHAR(50),
    
 );
+
 CREATE TABLE winner(
   episode_id INT NOT NULL,
   cookID INT NOT NULL,
