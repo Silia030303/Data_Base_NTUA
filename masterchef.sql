@@ -39,7 +39,7 @@ CREATE TABLE recipe(
 CREATE TABLE ingredient(
     ingredient_id INT AUTO_INCREMENT NOT NULL,
     ingredient_name VARCHAR(50) NOT NULL,
-    unit_of_measurement INT(20) NOT NULL CHECK (unit_of_measurement >= 0) ,
+    unit_of_measurement INT(10) UNSIGNED NOT NULL ,
     PRIMARY KEY(ingredient_id)
 );
 
