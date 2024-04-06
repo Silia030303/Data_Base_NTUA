@@ -29,7 +29,7 @@ CREATE TABLE recipe(
     recipe_id INT AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
     recipe_category VARCHAR(20) NOT NULL,
-    CONSTRAINT Check_YourColumn CHECK (recipeCategory IN ('Μαγειρικής', 'Ζαχαροπλαστικής')) ,
+    CONSTRAINT Check_YourColumn CHECK (recipeCategory IN ('main course', 'dessert')) ,
     national_cuisine VARCHAR (50) ,
     recipe_description VARCHAR(1000) ,
     primary_ingredient VARCHAR(50),
