@@ -3,14 +3,14 @@ use masterchef;
 
 
 CREATE TABLE equipment(
-    equipment_id INT AUTO_INCREMENT NOT NULL, 
+    equipment_id INT(10) AUTO_INCREMENT NOT NULL, 
     equipment_name VARCHAR(50) NOT NULL ,
     instructions VARCHAR(500) ,
     PRIMARY KEY(equipment_id)
 );  
 
 
-CREATE TABLE national_cuisina(
+CREATE TABLE national_cuisine(
     natcuis_id INT AUTO_INCREMENT  NOT NULL,
     natcuis_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(natcuis_id)
@@ -33,6 +33,8 @@ CREATE TABLE recipe(
     national_cuisine VARCHAR (50) ,
     recipe_description VARCHAR(1000) ,
     primary_ingredient VARCHAR(50),
+    time_id INT(10) unsigned NOT NULL,
+    CONSTRAINT `fk_time_id` FOREIGN KEY (`time_id`) REFERENCES `time` (`time_id`) ON UPDATE CASCADE
     PRIMARY KEY(recipe_id)
 );
 
@@ -95,11 +97,12 @@ CREATE TABLE time(
   prep_time INT unsigned NOT NULL, 
     -- in minutes
  cooking_time INT unsigned NOT NULL,
- `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
  total_time INT unsigned AS (prep_time + cooking_time) STORED,
- KEY 'idx_total_time' (total_time)
+ KEY idx_total_time (total_time),
  PRIMARY KEY (time_id)
     );
+-- each recipe has only one time so we can add it directly to recipe
 
 
 
