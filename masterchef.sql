@@ -104,6 +104,14 @@ CREATE TABLE time(
     );
 -- each recipe has only one time so we can add it directly to recipe
 
+CREATE TABLE cook(
+ cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+ first_name VARCHAR(50) NOT NULL,
+ last_name VARCHAR(50) NOT NULL,
+ birth_date date NOT NULL,
+ 
+
+    );
 
 
 
