@@ -90,6 +90,16 @@ CREATE TABLE winner(
   FOREIGN KEY(cookID) REFERENCES cook(cookID),
 
 );
+CREATE TABLE time(
+  time_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+  prep_time INT unsigned NOT NULL, 
+    -- in minutes
+ cooking_time INT unsigned NOT NULL,
+ `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ total_time INT unsigned AS (prep_time + cooking_time) STORED,
+ KEY 'idx_total_time' (total_time)
+ PRIMARY KEY (time_id)
+    );
 
 
 
