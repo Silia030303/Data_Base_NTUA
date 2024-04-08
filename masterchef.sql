@@ -11,7 +11,7 @@ CREATE TABLE equipment(
 
 
 CREATE TABLE national_cuisine(
-    natcuis_id INT AUTO_INCREMENT  NOT NULL,
+    natcuis_id INT(10) unsigned AUTO_INCREMENT  NOT NULL,
     natcuis_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(natcuis_id)
 );
@@ -105,6 +105,8 @@ CREATE TABLE winner(
 );
 
 
+
+
 CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
  first_name VARCHAR(50) NOT NULL,
@@ -117,8 +119,8 @@ CREATE TABLE cook(
     );
 
 CREATE TABLE cook_expert_in(
- cook_id INT(10) NOT NULL,
- natcuis_id INT NOT NULL,
+ cook_id INT unsigned NOT NULL,
+ natcuis_id INT unsigned NOT NULL,
  FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
  FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
  PRIMARY KEY(cook_id,natcuis_id)
