@@ -24,6 +24,17 @@ CREATE TABLE meal(
     meal_type VARCHAR(50) NOT NULL,
     PRIMARY KEY(meal_id)
 );
+CREATE TABLE time(
+  time_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+  prep_time INT unsigned NOT NULL, 
+    -- in minutes
+ cooking_time INT unsigned NOT NULL,
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ total_time INT unsigned AS (prep_time + cooking_time) STORED,
+ KEY idx_total_time (total_time),
+ PRIMARY KEY (time_id)
+    );
+-- each recipe has only one time so we can add it directly to recipe
 
 CREATE TABLE recipe(
     recipe_id INT AUTO_INCREMENT NOT NULL,
@@ -34,7 +45,7 @@ CREATE TABLE recipe(
     recipe_description VARCHAR(1000) ,
     primary_ingredient VARCHAR(50),
     time_id INT(10) unsigned NOT NULL,
-    CONSTRAINT `fk_time_id` FOREIGN KEY (`time_id`) REFERENCES `time` (`time_id`) ON UPDATE CASCADE
+    CONSTRAINT `fk_time_id` FOREIGN KEY (`time_id`) REFERENCES `time` (`time_id`) ON UPDATE CASCADE,
     PRIMARY KEY(recipe_id)
 );
 
@@ -86,23 +97,13 @@ CREATE TABLE episode(
 
 CREATE TABLE winner(
   episode_id INT NOT NULL,
-  cookID INT NOT NULL,
+  cook_id INT NOT NULL,
   evaluation INT NOT NULL CHECK (evaluation >= 0),
   FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
-  FOREIGN KEY(cookID) REFERENCES cook(cookID)
+  FOREIGN KEY(cookID) REFERENCES cook(cook_id)
 
 );
-CREATE TABLE time(
-  time_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
-  prep_time INT unsigned NOT NULL, 
-    -- in minutes
- cooking_time INT unsigned NOT NULL,
- last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
- total_time INT unsigned AS (prep_time + cooking_time) STORED,
- KEY idx_total_time (total_time),
- PRIMARY KEY (time_id)
-    );
--- each recipe has only one time so we can add it directly to recipe
+
 
 CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -112,8 +113,14 @@ CREATE TABLE cook(
  years_of_experience INT NOT NULL,
  age INT NOT NULL,
  position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')),
- expert_in   
+    );
 
+CREATE TABLE cook_expert_in(
+ cook_id INT NOT NULL,
+ natcuis_id INT NOT NULL,
+ FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
+ FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
+ PRIMARY KEY(cook_id,natcuis_id)
     );
 
 
