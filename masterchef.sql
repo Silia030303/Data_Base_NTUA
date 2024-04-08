@@ -89,7 +89,7 @@ CREATE TABLE winner(
   cookID INT NOT NULL,
   evaluation INT NOT NULL CHECK (evaluation >= 0),
   FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
-  FOREIGN KEY(cookID) REFERENCES cook(cookID),
+  FOREIGN KEY(cookID) REFERENCES cook(cookID)
 
 );
 CREATE TABLE time(
@@ -108,7 +108,7 @@ CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
  first_name VARCHAR(50) NOT NULL,
  last_name VARCHAR(50) NOT NULL,
- birth_date date NOT NULL,
+ birth_date date NOT NULL
  
 
     );
