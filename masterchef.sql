@@ -112,6 +112,7 @@ CREATE TABLE cook(
  birth_date date NOT NULL,
  years_of_experience INT NOT NULL,
  age INT NOT NULL,
+ phone_number INT(10) NOT NULL,
  position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
  last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
  PRIMARY KEY(cook_id)
