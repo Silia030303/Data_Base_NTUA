@@ -117,7 +117,7 @@ CREATE TABLE cook(
     );
 
 CREATE TABLE cook_expert_in(
- cook_id INT NOT NULL,
+ cook_id INT(10) NOT NULL,
  natcuis_id INT NOT NULL,
  FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
  FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
