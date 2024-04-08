@@ -112,7 +112,8 @@ CREATE TABLE cook(
  birth_date date NOT NULL,
  years_of_experience INT NOT NULL,
  age INT NOT NULL,
- position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')),
+ position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
+ PRIMARY KEY(cook_id)
     );
 
 CREATE TABLE cook_expert_in(
