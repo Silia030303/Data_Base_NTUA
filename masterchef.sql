@@ -100,11 +100,9 @@ CREATE TABLE winner(
   cook_id INT NOT NULL,
   evaluation INT NOT NULL CHECK (evaluation >= 0),
   FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
-  FOREIGN KEY(cookID) REFERENCES cook(cook_id)
-
+  FOREIGN KEY(cookID) REFERENCES cook(cook_id),
+  PRIMARY KEY(episode_id,cook_id)
 );
-
-
 
 
 CREATE TABLE cook(
@@ -115,12 +113,14 @@ CREATE TABLE cook(
  years_of_experience INT NOT NULL,
  age INT NOT NULL,
  position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
  PRIMARY KEY(cook_id)
     );
 
 CREATE TABLE cook_expert_in(
  cook_id INT unsigned NOT NULL,
  natcuis_id INT unsigned NOT NULL,
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
  FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
  FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
  PRIMARY KEY(cook_id,natcuis_id)
