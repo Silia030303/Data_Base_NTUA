@@ -29,7 +29,7 @@ CREATE TABLE recipe(
     recipe_id INT AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
     recipe_category VARCHAR(20) NOT NULL,
-    CONSTRAINT Check_YourColumn CHECK (recipeCategory IN ('main course', 'dessert')) ,
+    CONSTRAINT Check_YourColumn CHECK (recipe_category IN ('main course', 'dessert')) ,
     national_cuisine VARCHAR (50) ,
     recipe_description VARCHAR(1000) ,
     primary_ingredient VARCHAR(50),
@@ -75,13 +75,13 @@ CREATE TABLE judges(
    
 );
 
-CREATE TABLE episodes(
+CREATE TABLE episode(
    episode_id INT AUTO_INCREMENT NOT NULL,
    episode_name VARCHAR(50) NOT NULL,
    episode_date date NOT NULL,
    season INT NOT NULL CHECK (season >= 0),
    --winner VARCHAR(50),
-   
+   primary key(episode_id)
 );
 
 CREATE TABLE winner(
@@ -109,7 +109,10 @@ CREATE TABLE cook(
  first_name VARCHAR(50) NOT NULL,
  last_name VARCHAR(50) NOT NULL,
  birth_date date NOT NULL
- 
+ years_of_experience INT NOT NULL,
+ age INT NOT NULL,
+ position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')),
+ expert_in   
 
     );
 
