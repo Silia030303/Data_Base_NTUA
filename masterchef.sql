@@ -109,7 +109,7 @@ CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
  first_name VARCHAR(50) NOT NULL,
  last_name VARCHAR(50) NOT NULL,
- birth_date date NOT NULL
+ birth_date date NOT NULL,
  years_of_experience INT NOT NULL,
  age INT NOT NULL,
  position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')),
