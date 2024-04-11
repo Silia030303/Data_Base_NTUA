@@ -44,7 +44,7 @@ CREATE TABLE recipe(
     recipe_category VARCHAR(20) NOT NULL,
     CONSTRAINT Check_YourColumn CHECK (recipe_category IN ('main course', 'dessert')) ,
     national_cuisine VARCHAR (50) ,
-    recipe_description VARCHAR(1000) ,
+    recipe_description text DEFAULT NULL ,
     primary_ingredient VARCHAR(50),
     difficulty_level INT NOT NULL,
     CONSTRAINT difficulty_level_check CHECK (difficulty_level IN (1,2,3,4,5)),
