@@ -140,6 +140,16 @@ PRIMARY KEY(foodgroups_id)
  
     );
 
+CREATE TABLE recipe_step (
+    step_id INT unsigned NOT NULL AUTO_INCREMENT,
+    step_description text DEFAULT NULL ,
+    serial_number INT unsigned NOT NULL,
+    --add trigger
+    recipe_id INT  NOT NULL,
+    -- add fk periorismos
+    PRIMARY KEY(step_id)
+);
+
 
 
 
