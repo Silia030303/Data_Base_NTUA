@@ -129,6 +129,13 @@ CREATE TABLE cook_expert_in(
  PRIMARY KEY(cook_id,natcuis_id)
     );
 
+CREATE TABLE foodgroups(
+ foodgroups_id INT(10) NOT NULL,
+foodgroups_name VARCHAR(50) NOT NULL,
+description text DEFAULT NULL,
+PRIMARY KEY(foodgroups_id)
+ 
+    );
 
 
 
