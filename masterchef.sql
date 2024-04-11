@@ -1,20 +1,23 @@
+
 create database masterchef;
 use masterchef;
 
 
 CREATE TABLE equipment(
-    equipment_id INT(10) AUTO_INCREMENT NOT NULL, 
+    equipment_id INT(10) unsigned AUTO_INCREMENT NOT NULL, 
     equipment_name VARCHAR(50) NOT NULL ,
-    instructions VARCHAR(500) ,
+    instructions text DEFAULT NULL ,
     PRIMARY KEY(equipment_id)
 );  
+
+--INSERT INTO equipment (equipment_name, instructions) VALUES ('briki', 'boil le egg'); 
 
 
 CREATE TABLE national_cuisine(
     natcuis_id INT(10) unsigned AUTO_INCREMENT  NOT NULL,
     natcuis_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(natcuis_id)
-);
+);   --useless imo :)
 
 
 CREATE TABLE meal(
@@ -25,15 +28,14 @@ CREATE TABLE meal(
     PRIMARY KEY(meal_id)
 );
 CREATE TABLE time(
-  time_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
-  prep_time INT unsigned NOT NULL, 
-    -- in minutes
- cooking_time INT unsigned NOT NULL,
- last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
- total_time INT unsigned AS (prep_time + cooking_time) STORED,
- KEY idx_total_time (total_time),
- PRIMARY KEY (time_id)
-    );
+    time_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+    prep_time INT unsigned NOT NULL,  -- in minutes
+    cooking_time INT unsigned NOT NULL,
+    last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    total_time INT unsigned AS (prep_time + cooking_time) STORED,
+    KEY idx_total_time (total_time),
+    PRIMARY KEY (time_id)
+);
 -- each recipe has only one time so we can add it directly to recipe
 
 CREATE TABLE recipe(
@@ -126,6 +128,12 @@ CREATE TABLE cook_expert_in(
  FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
  PRIMARY KEY(cook_id,natcuis_id)
     );
+
+
+
+
+
+
 
 
 
