@@ -17,7 +17,7 @@ CREATE TABLE national_cuisine(
     natcuis_id INT(10) unsigned AUTO_INCREMENT  NOT NULL,
     natcuis_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(natcuis_id)
-);   --useless imo :)
+);   --maybe not so useless afterall :)
 
 
 CREATE TABLE meal(
