@@ -62,13 +62,15 @@ CREATE TABLE ingredient(
 );
 
 /*
-Θέλου,ε το recipe_id να πηγαινει στο πινακα ingredient με μία σχέση many to many 
-αφου πολλα υλικα πάνε σε πολλες συνταγές
+We want the recipe_id to go to the ingredient table with a many to many relationship
+since many ingredients go into many recipes
 */
+
 /*
-ΣΧΕΣΗ ΤΩΝ ΟΝΤΟΤΗΤΩΝ: 
-ΠΟΙΑ ΚΑΙ ΠΟΣΑ ΥΛΙΚΑ ΠΕΡΙΕΧΟΝΤΑΙ ΣΕ ΠΟΙΕΣ ΣΥΝΤΑΓΕΣ
+entity relationship:
+which and how many ingredients are contained in which recipe
 */
+
 CREATE TABLE ingedient_VS_recipe(
     recipe_id INT  NOT NULL,
     ingredient_id INT NOT NULL,
@@ -78,8 +80,8 @@ CREATE TABLE ingedient_VS_recipe(
 
     quantity INT NULL CHECK (quantity >= 0),
     unit_of_measurement INT(20) NOT NULL CHECK (unit_of_measurement >= 0),
-    calories_per_100ml INT(20) NOT NULL CHECK (calories_per_100ml >= 0), -- Κανονικοποιηση στα 100 ml 
-    calories INT(20) NOT NULL CHECK (calories >= 0) ,-- Ανα ποσοτητα που δινεται πχ 1 αυγo
+    calories_per_100ml INT(20) NOT NULL CHECK (calories_per_100ml >= 0), -- normalization 100 ml 
+    calories INT(20) NOT NULL CHECK (calories >= 0) -- for example 1 egg
 
 );
 
