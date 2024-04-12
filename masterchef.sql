@@ -126,11 +126,12 @@ CREATE TABLE cook(
 
 CREATE TABLE winner(
   episode_id INT NOT NULL,
-  cook_id INT NOT NULL,
+  cook_id INT unsigned NOT NULL,
   evaluation INT NOT NULL CHECK (evaluation >= 0),
+  PRIMARY KEY(episode_id,cook_id),
   FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
-  FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
-  PRIMARY KEY(episode_id,cook_id)
+  FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
+
 );
 
 
