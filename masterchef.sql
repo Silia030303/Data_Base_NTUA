@@ -86,10 +86,13 @@ CREATE TABLE ingedient_VS_recipe(
 
     quantity INT NULL CHECK (quantity >= 0),
     unit_of_measurement INT(20) NOT NULL CHECK (unit_of_measurement >= 0),
-    calories_per_100ml INT(20) NOT NULL CHECK (calories_per_100ml >= 0), -- normalization 100 ml 
-    calories INT(20) NOT NULL CHECK (calories >= 0) -- for example 1 egg
+    calories_per_100ml INT(20) NOT NULL CHECK (calories_per_100ml >= 0), 
+    calories INT(20) NOT NULL CHECK (calories >= 0) 
 
 );
+
+-- normalization 100 ml 
+-- for example 1 egg
 
 CREATE TABLE judges(
    judges_id INT AUTO_INCREMENT NOT NULL,
