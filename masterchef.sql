@@ -166,7 +166,6 @@ CREATE TABLE recipe_step (
 
 
 CREATE TABLE image (
-    --image_id INT unsigned NOT NULL AUTO_INCREMENT,
     type VARCHAR(100)  NOT NULL,
     entity_id INT  NOT NULL,
     image_description text DEFAULT NULL ,
@@ -174,7 +173,7 @@ CREATE TABLE image (
     image_data_type BLOB,
     PRIMARY KEY(type,entity_id)
 
-);  
+);    --image_id INT unsigned NOT NULL AUTO_INCREMENT,
 
 
 
