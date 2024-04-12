@@ -78,8 +78,8 @@ which and how many ingredients are contained in which recipe
 */
 
 CREATE TABLE ingedient_VS_recipe(
-    recipe_id INT  NOT NULL,
-    ingredient_id INT NOT NULL,
+    recipe_id INT(10) unsigned NOT NULL,
+    ingredient_id INT(10) unsigned NOT NULL,
     PRIMARY KEY (recipe_id, ingredient_id),
     FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
     FOREIGN KEY (ingredient_id) REFERENCES ingredient(ingredient_id),
