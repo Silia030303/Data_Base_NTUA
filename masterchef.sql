@@ -27,7 +27,7 @@ CREATE TABLE national_cuisine(
 
 
 CREATE TABLE meal(
-    meal_id INT AUTO_INCREMENT  NOT NULL,
+    meal_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     meal_name VARCHAR(50) NOT NULL,
     meal_calories INT(10) UNSIGNED NOT NULL,
     meal_type VARCHAR(50) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE time(
 -- each recipe has only one time so we can add it directly to recipe
 
 CREATE TABLE recipe(
-    recipe_id INT AUTO_INCREMENT NOT NULL,
+    recipe_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
     recipe_category VARCHAR(20) NOT NULL,
     CONSTRAINT Check_YourColumn CHECK (recipe_category IN ('main course', 'dessert')) ,
@@ -61,7 +61,7 @@ CREATE TABLE recipe(
 );
 
 CREATE TABLE ingredient(
-    ingredient_id INT AUTO_INCREMENT NOT NULL,
+    ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     ingredient_name VARCHAR(50) NOT NULL,
     unit_of_measurement INT(10) UNSIGNED NOT NULL ,
     PRIMARY KEY(ingredient_id)
@@ -95,7 +95,7 @@ CREATE TABLE ingedient_VS_recipe(
 -- for example 1 egg
 
 CREATE TABLE judges(
-   judges_id INT AUTO_INCREMENT NOT NULL,
+   judges_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
    first_name VARCHAR(50) NOT NULL,
    last_name VARCHAR(50) NOT NULL,
    PRIMARY KEY(judges_id)
@@ -103,7 +103,7 @@ CREATE TABLE judges(
 );
 
 CREATE TABLE episode(
-   episode_id INT AUTO_INCREMENT NOT NULL,
+   episode_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
    episode_name VARCHAR(50) NOT NULL,
    episode_date date NOT NULL,
    season INT NOT NULL CHECK (season >= 0),
@@ -147,7 +147,7 @@ CREATE TABLE cook_expert_in(
     );
 
 CREATE TABLE foodgroups(
- foodgroups_id INT(10) NOT NULL,
+ foodgroups_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
 foodgroups_name VARCHAR(50) NOT NULL,
 description text DEFAULT NULL,
 PRIMARY KEY(foodgroups_id)
@@ -172,7 +172,6 @@ CREATE TABLE image (
     image_description text DEFAULT NULL ,
     image_type VARCHAR(50),
     image_data_type BLOB,
-    /*CONSTRAINT image_type_check CHECK (image_type IN ('...', '....')),*/
     PRIMARY KEY(type,entity_id)
 
 );  
