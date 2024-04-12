@@ -111,17 +111,6 @@ CREATE TABLE episode(
 );
    --winner VARCHAR(50)
 
-
-CREATE TABLE winner(
-  episode_id INT NOT NULL,
-  cook_id INT NOT NULL,
-  evaluation INT NOT NULL CHECK (evaluation >= 0),
-  FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
-  FOREIGN KEY(cookID) REFERENCES cook(cook_id),
-  PRIMARY KEY(episode_id,cook_id)
-);
-
-
 CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
  first_name VARCHAR(50) NOT NULL,
@@ -134,6 +123,18 @@ CREATE TABLE cook(
  last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
  PRIMARY KEY(cook_id)
     );
+
+CREATE TABLE winner(
+  episode_id INT NOT NULL,
+  cook_id INT NOT NULL,
+  evaluation INT NOT NULL CHECK (evaluation >= 0),
+  FOREIGN KEY(episode_id) REFERENCES episodes(episode_id),
+  FOREIGN KEY(cookID) REFERENCES cook(cook_id),
+  PRIMARY KEY(episode_id,cook_id)
+);
+
+
+
 
 CREATE TABLE cook_expert_in(
  cook_id INT unsigned NOT NULL,
