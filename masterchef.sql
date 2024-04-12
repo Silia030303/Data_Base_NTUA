@@ -183,12 +183,11 @@ CREATE TABLE thematic_section(
     PRIMARY KEY(them_sec_id)
 );
 CREATE TABLE recipe_thematic_section(
-  recipe_id INT unsigned NOT NULL,
+  recipe_id INT(10) unsigned NOT NULL,
   them_sec_id INT(10) unsigned NOT NULL,
   last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY(recipe_id,them_sec_id),
-  CONSTRAINT `fk_recipe_id` FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
-  CONSTRAINT `fk_them_sec_id`FOREIGN KEY(them_sec_id) REFERENCES thematic_section(them_sec_id)
+  CONSTRAINT `fk_them_sec_id` FOREIGN KEY(them_sec_id) REFERENCES thematic_section(them_sec_id)
     );
 
 
