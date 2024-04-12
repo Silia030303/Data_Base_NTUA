@@ -65,6 +65,7 @@ CREATE TABLE ingredient(
     ingredient_name VARCHAR(50) NOT NULL,
     unit_of_measurement INT(10) UNSIGNED NOT NULL ,
     PRIMARY KEY(ingredient_id)
+    FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
 );
 
 /*
@@ -187,7 +188,8 @@ CREATE TABLE recipe_thematic_section(
   them_sec_id INT(10) unsigned NOT NULL,
   last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY(recipe_id,them_sec_id),
-  CONSTRAINT `fk_them_sec_id` FOREIGN KEY(them_sec_id) REFERENCES thematic_section(them_sec_id)
+  FOREIGN KEY(them_sec_id) REFERENCES thematic_section(them_sec_id),
+  FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id)  
     );
 
 
@@ -201,8 +203,8 @@ CREATE TABLE nutritional_info_ingredient(
  FOREIGN KEY(ingredient_id) REFERENCES ingredient(ingredient_id),
 PRIMARY KEY(nutinf_ingredient_id, ingredient_id)
     );
-/* είτε 100 gρ , είτε μία σκελιδα, είτε μία κουπα, μια κουταλια του gλυκου */
-/*αναgωgι μοναδων μετρισις σε 100 gρ*/
+/* είτε 100 gρ , είτε μία σκελιδα, είτε μία κουπα, μια κουταλια του γλυκου */
+/*αναγωγή μοναδων μετρησης σε 100 gρ*/
 
 
 
