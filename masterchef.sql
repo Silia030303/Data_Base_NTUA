@@ -3,6 +3,12 @@ create database masterchef;
 use masterchef;
 
 
+--DDL
+
+--DROP DATABASE DB_name;
+--DROP TABLE IF EXISTS recipe;
+
+
 CREATE TABLE equipment(
     equipment_id INT(10) unsigned AUTO_INCREMENT NOT NULL, 
     equipment_name VARCHAR(50) NOT NULL ,
