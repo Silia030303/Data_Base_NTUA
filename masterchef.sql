@@ -94,11 +94,11 @@ CREATE TABLE ingedient_VS_recipe(
 -- normalization 100 ml 
 -- for example 1 egg
 
-CREATE TABLE judges(
-   judges_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+CREATE TABLE judge(
+   judge_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
    first_name VARCHAR(50) NOT NULL,
    last_name VARCHAR(50) NOT NULL,
-   PRIMARY KEY(judges_id)
+   PRIMARY KEY(judge_id)
    
 );
 
