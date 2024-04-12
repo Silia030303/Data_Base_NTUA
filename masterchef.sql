@@ -125,7 +125,7 @@ CREATE TABLE cook(
     );
 
 CREATE TABLE winner(
-  episode_id INT NOT NULL,
+  episode_id INT unsigned NOT NULL,
   cook_id INT unsigned NOT NULL,
   evaluation INT NOT NULL CHECK (evaluation >= 0),
   PRIMARY KEY(episode_id,cook_id),
