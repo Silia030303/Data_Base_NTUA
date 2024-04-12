@@ -107,9 +107,10 @@ CREATE TABLE episode(
    episode_name VARCHAR(50) NOT NULL,
    episode_date date NOT NULL,
    season INT NOT NULL CHECK (season >= 0),
-   --winner VARCHAR(50),
    primary key(episode_id)
 );
+   --winner VARCHAR(50)
+
 
 CREATE TABLE winner(
   episode_id INT NOT NULL,
