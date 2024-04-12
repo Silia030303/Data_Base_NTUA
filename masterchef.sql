@@ -165,6 +165,17 @@ CREATE TABLE recipe_step (
 );
 
 
+CREATE TABLE image (
+    image_id INT unsigned NOT NULL AUTO_INCREMENT,
+    image_description text DEFAULT NULL ,
+    image_type VARCHAR(50),
+    CONSTRAINT image_type_check CHECK (image_type IN ('...', '....')),
+    entity_id INT NOT NULL,
+    PRIMARY KEY(image_id)
+
+);  
+
+
 
 
 
