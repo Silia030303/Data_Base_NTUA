@@ -166,12 +166,14 @@ CREATE TABLE recipe_step (
 
 
 CREATE TABLE image (
-    image_id INT unsigned NOT NULL AUTO_INCREMENT,
+    --image_id INT unsigned NOT NULL AUTO_INCREMENT,
+    type VARCHAR(100)  NOT NULL,
+    entity_id INT  NOT NULL,
     image_description text DEFAULT NULL ,
     image_type VARCHAR(50),
     image_data_type BLOB,
     /*CONSTRAINT image_type_check CHECK (image_type IN ('...', '....')),*/
-    PRIMARY KEY(image_id)
+    PRIMARY KEY(type,entity_id)
 
 );  
 
