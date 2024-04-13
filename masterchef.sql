@@ -1,6 +1,6 @@
 
-create database masterchef;
-use masterchef;
+create database project84_DB_2024;
+use project84_DB_2024;
 
 
 --DDL
