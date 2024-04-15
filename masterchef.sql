@@ -121,14 +121,14 @@ CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
  first_name VARCHAR(50) NOT NULL,
  last_name VARCHAR(50) NOT NULL,
- birth_date date NOT NULL,
+ birth_date DATE NOT NULL,
  years_of_experience INT NOT NULL,
- age INT NOT NULL,
+ age INT AS (YEAR(CURDATE()) - YEAR(birth_date) - (DATE_FORMAT(CURDATE(), '%m%d') < DATE_FORMAT(birth_date, '%m%d'))),
  phone_number INT(10) NOT NULL,
- position_level varchar(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
- last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ position_level VARCHAR(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
+ last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(),
  PRIMARY KEY(cook_id)
-    );
+);
 
 CREATE TABLE winner(
   episode_id INT unsigned NOT NULL,
