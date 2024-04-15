@@ -61,6 +61,9 @@ CREATE TABLE recipe(
     difficulty_level INT NOT NULL,
     CONSTRAINT difficulty_level_check CHECK (difficulty_level IN (1,2,3,4,5)),
     time_id INT(10) unsigned NOT NULL,
+    tip_1 text DEFAULT NULL,
+    tip_2 text DEFAULT NULL,
+    tip_3 text DEFAULT NULL,
     CONSTRAINT `fk_time_id` FOREIGN KEY (`time_id`) REFERENCES `time` (`time_id`) ON UPDATE CASCADE,
     PRIMARY KEY(recipe_id)
 );
