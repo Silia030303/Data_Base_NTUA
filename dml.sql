@@ -201,4 +201,31 @@ VALUES
     ('Kitchen Torch', 'Use for caramelizing sugar, toasting meringue, and browning dishes. Hold the torch about 6 inches away from the food.'),
     ('Wok', 'Use for stir-frying, deep-frying, and steaming. Preheat the wok over high heat before adding ingredients.');
  
+INSERT INTO thematic_section (name, description)
+VALUES 
+('Village Recipes', 'Traditional recipes from the countryside, passed down through generations.'),
+('Risotto Recipes', 'Delicious recipes for creamy and flavorful risottos, perfect for any occasion.'),
+('Easter Desserts', 'Sweets and treats specially made for Easter celebrations.'),
+('Mediterranean Dishes', 'Authentic dishes inspired by the flavors of the Mediterranean region.'),
+('Comfort Food Classics', 'Classic comfort food recipes that warm the soul and satisfy the palate.'),
+('Summer Grilling', 'Recipes perfect for outdoor grilling during the summer months.'),
+('Vegetarian Delights', 'Delicious and nutritious vegetarian recipes for every meal.'),
+('Seafood Extravaganza', 'Fresh and flavorful seafood recipes that are sure to impress.'),
+('Quick and Easy Meals', 'Simple and speedy recipes for busy weeknights.'),
+('International Cuisine', 'Explore the flavors of the world with these diverse recipes.'),
+('Healthy Living', 'Nutritious recipes to support a healthy and balanced lifestyle.'),
+('Slow Cooker Wonders', 'Hearty and flavorful recipes cooked low and slow in the crockpot.'),
+('Family Favorites', 'Recipes that bring comfort and joy to the whole family.'),
+('Holiday Feasts', 'Special recipes to celebrate festive occasions and gatherings.'),
+('Plant-Based Power', 'Wholesome and delicious recipes focused on plant-based ingredients.'),
+('Weekend Brunch', 'Elevate your brunch game with these mouthwatering recipes.'),
+('Budget-Friendly Eats', 'Tasty meals that won’t break the bank.'),
+('One-Po('Healthy Breakfasts', 'Start your day right with nutritious and energizing breakfast recipes.'),
+('Gourmet Desserts', 'Indulgent and decadent desserts for special occasions or a sweet treat.'),
+('Homemade Breads', 'Master the art of bread-making with these homemade bread recipes.'),
+('Global Street Food', 'Explore the vibrant and diverse world of street food from around the globe.'),
+('Seasonal Harvest', 'Celebrate the flavors of each season with recipes featuring fresh, seasonal produce.'),
+('Culinary Adventures', 'Embark on culinary journeys with these adventurous and exotic recipes.'),
+('Classic Cocktails', 'Mix up classic cocktails and elevate your home bartending skills.');
+
 
