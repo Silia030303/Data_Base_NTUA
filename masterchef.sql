@@ -1,3 +1,8 @@
+INSERT INTO your_table_name (column1, column2, column3)
+VALUES 
+(value1_1, value1_2, value1_3),
+(value2_1, value2_2, value2_3),
+(value3_1, value3_2, value3_3);
 
 create database project84_DB_2024;
 use project84_DB_2024;
