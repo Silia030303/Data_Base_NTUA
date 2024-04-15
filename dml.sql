@@ -161,7 +161,7 @@ VALUES
     ('Cutting Board', 'Place it on a flat surface to chop vegetables or meat. Wash it thoroughly after each use.'),
     ('Mixing Bowl', 'Use for mixing ingredients like flour, eggs, and sugar. Comes in various sizes.'),
     ('Saucepan', 'Use for cooking sauces, soups, and boiling water. Comes with a lid.'),
-    ('Frying Pan', 'Use for frying and sautéing food. Ensure it's properly heated before adding ingredients.'),
+    ('Frying Pan', 'Use for frying and sautéing food. Ensure it is properly heated before adding ingredients.'),
     ('Oven', 'Use for baking and roasting. Preheat to the desired temperature before placing food inside.'),
     ('Blender', 'Use for blending ingredients to make smoothies, soups, and sauces. Make sure to secure the lid properly.'),
     ('Food Processor', 'Use for chopping, slicing, and shredding vegetables and fruits. Comes with various attachments.'),
