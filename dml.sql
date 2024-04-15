@@ -219,7 +219,7 @@ VALUES
 ('Holiday Feasts', 'Special recipes to celebrate festive occasions and gatherings.'),
 ('Plant-Based Power', 'Wholesome and delicious recipes focused on plant-based ingredients.'),
 ('Weekend Brunch', 'Elevate your brunch game with these mouthwatering recipes.'),
-('Budget-Friendly Eats', 'Tasty meals that won’t break the bank.'),
+('Budget-Friendly Eats', 'Tasty meals that will not break the bank.'),
 ('One-PoWonders', 'Simplify mealtime with these easy and delicious one-pot recipes.'),
 ('Healthy Breakfasts', 'Start your day right with nutritious and energizing breakfast recipes.'),
 ('Gourmet Desserts', 'Indulgent and decadent desserts for special occasions or a sweet treat.'),
