@@ -107,7 +107,7 @@ CREATE TABLE judge(
    cook_id INT(10) unsigned NOT NULL,
    partitipation_number INT(10) unsigned,
    episode_id INT(10) unsigned NOT NULL,
- PRIMARY KEY(judge_id)
+ PRIMARY KEY(judge_id),
  FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
  FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
 );
