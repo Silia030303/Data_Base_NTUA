@@ -238,3 +238,15 @@ INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, recipe_description
 ('Vegetable Stir-Fry', 'main course', 5, 'Healthy vegetable stir-fry with tofu in a savory sauce', 4, 2, 15, 15, 'Cut vegetables uniformly for even cooking.', 'Add tofu towards the end to prevent overcooking.', 'Serve hot over steamed rice.'),
 ('Vanilla Cupcakes', 'dessert', 6, 'Soft and fluffy vanilla cupcakes with buttercream frosting', 12, 3, 30, 20, 'Make sure all ingredients are at room temperature for best results.', 'Use a piping bag to frost the cupcakes for a professional look.', 'Decorate with sprinkles or edible flowers.');
 
+INSERT INTO episode (episode_name, episode_date, season)
+VALUES 
+('Season Premiere', '2024-01-10', 1),
+('The Great Bake-Off', '2024-01-17', 1),
+('International Flavors', '2024-01-24', 1),
+('Family Favorites', '2024-01-31', 1),
+('Pressure Cooker Challenge', '2024-02-07', 1),
+('Sweet Treats', '2024-02-14', 1),
+('Restaurant Wars', '2024-02-21', 1),
+('Ultimate BBQ', '2024-02-28', 1),
+('Mystery Box Madness', '2024-03-06', 1),
+('Grand Finale', '2024-03-13', 1);
