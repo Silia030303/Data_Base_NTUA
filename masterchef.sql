@@ -1,8 +1,3 @@
-INSERT INTO your_table_name (column1, column2, column3)
-VALUES 
-(value1_1, value1_2, value1_3),
-(value2_1, value2_2, value2_3),
-(value3_1, value3_2, value3_3);
 
 create database project84_DB_2024;
 use project84_DB_2024;
@@ -237,8 +232,18 @@ CREATE TABLE evaluation (
     PRIMARY KEY(eval_id)
 );
 
+CREATE TABLE episode_cook(
+    cook_id INT(10) unsigned NOT NULL,
+    episode_id INT(10) unsigned NOT NULL,
+    natcuis_id INT(10) unsigned NOT NULL,
+    final_grade INT(10) unsigned NOT NULL,
+    FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
+    FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
+    FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
+    PRIMARY KEY(cook_id,episode_id)
+    );
 
-
+    
 
 
 
