@@ -33,36 +33,33 @@ CREATE TABLE meal(
     meal_type VARCHAR(50) NOT NULL,
     PRIMARY KEY(meal_id)
 );
-CREATE TABLE time(
-    time_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
-    prep_time INT unsigned NOT NULL,  -- in minutes
-    cooking_time INT unsigned NOT NULL,
-    last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    total_time INT unsigned AS (prep_time + cooking_time) STORED,
-    KEY idx_total_time (total_time),
-    PRIMARY KEY (time_id)
-);
--- each recipe has only one time so we can add it directly to recipe
 
+-- each recipe has only one time so we can add it directly to recipe
+-- in minutes
 CREATE TABLE recipe(
     recipe_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
     recipe_category VARCHAR(20) NOT NULL,
     CONSTRAINT Check_YourColumn CHECK (recipe_category IN ('main course', 'dessert')) ,
-    national_cuisine VARCHAR (50) ,
+    natcuis_id  INT(10) unsigned NOT NULL ,
     recipe_description text DEFAULT NULL ,
-    primary_ingredient VARCHAR(50) NOT NULL,
-    quantity VARCHAR(50) NOT NULL,
+    quantity_of_servings INT NOT NULL,
     difficulty_level INT NOT NULL,
     CONSTRAINT difficulty_level_check CHECK (difficulty_level IN (1,2,3,4,5)),
     time_id INT(10) unsigned NOT NULL,
     tip_1 text DEFAULT NULL,
     tip_2 text DEFAULT NULL,
     tip_3 text DEFAULT NULL,
+    prep_time INT unsigned NOT NULL,  
+    cooking_time INT unsigned NOT NULL,
+    total_time INT unsigned AS (prep_time + cooking_time) STORED,
+    KEY idx_total_time (total_time),
+    FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
     CONSTRAINT `fk_time_id` FOREIGN KEY (`time_id`) REFERENCES `time` (`time_id`) ON UPDATE CASCADE,
     PRIMARY KEY(recipe_id)
 );
 
+-- PAIDIA EDOOOO primary_ingredient VARCHAR(50) NOT NULL
 CREATE TABLE ingredient(
     ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     ingredient_name VARCHAR(50) NOT NULL,
