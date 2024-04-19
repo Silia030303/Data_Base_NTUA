@@ -228,12 +228,13 @@ CREATE TABLE evaluation (
     eval_id INT unsigned NOT NULL AUTO_INCREMENT, -- maybe useless
     cook_id INT unsigned NOT NULL,
     judge_id INT unsigned NOT NULL,
+    episode_id INT unsigned NOT NULL,
     grade INT NOT NULL,
     CONSTRAINT grade_check CHECK (grade IN (1,2,3,4,5)),
     FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
     FOREIGN KEY(judge_id) REFERENCES judge(judge_id),
+    FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
     PRIMARY KEY(eval_id)
-    -- + fk periorismos
 );
 
 
