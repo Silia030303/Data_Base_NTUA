@@ -141,14 +141,7 @@ CREATE TABLE winner(
 
 
 
-CREATE TABLE cook_expert_in(
- cook_id INT unsigned NOT NULL,
- natcuis_id INT unsigned NOT NULL,
- last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
- FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
- FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
- PRIMARY KEY(cook_id,natcuis_id)
-    );
+
 
 CREATE TABLE foodgroups(
  foodgroups_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
@@ -232,17 +225,24 @@ CREATE TABLE evaluation (
     PRIMARY KEY(eval_id)
 );
 
-CREATE TABLE episode_cook(
+CREATE TABLE episode_cook_recipe(
     cook_id INT(10) unsigned NOT NULL,
     episode_id INT(10) unsigned NOT NULL,
-    natcuis_id INT(10) unsigned NOT NULL,
-    final_grade INT(10) unsigned NOT NULL,
+    recipe_id INT(10) unsigned NOT NULL,
     FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
     FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
-    FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
+    FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
     PRIMARY KEY(cook_id,episode_id)
     );
 
+CREATE TABLE cook_nat_cuis(
+ cook_id INT unsigned NOT NULL,
+ natcuis_id INT unsigned NOT NULL,
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
+ FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
+ PRIMARY KEY(cook_id,natcuis_id)
+    );
     
 
 
