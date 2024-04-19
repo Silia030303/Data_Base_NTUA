@@ -230,3 +230,11 @@ VALUES
 ('Classic Cocktails', 'Mix up classic cocktails and elevate your home bartending skills.');
 
 
+INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, recipe_description, quantity_of_servings, difficulty_level, prep_time, cooking_time, tip_1, tip_2, tip_3) VALUES 
+('Grilled Salmon', 'main course', 1, 'Delicious grilled salmon seasoned with herbs', 4, 3, 20, 15, 'Make sure to preheat the grill before cooking.', 'Marinate the salmon for at least 30 minutes before grilling.', NULL),
+('Chocolate Cake', 'dessert', 2, 'Decadent chocolate cake topped with chocolate ganache', 8, 4, 30, 40, 'Use high-quality cocoa powder for a richer flavor.', 'Allow the cake to cool completely before adding the ganache.', 'Garnish with fresh berries before serving.');
+('Chicken Alfredo Pasta', 'main course', 3, 'Creamy chicken Alfredo pasta with Parmesan cheese', 6, 3, 25, 20, 'Use fresh Parmesan cheese for best flavor.', 'Cook the pasta al dente for optimal texture.', 'Garnish with chopped parsley before serving.'),
+('Apple Pie', 'dessert', 4, 'Classic homemade apple pie with cinnamon-spiced apples', 8, 4, 40, 50, 'Make sure to use a mix of sweet and tart apples for the filling.', 'Brush the top crust with egg wash for a golden finish.', 'Serve warm with vanilla ice cream.'),
+('Vegetable Stir-Fry', 'main course', 5, 'Healthy vegetable stir-fry with tofu in a savory sauce', 4, 2, 15, 15, 'Cut vegetables uniformly for even cooking.', 'Add tofu towards the end to prevent overcooking.', 'Serve hot over steamed rice.'),
+('Vanilla Cupcakes', 'dessert', 6, 'Soft and fluffy vanilla cupcakes with buttercream frosting', 12, 3, 30, 20, 'Make sure all ingredients are at room temperature for best results.', 'Use a piping bag to frost the cupcakes for a professional look.', 'Decorate with sprinkles or edible flowers.');
+
