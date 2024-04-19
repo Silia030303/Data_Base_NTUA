@@ -230,7 +230,10 @@ CREATE TABLE evaluation (
     judge_id INT unsigned NOT NULL,
     grade INT NOT NULL,
     CONSTRAINT grade_check CHECK (grade IN (1,2,3,4,5)),
+    FOREIGN KEY(cook_id) REFERENCES cook(cook_id),
+    FOREIGN KEY(judge_id) REFERENCES judge(judge_id),
     PRIMARY KEY(eval_id)
+    -- + fk periorismos
 );
 
 
