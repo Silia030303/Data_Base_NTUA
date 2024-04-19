@@ -99,11 +99,13 @@ CREATE TABLE ingedient_VS_recipe(
 -- for example 1 egg
 
 CREATE TABLE judge(
-   judge_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-   first_name VARCHAR(50) NOT NULL,
-   last_name VARCHAR(50) NOT NULL,
-   PRIMARY KEY(judge_id)
-   
+   judge_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+   cook_id INT(10) unsigned NOT NULL,
+   partitipation_number INT(10) unsigned,
+   episode_id INT(10) unsigned NOT NULL,
+ PRIMARY KEY(judge_id)
+ FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
+ FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
 );
 
 CREATE TABLE episode(
@@ -137,10 +139,6 @@ CREATE TABLE winner(
   FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
 
 );
-
-
-
-
 
 
 CREATE TABLE foodgroups(
