@@ -90,6 +90,15 @@ CREATE TABLE ingedient_VS_recipe(
 
 );
 
+
+CREATE TABLE recipe_meal (
+    recipe_id INT unsigned NOT NULL,
+    meal_id INT unsigned NOT NULL,
+    FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
+    FOREIGN KEY(meal_id) REFERENCES meal(meal_id),
+    PRIMARY KEY(recipe_id,meal_id)
+);
+
 -- normalization 100 ml 
 -- for example 1 egg
 
