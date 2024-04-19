@@ -303,5 +303,76 @@ VALUES
 (39, 1, 10),  -- Michelle Nguyen
 (40, 1, 10),  -- James Wong
 (41, 1, 10);  -- Amanda Scott
+-- Inserting evaluation data
+
+INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
+-- Evaluations for Episode 1
+(12, 1, 1, 4),  -- Gino DAcampo
+(13, 2, 1, 3),  -- Curtis Stone
+(14, 3, 1, 5),  -- Giada De Laurentiis
+-- Evaluations for Episode 2
+(15, 4, 2, 3),  -- Emeril Lagasse
+(16, 5, 2, 4),  -- Rick Bayless
+(17, 6, 2, 5),  -- Guy Fieri
+-- Evaluations for Episode 3
+(18, 7, 3, 5),  -- Bourdain Ramsay
+(19, 8, 3, 4),  -- Heston Blumenthal
+(20, 9, 3, 3),  -- Jose Andres
+-- Evaluations for Episode 4
+(21, 10, 4, 4),  -- Yotam Ottolenghi
+(22, 11, 4, 5),  -- Laura Gomez
+(23, 12, 4, 3),  -- Daniel Smith
+-- Evaluations for Episode 5
+(24, 13, 5, 5),  -- Rachel Johnson
+(25, 14, 5, 4),  -- Christopher Martinez
+(26, 15, 5, 3),  -- Maria Lee
+-- Evaluations for Episode 6
+(27, 16, 6, 3),  -- Alexander Brown
+(28, 17, 6, 4),  -- Emma Davis
+(29, 18, 6, 5),  -- Ryan Chen
+-- Evaluations for Episode 7
+(30, 19, 7, 4),  -- Sara Lee
+(31, 20, 7, 5),  -- Peter Pan
+(32, 21, 7, 3),  -- Emily Ross
+-- Evaluations for Episode 8
+(33, 22, 8, 5),  -- Paula Deen
+(34, 23, 8, 4),  -- Rachael Ray
+(35, 24, 8, 3);  -- Thomas Keller
+
+-- Inserting data for Episode 1
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(12, 1, 1),  -- Gino D'Acampo - Grilled Salmon
+(13, 1, 2),  -- Curtis Stone - Chocolate Cake
+(14, 1, 3),  -- Giada De Laurentiis - Chicken Alfredo Pasta
+-- Inserting data for Episode 2
+(15, 2, 4),  -- Emeril Lagasse - Apple Pie
+(16, 2, 5),  -- Rick Bayless - Vegetable Stir-Fry
+(17, 2, 6),  -- Guy Fieri - Vanilla Cupcakes
+-- Inserting data for Episode 3
+(18, 3, 1),  -- Bourdain Ramsay - Grilled Salmon
+(19, 3, 2),  -- Heston Blumenthal - Chocolate Cake
+(20, 3, 3),  -- Jos? Andr?s - Chicken Alfredo Pasta
+-- Inserting data for Episode 4
+(21, 4, 4),  -- Yotam Ottolenghi - Apple Pie
+(22, 4, 5),  -- Laura Gomez - Vegetable Stir-Fry
+(23, 4, 6),  -- Daniel Smith - Vanilla Cupcakes
+-- Inserting data for Episode 5
+(24, 5, 1),  -- Rachel Johnson - Grilled Salmon
+(25, 5, 2),  -- Christopher Martinez - Chocolate Cake
+(26, 5, 3),  -- Maria Lee - Chicken Alfredo Pasta
+-- Inserting data for Episode 6
+(27, 6, 4),  -- Alexander Brown - Apple Pie
+(28, 6, 5),  -- Emma Davis - Vegetable Stir-Fry
+(29, 6, 6),  -- Ryan Chen - Vanilla Cupcakes
+-- Inserting data for Episode 7
+(30, 7, 1),  -- Sara Lee - Grilled Salmon
+(31, 7, 2),  -- Peter Pan - Chocolate Cake
+(32, 7, 3),  -- Emily Ross - Chicken Alfredo Pasta
+-- Inserting data for Episode 8
+(33, 8, 4),  -- Paula Deen - Apple Pie
+(34, 8, 5),  -- Rachael Ray - Vegetable Stir-Fry
+(35, 8, 6);  -- Thomas Keller - Vanilla Cupcakes
+
+
 
 
