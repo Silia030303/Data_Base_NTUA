@@ -48,3 +48,14 @@ GROUP BY
     c.cook_id
 ORDER BY 
     total_recipes DESC;
+--------------------------------------------Query 4 ---------------------------------------
+SELECT 
+    c.first_name,
+    c.last_name
+FROM 
+    cook c
+LEFT JOIN 
+    judge j ON c.cook_id = j.cook_id
+WHERE 
+    j.judge_id IS NULL;
+--------------------------------------------Query 5---------------------------------
