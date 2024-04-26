@@ -20,3 +20,10 @@ JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.e
 JOIN recipe r on r.recipe_id = ecr.recipe_id
 JOIN national_cuisine n on r.natcuis_id = n.natcuis_id
 GROUP BY cook_id,natcuis_id;
+
+
+SELECT c.first_name,c.last_name
+from cook c 
+JOIN cook_nat_cuis cn on c.cook_id = cn.cook_id
+JOIN national_cuisine nc on cn.natcuis_id = nc.natcuis_id
+where nc.natcuis_name = 'Afghan';
