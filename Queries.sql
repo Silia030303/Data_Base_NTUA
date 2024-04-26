@@ -32,3 +32,19 @@ from cook c
 JOIN episode_cook_recipe cer on c.cook_id = cer.cook_id
 JOIN episode e on e.episode_id = cer.episode_id
 where year(episode_date)=2024 ;
+-------------------------------------------Query 3--------------------------------------------
+SELECT 
+    c.first_name,
+    c.last_name,
+    c.age,
+    COUNT(ecr.recipe_id) AS total_recipes
+FROM 
+    cook c
+JOIN 
+    episode_cook_recipe ecr ON c.cook_id = ecr.cook_id
+WHERE 
+    c.age < 60
+GROUP BY 
+    c.cook_id
+ORDER BY 
+    total_recipes DESC;
