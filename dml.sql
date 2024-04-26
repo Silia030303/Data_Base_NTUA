@@ -371,7 +371,49 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 -- Inserting data for Episode 8
 (33, 8, 4),  -- Paula Deen - Apple Pie
 (34, 8, 5),  -- Rachael Ray - Vegetable Stir-Fry
-(35, 8, 6);  -- Thomas Keller - Vanilla Cupcakes
+(35, 8, 6),  -- Thomas Keller - Vanilla Cupcakes
+
+ INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
+(1, 58), -- Gordon Ramsey is associated with French cuisine
+(2, 59), -- Jamie Oliver is associated with Georgian cuisine
+(3, 60), -- Bobby Flay is associated with German cuisine
+(4, 61), -- Nigella Lawson is associated with Greek cuisine
+(5, 62), -- Anthony Bourdain is associated with Hungarian cuisine
+(6, 63), -- Julia Child is associated with Indian cuisine
+(7, 64), -- Alain Ducasse is associated with Indonesian cuisine
+(8, 65), -- Marco Pierre White is associated with Iranian cuisine
+(9, 66), -- Thomas Keller is associated with Italian cuisine
+(10, 67), -- Massimo Bottura is associated with Jamaican cuisine
+(11, 68), -- Wolfgang Puck is associated with Japanese cuisine
+(12, 69), -- Gino D'Acampo is associated with Korean cuisine
+(13, 70), -- Curtis Stone is associated with Lebanese cuisine
+(14, 71), -- Giada De Laurentiis is associated with Lithuanian cuisine
+(15, 72), -- Emeril Lagasse is associated with Malaysian cuisine
+(16, 73), -- Rick Bayless is associated with Mexican cuisine
+(17, 74), -- Guy Fieri is associated with Romanian cuisine
+(18, 75), -- Bourdain Ramsay is associated with Russian cuisine
+(19, 76), -- Heston Blumenthal is associated with Rwandan cuisine
+(20, 77), -- José Andrés is associated with Saudi Arabian cuisine
+(21, 78), -- Yotam Ottolenghi is associated with Serbian cuisine
+(22, 79), -- Laura Gomez is associated with Singaporean cuisine
+(23, 80), -- Daniel Smith is associated with Slovak cuisine
+(24, 81), -- Rachel Johnson is associated with Spanish cuisine
+(25, 82), -- Christopher Martinez is associated with Afghan cuisine
+(26, 1),  -- Maria Lee is associated with Albanian cuisine
+(27, 2),  -- Alexander Brown is associated with Algerian cuisine
+(28, 3),  -- Emma Davis is associated with American cuisine
+(29, 4),  -- Ryan Chen is associated with Argentine cuisine
+(30, 5),  -- Sara Lee is associated with Armenian cuisine
+(31, 6),  -- Peter Pan is associated with Australian cuisine
+(32, 7),  -- Emily Ross is associated with Austrian cuisine
+(33, 8),  -- Paula Deen is associated with Azerbaijani cuisine
+(34, 9),  -- Rachael Ray is associated with Bahraini cuisine
+(35, 10), -- Thomas Keller is associated with Bangladeshi cuisine
+(36, 11), -- Alice Waters is associated with Belgian cuisine
+(37, 12), -- Masaharu Morimoto is associated with Belarusian cuisine
+(38, 13), -- David Cook is associated with Bermudian cuisine
+(39, 14), -- Michelle Nguyen is associated with Bolivian cuisine
+(40, 15); -- James Wong is associated with Bosnia and Herzegovina cuisine
 
 
 
