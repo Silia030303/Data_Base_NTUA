@@ -414,6 +414,9 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (38, 13), -- David Cook is associated with Bermudian cuisine
 (39, 14), -- Michelle Nguyen is associated with Bolivian cuisine
 (40, 15); -- James Wong is associated with Bosnia and Herzegovina cuisine
+-- Example insertions
+INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
+(30,1);
 
 
 
