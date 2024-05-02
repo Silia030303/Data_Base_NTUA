@@ -81,10 +81,14 @@ GROUP BY ecr.episode_id
 ORDER BY equip_count DESC
 LIMIT 10;
 ----------------------------------------Query 12-----------------------------------
-SELECT episode_name, AVG(difficult_level)
-FROM episode_cook_recipe ecr
-JOIN episode ep ON ep.episode_id = ecr.episode_id
-JOIN recipe re ON re.recipe_id = ecr.recipe_id
-GROUP BY ecr.episode_id
-ORDER BY difficult_level
+SELECT season, AVG(avg_dif) AS avg_difficulty
+FROM (
+    SELECT season, episode_name, AVG(difficulty_level) AS avg_dif
+    FROM episode_cook_recipe ecr
+    JOIN episode ep ON ep.episode_id = ecr.episode_id
+    JOIN recipe re ON re.recipe_id = ecr.recipe_id
+    GROUP BY ecr.episode_id
+) AS avg_diff_per_episode
+GROUP BY season;
+
 
