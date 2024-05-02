@@ -65,7 +65,14 @@ CREATE TABLE tags(
     PRIMARY KEY(tag_id)
 );
 
-CREATE TABLE recipe_tag (
+CREATE TABLE recipe_tag(
+ recipe_id INT unsigned NOT NULL,
+ tag_id INT unsigned NOT NULL,
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
+ FOREIGN KEY(tag_id) REFERENCES tag(tag_id),
+ PRIMARY KEY(recipe_id,tag_id)
+    );
     
 
 
