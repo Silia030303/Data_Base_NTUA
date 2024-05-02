@@ -57,6 +57,12 @@ CREATE TABLE recipe(
     PRIMARY KEY(recipe_id)
 );
 
+CREATE TABLE tags(
+    tag_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    tag_name VARCHAR(50) NOT NULL,
+    PRIMARY KEY(tag_id)
+);
+
 CREATE TABLE recipe_tag (
     
 
@@ -251,11 +257,7 @@ CREATE TABLE cook_nat_cuis(
  PRIMARY KEY(cook_id,natcuis_id)
     );
     
-CREATE TABLE tags(
-    tag_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-    tag_name VARCHAR(50) NOT NULL,
-    PRIMARY KEY(tag_id)
-);
+
 
 
 
