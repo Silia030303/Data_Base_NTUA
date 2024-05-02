@@ -154,6 +154,7 @@ VALUES
 ('Maria', 'Georgiou', '1991-04-18', 6, '9876543215', 'cook C'),
 ('Yannis', 'Andreadis', '1989-12-30', 8, '5551234572', 'chef assistant'),
 ('Petros','Kokkinos','2002-06-21', 4, '9998887782', 'cook A') ;
+('Alexander','Koulakov','2002-05-23', 3, '9998387582', 'cook B') ;
 
 INSERT INTO equipment (equipment_name, instructions)
 VALUES 
