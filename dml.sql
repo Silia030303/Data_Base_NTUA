@@ -523,6 +523,102 @@ SELECT r.recipe_id, t.tag_id FROM recipe r
 JOIN tags t ON t.tag_name IN ('dessert', 'easy', 'sweet')
 WHERE r.recipe_name = 'Tiramisu';
 
+-- Grilled Salmon
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Chef Knife', 'Kitchen Timer', 'Baking Sheet')
+WHERE r.recipe_name = 'Grilled Salmon';
+
+-- Chocolate Cake
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Mixer', 'Sieve', 'Rolling Pin', 'Baking Sheet')
+WHERE r.recipe_name = 'Chocolate Cake';
+
+-- Chicken Alfredo Pasta
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Chef Knife', 'Cutting Board', 'Saucepan', 'Mixing Spoon')
+WHERE r.recipe_name = 'Chicken Alfredo Pasta';
+
+-- Apple Pie
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Chef Knife', 'Cutting Board', 'Pie Dish', 'Rolling Pin')
+WHERE r.recipe_name = 'Apple Pie';
+
+-- Continue inserting for other recipes...
+-- Vegetable Stir-Fry
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Wok', 'Chef Knife', 'Cutting Board', 'Mixing Spoon')
+WHERE r.recipe_name = 'Vegetable Stir-Fry';
+
+-- Vanilla Cupcakes
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Mixer', 'Mixing Bowl', 'Muffin Tin', 'Pastry Brush')
+WHERE r.recipe_name = 'Vanilla Cupcakes';
+
+-- Spaghetti Bolognese
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Chef Knife', 'Cutting Board', 'Saucepan', 'Mixing Spoon')
+WHERE r.recipe_name = 'Spaghetti Bolognese';
+
+-- New York Cheesecake
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Mixer', 'Mixing Bowl', 'Springform Pan', 'Spatula')
+WHERE r.recipe_name = 'New York Cheesecake';
+
+-- Beef Tacos
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Skillet', 'Chef Knife', 'Cutting Board', 'Mixing Spoon')
+WHERE r.recipe_name = 'Beef Tacos';
+
+-- Tiramisu
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Mixing Bowl', 'Whisk', 'Square Baking Dish', 'Spatula')
+WHERE r.recipe_name = 'Tiramisu';
+
+-- Chicken Curry
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Chef Knife', 'Cutting Board', 'Saucepan', 'Mixing Spoon')
+WHERE r.recipe_name = 'Chicken Curry';
+
+-- Lemon Bars
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Mixing Bowl', 'Baking Dish', 'Spatula', 'Chef Knife')
+WHERE r.recipe_name = 'Lemon Bars';
+
+-- Mushroom Risotto
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Saucepan', 'Mixing Spoon', 'Chef Knife', 'Cutting Board')
+WHERE r.recipe_name = 'Mushroom Risotto';
+
+-- Chocolate Chip Cookies
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Mixer', 'Mixing Bowl', 'Baking Sheet', 'Cookie Scoop')
+WHERE r.recipe_name = 'Chocolate Chip Cookies';
+
+-- Grilled Chicken Caesar Salad
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Grill', 'Chef Knife', 'Cutting Board', 'Mixing Bowl')
+WHERE r.recipe_name = 'Grilled Chicken Caesar Salad';
+
+-- Panna Cotta
+INSERT INTO recipe_equipment (recipe_id, equipment_id)
+SELECT r.recipe_id, e.equipment_id FROM recipe r
+JOIN equipment e ON e.equipment_name IN ('Saucepan', 'Mixing Bowl', 'Ramekins', 'Whisk')
+WHERE r.recipe_name = 'Panna Cotta';
 
 
 
