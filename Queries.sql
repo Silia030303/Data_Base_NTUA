@@ -59,10 +59,15 @@ LEFT JOIN
 WHERE 
     j.judge_id IS NULL;
 --------------------------------------------Query 5---------------------------------
-SELECT rt1.tag_id AS tag_id1, rt2.tag_id AS tag_id2, COUNT(*) AS pair_count
+SELECT t1.tag_name AS tag_name1, t2.tag_name AS tag_name2, COUNT(*) AS pair_count
 FROM recipe_tag rt1 
 JOIN episode_cook_recipe ecr ON rt1.recipe_id = ecr.recipe_id
 JOIN recipe_tag rt2 ON rt1.recipe_id = rt2.recipe_id AND rt1.tag_id < rt2.tag_id
+JOIN tags t1 ON rt1.tag_id = t1.tag_id
+JOIN tags t2 ON rt2.tag_id = t2.tag_id
 GROUP BY rt1.tag_id, rt2.tag_id
-order by pair_count;
+ORDER BY pair_count DESC
+LIMIT 3;
+----------------------------------------Query 6------------------------------------
+
 
