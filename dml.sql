@@ -457,11 +457,10 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (70, 20, 5),  -- Petros Kokkinos - Vegetable Stir-Fry
 (71, 20, 6);  -- Alexander Koulakov - Vanilla Cupcakes
 
--- Inserting data for Episode 3 (Season 3)
 INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
-(72, 21, 1),  -- Yannis Andreadis - Grilled Salmon
-(73, 21, 2),  -- Petros Kokkinos - Chocolate Cake
-(74, 21, 3);  -- Alexander Koulakov - Chicken Alfredo Pasta
+(31, 21, 1),  -- Yannis Andreadis - Grilled Salmon
+(12, 21, 2),  -- Petros Kokkinos - Chocolate Cake
+(45, 21, 3);
 
  INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
 (1, 58), -- Gordon Ramsey is associated with French cuisine
