@@ -70,7 +70,7 @@ CREATE TABLE recipe_tag(
  tag_id INT unsigned NOT NULL,
  last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
  FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
- FOREIGN KEY(tag_id) REFERENCES tag(tag_id),
+ FOREIGN KEY(tag_id) REFERENCES tags(tag_id),
  PRIMARY KEY(recipe_id,tag_id)
     );
     
