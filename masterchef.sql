@@ -15,14 +15,7 @@ CREATE TABLE equipment(
     instructions text DEFAULT NULL ,
     PRIMARY KEY(equipment_id)
 );  
-CREATE TABLE recipe_equipment(
- recipe_id INT unsigned NOT NULL,
- equipment_id INT unsigned NOT NULL,
- last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
- FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
- FOREIGN KEY(equipment_id) REFERENCES equipment(equipment_id),
- PRIMARY KEY(recipe_id,equipment_id)
-    );
+
 --INSERT INTO equipment (equipment_name, instructions) VALUES ('briki', 'boil le egg'); 
 
 
@@ -64,7 +57,14 @@ CREATE TABLE recipe(
     FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
     PRIMARY KEY(recipe_id)
 );
-
+CREATE TABLE recipe_equipment(
+ recipe_id INT unsigned NOT NULL,
+ equipment_id INT unsigned NOT NULL,
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
+ FOREIGN KEY(equipment_id) REFERENCES equipment(equipment_id),
+ PRIMARY KEY(recipe_id,equipment_id)
+    );
 CREATE TABLE tags(
     tag_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     tag_name VARCHAR(50) NOT NULL,
