@@ -463,6 +463,66 @@ INSERT INTO tags (tag_name) VALUES
 ('light'),
 ('hearty');
 
+-- Grilled Salmon
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('main course', 'grilled')
+WHERE r.recipe_name = 'Grilled Salmon';
+
+-- Chocolate Cake (without the "chocolate" tag)
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('dessert', 'baked', 'sweet')
+WHERE r.recipe_name = 'Chocolate Cake';
+
+-- Chicken Alfredo Pasta
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('main course', 'pasta', 'creamy')
+WHERE r.recipe_name = 'Chicken Alfredo Pasta';
+
+-- Apple Pie
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('dessert', 'baked', 'sweet')
+WHERE r.recipe_name = 'Apple Pie';
+
+-- Vegetable Stir-Fry
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('main course', 'vegetarian', 'quick', 'easy')
+WHERE r.recipe_name = 'Vegetable Stir-Fry';
+
+-- Vanilla Cupcakes
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('dessert', 'baked', 'sweet')
+WHERE r.recipe_name = 'Vanilla Cupcakes';
+
+-- Spaghetti Bolognese
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('main course', 'pasta', 'comfort food')
+WHERE r.recipe_name = 'Spaghetti Bolognese';
+
+-- New York Cheesecake
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('dessert', 'baked', 'sweet')
+WHERE r.recipe_name = 'New York Cheesecake';
+
+-- Beef Tacos
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('main course', 'quick', 'easy', 'spicy')
+WHERE r.recipe_name = 'Beef Tacos';
+
+-- Tiramisu
+INSERT INTO recipe_tag (recipe_id, tag_id)
+SELECT r.recipe_id, t.tag_id FROM recipe r
+JOIN tags t ON t.tag_name IN ('dessert', 'easy', 'sweet')
+WHERE r.recipe_name = 'Tiramisu';
+
 
 
 
