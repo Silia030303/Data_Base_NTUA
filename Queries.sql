@@ -80,4 +80,8 @@ JOIN episode ep ON ep.episode_id = ecr.episode_id
 GROUP BY ecr.episode_id
 ORDER BY equip_count DESC
 LIMIT 10;
+----------------------------------------Query 12-----------------------------------
+SELECT AVG(difficult_level)
+FROM episode_cook_recipe ecr
+GROUP BY ecr.episode_id;
 
