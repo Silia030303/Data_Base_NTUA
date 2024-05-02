@@ -397,6 +397,71 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (33, 8, 4),  -- Paula Deen - Apple Pie
 (34, 8, 5),  -- Rachael Ray - Vegetable Stir-Fry
 (35, 8, 6),  -- Thomas Keller - Vanilla Cupcakes
+ -- Inserting data for Episode 1 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(42, 11, 1),  -- Amit Patel - Grilled Salmon
+(43, 11, 2),  -- Priya Sharma - Chocolate Cake
+(44, 11, 3);  -- Raj Kumar - Chicken Alfredo Pasta
+
+-- Inserting data for Episode 2 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(45, 12, 4),  -- Anjali Mehta - Apple Pie
+(46, 12, 5),  -- Rahul Singh - Vegetable Stir-Fry
+(47, 12, 6);  -- Sneha Gupta - Vanilla Cupcakes
+
+-- Inserting data for Episode 3 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(48, 13, 1),  -- Vikram Shah - Grilled Salmon
+(49, 13, 2),  -- Neha Verma - Chocolate Cake
+(50, 13, 3);  -- Gabriel Silva - Chicken Alfredo Pasta
+
+-- Inserting data for Episode 4 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(51, 14, 4),  -- Luana Costa - Apple Pie
+(52, 14, 5),  -- Pedro Santos - Vegetable Stir-Fry
+(53, 14, 6);  -- Mariana Oliveira - Vanilla Cupcakes
+
+-- Inserting data for Episode 5 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(54, 15, 1),  -- Lucas Rodrigues - Grilled Salmon
+(55, 15, 2),  -- Juliana Almeida - Chocolate Cake
+(56, 15, 3);  -- Bruno Ferreira - Chicken Alfredo Pasta
+
+-- Inserting data for Episode 6 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(57, 16, 4),  -- Carolina Nunes - Apple Pie
+(58, 16, 5),  -- Juan Santos - Vegetable Stir-Fry
+(59, 16, 6);  -- Maria Garcia - Vanilla Cupcakes
+
+-- Inserting data for Episode 7 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(60, 17, 1),  -- Jose Reyes - Grilled Salmon
+(61, 17, 2),  -- Ana Torres - Chocolate Cake
+(62, 17, 3);  -- Chinedu Okoye - Chicken Alfredo Pasta
+
+-- Inserting data for Episode 8 (Season 2)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(63, 18, 4),  -- Ngozi Eze - Apple Pie
+(64, 18, 5),  -- Obinna Onuoha - Vegetable Stir-Fry
+(65, 18, 6);  -- Chiamaka Nwosu - Vanilla Cupcakes
+
+-- Inserting data for Episode 1 (Season 3)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(66, 19, 1),  -- Oluwaseun Adeleke - Grilled Salmon
+(67, 19, 2),  -- Adeola Olawale - Chocolate Cake
+(68, 19, 3);  -- Maria Georgiou - Chicken Alfredo Pasta
+
+-- Inserting data for Episode 2 (Season 3)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(69, 20, 4),  -- Yannis Andreadis - Apple Pie
+(70, 20, 5),  -- Petros Kokkinos - Vegetable Stir-Fry
+(71, 20, 6);  -- Alexander Koulakov - Vanilla Cupcakes
+
+-- Inserting data for Episode 3 (Season 3)
+INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
+(72, 21, 1),  -- Yannis Andreadis - Grilled Salmon
+(73, 21, 2),  -- Petros Kokkinos - Chocolate Cake
+(74, 21, 3);  -- Alexander Koulakov - Chicken Alfredo Pasta
 
  INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
 (1, 58), -- Gordon Ramsey is associated with French cuisine
