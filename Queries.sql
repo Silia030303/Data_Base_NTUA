@@ -72,5 +72,12 @@ GROUP BY rt1.tag_id, rt2.tag_id
 ORDER BY pair_count DESC
 LIMIT 3;
 ----------------------------------------Query 7------------------------------------
-
+----------------------------------------Query 8-----------------------------------
+SELECT episode_name, COUNT(DISTINCT re.equipment_id) AS equip_count
+FROM episode_cook_recipe ecr
+JOIN recipe_equipment re ON re.recipe_id = ecr.recipe_id
+JOIN episode ep ON ep.episode_id = ecr.episode_id
+GROUP BY ecr.episode_id
+ORDER BY equip_count DESC
+LIMIT 10;
 
