@@ -261,6 +261,30 @@ VALUES
 ('Ultimate BBQ', '2024-02-28', 1),
 ('Mystery Box Madness', '2024-03-06', 1),
 ('Grand Finale', '2024-03-13', 1);
+INSERT INTO episode (episode_name, episode_date, season)
+VALUES 
+('Season Premiere: New Challenges', '2025-01-10', 2),
+('Around the World in 80 Dishes', '2025-01-17', 2),
+('Comfort Food Classics', '2025-01-24', 2),
+('Healthy Eating Habits', '2025-01-31', 2),
+('Dessert Extravaganza', '2025-02-07', 2),
+('Gourmet Grilling', '2025-02-14', 2),
+('Baking Bonanza', '2025-02-21', 2),
+('Culinary Showdown', '2025-02-28', 2),
+('Mystery Box Mayhem', '2025-03-06', 2),
+('Season Finale: The Ultimate Cook-Off', '2025-03-13', 2);
+INSERT INTO episode (episode_name, episode_date, season)
+VALUES 
+('Season Premiere: New Beginnings', '2026-01-10', 3),
+('Spicy Sensations', '2026-01-17', 3),
+('Vegetarian Delights', '2026-01-24', 3),
+('Seafood Spectacular', '2026-01-31', 3),
+('Global Fusion', '2026-02-07', 3),
+('Burger Battle', '2026-02-14', 3),
+('Pasta Party', '2026-02-21', 3),
+('Tropical Temptations', '2026-02-28', 3),
+('Sizzling Steaks', '2026-03-06', 3),
+('Season Finale: The Ultimate Showdown', '2026-03-13', 3);
 
 INSERT INTO judge (cook_id, partitipation_number, episode_id)
 VALUES 
