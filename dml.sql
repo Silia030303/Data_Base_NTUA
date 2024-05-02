@@ -418,6 +418,51 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 -- Example insertions
 INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
 (30,1);
+-- Example insertions for recipe categories
+INSERT INTO tags (tag_name) VALUES
+('brunch'),
+('quick-lunch'),
+('cold dish'),
+('appetizer'),
+('soup'),
+('salad'),
+('main course'),
+('side dish'),
+('dessert'),
+('snack'),
+('beverage'),
+('breakfast'),
+('lunch'),
+('dinner'),
+('snack'),
+('vegetarian'),
+('vegan'),
+('gluten-free'),
+('dairy-free'),
+('low-carb'),
+('high-protein'),
+('paleo'),
+('easy'),
+('quick'),
+('healthy'),
+('low-calorie'),
+('family-friendly'),
+('one-pot'),
+('budget-friendly'),
+('comfort food'),
+('grilled'),
+('baked'),
+('fried'),
+('roasted'),
+('steamed'),
+('spicy'),
+('sweet'),
+('savory'),
+('glazed'),
+('creamy'),
+('light'),
+('hearty');
+
 
 
 
