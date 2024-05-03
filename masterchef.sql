@@ -255,7 +255,6 @@ CREATE TABLE cook_nat_cuis(
     );
 
 
--- these dont work or not sure what they do :( 
 CREATE TABLE winner(
   episode_id INT unsigned NOT NULL,
   cook_id INT unsigned NOT NULL,
@@ -266,6 +265,8 @@ CREATE TABLE winner(
 
 );
 
+
+--not sure what this is for :(
 CREATE TABLE nutritional_info_recipe(
  nutinf_id INT(10) unsigned NOT NULL,
 PRIMARY KEY(nutinf_id)
