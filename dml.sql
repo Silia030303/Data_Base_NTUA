@@ -707,6 +707,117 @@ INSERT INTO recipe_equipment (recipe_id, equipment_id)
 SELECT r.recipe_id, e.equipment_id FROM recipe r
 JOIN equipment e ON e.equipment_name IN ('Saucepan', 'Mixing Bowl', 'Ramekins', 'Whisk')
 WHERE r.recipe_name = 'Panna Cotta';
+-- Grilled Salmon
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Seafood Extravaganza', 'Summer Grilling')
+WHERE r.recipe_name = 'Grilled Salmon';
+
+-- Chocolate Cake
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Gourmet Desserts', 'Comfort Food Classics')
+WHERE r.recipe_name = 'Chocolate Cake';
+
+-- Chicken Alfredo Pasta
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Family Favorites', 'Quick and Easy Meals', 'Pasta')
+WHERE r.recipe_name = 'Chicken Alfredo Pasta';
+
+-- Apple Pie
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Seasonal Harvest', 'Holiday Feasts', 'Comfort Food Classics')
+WHERE r.recipe_name = 'Apple Pie';
+
+-- Vegetable Stir-Fry
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Vegetarian Delights', 'Quick and Easy Meals')
+WHERE r.recipe_name = 'Vegetable Stir-Fry';
+
+-- Vanilla Cupcakes
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Gourmet Desserts', 'Comfort Food Classics')
+WHERE r.recipe_name = 'Vanilla Cupcakes';
+
+-- Spaghetti Bolognese
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Family Favorites', 'Comfort Food Classics', 'Italian Cuisine')
+WHERE r.recipe_name = 'Spaghetti Bolognese';
+
+-- New York Cheesecake
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Gourmet Desserts', 'Comfort Food Classics')
+WHERE r.recipe_name = 'New York Cheesecake';
+
+-- Beef Tacos
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('International Cuisine', 'Comfort Food Classics')
+WHERE r.recipe_name = 'Beef Tacos';
+
+-- Tiramisu
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Italian Cuisine', 'Gourmet Desserts')
+WHERE r.recipe_name = 'Tiramisu';
+
+-- Chicken Curry
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('International Cuisine', 'Comfort Food Classics')
+WHERE r.recipe_name = 'Chicken Curry';
+
+-- Lemon Bars
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Desserts', 'Summer Grilling')
+WHERE r.recipe_name = 'Lemon Bars';
+
+-- Mushroom Risotto
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Italian Cuisine', 'Comfort Food Classics', 'Risotto Recipes')
+WHERE r.recipe_name = 'Mushroom Risotto';
+
+-- Chocolate Chip Cookies
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Desserts', 'Quick and Easy Meals')
+WHERE r.recipe_name = 'Chocolate Chip Cookies';
+
+-- Grilled Chicken Caesar Salad
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Main Course', 'Salads', 'Summer Grilling')
+WHERE r.recipe_name = 'Grilled Chicken Caesar Salad';
+
+-- Panna Cotta
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id)
+SELECT r.recipe_id, ts.them_sec_id
+FROM recipe r
+JOIN thematic_section ts ON ts.name IN ('Desserts', 'Italian Cuisine')
+WHERE r.recipe_name = 'Panna Cotta';
 
 
 
