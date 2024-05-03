@@ -136,6 +136,14 @@ CREATE TABLE recipe_meal (
 -- normalization 100 ml 
 -- for example 1 egg
 
+CREATE TABLE episode(
+   episode_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+   episode_name VARCHAR(50) NOT NULL,
+   episode_date date NOT NULL,
+   season INT NOT NULL CHECK (season >= 0),
+   primary key(episode_id)
+);
+
 CREATE TABLE judge(
    judge_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
    cook_id INT(10) unsigned NOT NULL,
@@ -146,13 +154,7 @@ CREATE TABLE judge(
  FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
 );
 
-CREATE TABLE episode(
-   episode_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-   episode_name VARCHAR(50) NOT NULL,
-   episode_date date NOT NULL,
-   season INT NOT NULL CHECK (season >= 0),
-   primary key(episode_id)
-);
+
    --winner VARCHAR(50)
 
 CREATE TABLE cook(
