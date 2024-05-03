@@ -169,23 +169,13 @@ CREATE TABLE judge(
  FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
 );
 
-CREATE TABLE winner(
-  episode_id INT unsigned NOT NULL,
-  cook_id INT unsigned NOT NULL,
-  evaluation INT NOT NULL CHECK (evaluation >= 0),
-  PRIMARY KEY(episode_id,cook_id),
-  FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
-  FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
-
-);
-
 CREATE TABLE recipe_step (
     step_id INT unsigned NOT NULL AUTO_INCREMENT,
     step_description text DEFAULT NULL ,
     serial_number INT unsigned NOT NULL,
-    /*add trigger*/
-    recipe_id INT  NOT NULL,
-   /* add fk periorismos*/
+    /*add trigger (?)*/
+    recipe_id INT(10) unsigned NOT NULL,
+    FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
     PRIMARY KEY(step_id)
 );
 
@@ -270,6 +260,18 @@ CREATE TABLE cook_nat_cuis(
  FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
  PRIMARY KEY(cook_id,natcuis_id)
     );
+
+
+-- these dont work :
+CREATE TABLE winner(
+  episode_id INT unsigned NOT NULL,
+  cook_id INT unsigned NOT NULL,
+  evaluation INT NOT NULL CHECK (evaluation >= 0),
+  PRIMARY KEY(episode_id,cook_id),
+  FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
+  FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
+
+);
     
 
 
