@@ -72,6 +72,19 @@ GROUP BY rt1.tag_id, rt2.tag_id
 ORDER BY pair_count DESC
 LIMIT 3;
 ----------------------------------------Query 7------------------------------------
+SELECT c.cook_id, c.first_name, c.last_name, COUNT(ecr.episode_id) AS participation
+FROM cook c
+JOIN episode_cook_recipe ecr ON c.cook_id = ecr.cook_id
+GROUP BY c.cook_id, c.first_name, c.last_name
+HAVING COUNT(ecr.episode_id) <= (
+    SELECT MAX(participation_count) - 5
+    FROM (
+        SELECT c.cook_id, COUNT(ecr.episode_id) AS participation_count
+        FROM cook c
+        JOIN episode_cook_recipe ecr ON c.cook_id = ecr.cook_id
+        GROUP BY c.cook_id
+    ) AS table1
+);
 ----------------------------------------Query 8-----------------------------------
 SELECT episode_name, COUNT(DISTINCT re.equipment_id) AS equip_count
 FROM episode_cook_recipe ecr
