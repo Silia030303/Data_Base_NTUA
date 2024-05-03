@@ -196,6 +196,8 @@ CREATE TABLE thematic_section(
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY(them_sec_id)
 );
+
+
 CREATE TABLE recipe_thematic_section(
   recipe_id INT(10) unsigned NOT NULL,
   them_sec_id INT(10) unsigned NOT NULL,
@@ -208,14 +210,14 @@ CREATE TABLE recipe_thematic_section(
 
     
 CREATE TABLE nutritional_info_ingredient(
- nutinf_ingredient_id INT(10) unsigned NOT NULL,
- ingredient_id INT(10)    unsigned NOT NULL
- fat_per_portion           INT NOT NULL,
- protein_per_portion       INT NOT NULL,
- carbohydrate _per_portion INT NOT NULL,
- FOREIGN KEY(ingredient_id) REFERENCES ingredient(ingredient_id),
-PRIMARY KEY(nutinf_ingredient_id, ingredient_id)
-    );
+    nutinf_ingredient_id INT(10) unsigned NOT NULL,
+    ingredient_id INT(10) unsigned NOT NULL,
+    fat_per_portion INT NOT NULL,
+    protein_per_portion INT NOT NULL,
+    carbohydrate_per_portion INT NOT NULL,
+    FOREIGN KEY(ingredient_id) REFERENCES ingredient(ingredient_id),
+    PRIMARY KEY(nutinf_ingredient_id, ingredient_id)
+);
 /* είτε 100 gρ , είτε μία σκελιδα, είτε μία κουπα, μια κουταλια του γλυκου */
 /*αναγωγή μοναδων μετρησης σε 100 gρ*/
 
@@ -230,7 +232,7 @@ PRIMARY KEY(nutinf_id)
 
 
 CREATE TABLE evaluation (
-    eval_id INT unsigned NOT NULL AUTO_INCREMENT, -- maybe useless
+    eval_id INT unsigned NOT NULL AUTO_INCREMENT,
     cook_id INT unsigned NOT NULL,
     judge_id INT unsigned NOT NULL,
     episode_id INT unsigned NOT NULL,
