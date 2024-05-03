@@ -5,7 +5,7 @@ use project84_DB_2024;
 
 --DDL
 
---DROP DATABASE DB_name;
+--DROP DATABASE project84_DB_2024;
 --DROP TABLE IF EXISTS recipe;
 
 
