@@ -103,5 +103,13 @@ FROM (
     GROUP BY ecr.episode_id
 ) AS avg_diff_per_episode
 GROUP BY season;
-
+-------------------------------------Query 14-------------------------------------
+select ts.name as thematic_section_name ,COUNT(ts.them_sec_id) as appearance_count
+from episode_cook_recipe ecr
+join recipe r on ecr.recipe_id = r.recipe_id
+join recipe_thematic_section rts on r.recipe_id = rts.recipe_id
+join thematic_section ts on rts.them_sec_id = ts.them_sec_id
+group by ts.them_sec_id
+order by appearance_count DESC
+LIMIT 1;
 
