@@ -192,13 +192,12 @@ CREATE TABLE recipe_step (
 
 CREATE TABLE image (
     type VARCHAR(100)  NOT NULL,
-    entity_id INT unsigned NOT NULL,
+    image_id INT(10) unsigned AYTO_INCREMENT NOT NULL,
     image_description text DEFAULT NULL ,
-    image_hex BLOB,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY(type,entity_id)
 
-);    --image_id INT unsigned NOT NULL AUTO_INCREMENT,
+);  
 
 CREATE TABLE thematic_section(
     them_sec_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
