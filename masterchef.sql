@@ -16,14 +16,20 @@ CREATE TABLE equipment(
     PRIMARY KEY(equipment_id)
 );  
 
---INSERT INTO equipment (equipment_name, instructions) VALUES ('briki', 'boil le egg'); 
+CREATE TABLE foodgroups(
+ foodgroups_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+ foodgroups_name VARCHAR(50) NOT NULL,
+ description text DEFAULT NULL,
+ PRIMARY KEY(foodgroups_id)
+ 
+    );
 
 
 CREATE TABLE national_cuisine(
     natcuis_id INT(10) unsigned AUTO_INCREMENT  NOT NULL,
     natcuis_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(natcuis_id)
-);   --maybe not so useless afterall :)
+);  
 
 
 CREATE TABLE meal(
@@ -171,15 +177,6 @@ CREATE TABLE winner(
   FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
 
 );
-
-
-CREATE TABLE foodgroups(
- foodgroups_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-foodgroups_name VARCHAR(50) NOT NULL,
-description text DEFAULT NULL,
-PRIMARY KEY(foodgroups_id)
- 
-    );
 
 CREATE TABLE recipe_step (
     step_id INT unsigned NOT NULL AUTO_INCREMENT,
