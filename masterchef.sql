@@ -222,15 +222,6 @@ CREATE TABLE nutritional_info_ingredient(
 /*αναγωγή μοναδων μετρησης σε 100 gρ*/
 
 
-
-
-CREATE TABLE nutritional_info_recipe(
- nutinf_id INT(10) unsigned NOT NULL,
-PRIMARY KEY(nutinf_id)
- 
-    );
-
-
 CREATE TABLE evaluation (
     eval_id INT unsigned NOT NULL AUTO_INCREMENT,
     cook_id INT unsigned NOT NULL,
@@ -264,7 +255,7 @@ CREATE TABLE cook_nat_cuis(
     );
 
 
--- these dont work :
+-- these dont work or not sure what they do :( 
 CREATE TABLE winner(
   episode_id INT unsigned NOT NULL,
   cook_id INT unsigned NOT NULL,
@@ -274,6 +265,12 @@ CREATE TABLE winner(
   FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
 
 );
+
+CREATE TABLE nutritional_info_recipe(
+ nutinf_id INT(10) unsigned NOT NULL,
+PRIMARY KEY(nutinf_id)
+ 
+    );
     
 
 
