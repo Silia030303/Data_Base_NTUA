@@ -144,17 +144,6 @@ CREATE TABLE episode(
    primary key(episode_id)
 );
 
-CREATE TABLE judge(
-   judge_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
-   cook_id INT(10) unsigned NOT NULL,
-   partitipation_number INT(10) unsigned,
-   episode_id INT(10) unsigned NOT NULL,
- PRIMARY KEY(judge_id),
- FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
- FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
-);
-
-
    --winner VARCHAR(50)
 
 CREATE TABLE cook(
@@ -168,6 +157,16 @@ CREATE TABLE cook(
  position_level VARCHAR(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(),
  PRIMARY KEY(cook_id)
+);
+
+CREATE TABLE judge(
+   judge_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+   cook_id INT(10) unsigned NOT NULL,
+   partitipation_number INT(10) unsigned,
+   episode_id INT(10) unsigned NOT NULL,
+ PRIMARY KEY(judge_id),
+ FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
+ FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
 );
 
 CREATE TABLE winner(
