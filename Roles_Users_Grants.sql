@@ -5,6 +5,12 @@ GRANT cook_role to 'gordon_ramsey'@'localhost';
 GRANT SELECT, INSERT ON masterchef.recipe TO cook_role;
 -- GRANT SELECT, INSERT ON masterchef.recipe TO 'gordon_ramsey'@'localhost';
 
+-- Creating a back up containing all the sql code for the recreation of the database------------
+mysqldump -u username -p masterchef > masterchef_backup.sql
+--restoration 
+    source /path/to/backup_file.sql;
+
+
 
 --Some sql pseudocode for row-level authorization
 -- Step 1: Create a role for cooks
