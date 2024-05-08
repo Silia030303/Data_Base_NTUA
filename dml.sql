@@ -377,6 +377,50 @@ VALUES
 (61, 1, 20),  
 (71, 1, 20);  
 
+INSERT INTO judge (cook_id, partitipation_number, episode_id)
+VALUES 
+-- Season 3
+-- Episode 21 judges
+(1, 1, 21),  
+(2, 1, 21),  
+(3, 1, 21),  
+-- Episode 22 judges
+(4, 1, 22),  
+(5, 1, 22),  
+(6, 1, 22),  
+-- Episode 13 judges
+(7, 1, 23),  
+(8, 2, 23),  
+(9, 1, 23),  
+-- Episode 14 judges
+(10, 2, 24),  
+(21, 1, 24),  
+(9, 2, 24),  
+-- Episode 15 judges
+(13, 1, 25),  
+(21, 2, 25),  
+(15, 1, 25),  
+-- Episode 16 judges
+(16 1, 26),  
+(7, 1, 26),  -- Emma Davis
+(18, 2, 26),  -- Ryan Chen
+-- Episode 17 judges
+(9, 2, 27),  
+(20, 2, 27),  
+(21, 1, 27),  
+-- Episode 18 judges
+(1, 1, 28),  
+(3, 1, 28),  
+(5, 1, 28),  
+-- Episode 19 judges
+(1, 1, 29),  
+(7, 2, 29),  
+(9, 1, 29),  
+-- Episode 20 judges
+(1, 1, 30),  
+(5, 1, 30),  
+(21, 1, 30);  
+
 ---------------------------------------------------------------------------------------------------------------
 INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
 -- Evaluations for Episode 1
