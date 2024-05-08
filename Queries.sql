@@ -42,16 +42,6 @@ JOIN recipe r ON r.recipe_id = ecr.recipe_id
 JOIN national_cuisine n ON r.natcuis_id = n.natcuis_id
 GROUP BY n.natcuis_id   
 ORDER BY aver_grade;
-
-
-SELECT n.natcuis_name , ecr.episode_id , e.grade
-FROM cook c
-JOIN evaluation e ON c.cook_id = e.cook_id
-JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
-JOIN recipe r ON r.recipe_id = ecr.recipe_id
-JOIN national_cuisine n ON r.natcuis_id = n.natcuis_id
-GROUP BY n.natcuis_id   
-;
 ---------------------------------------------------------Query 2------------------------------------------------------
 SELECT c.first_name,c.last_name
 from cook c 
@@ -180,4 +170,12 @@ join thematic_section ts on rts.them_sec_id = ts.them_sec_id
 group by ts.them_sec_id
 order by appearance_count DESC
 LIMIT 1;
+-------------------------------------Query 15-------------------------------------
+SELECT fg.foodgroups_name 
+FROM ingedient_VS_recipe ir
+JOIN ingredient i ON i.ingredient_id = ir.ingredient_id
+JOIN episode_cook_recipe ecr ON ecr.ingredient_id= ir.ingredient_id
+LEFT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
+WHERE 
+   fg.foodgroups_id  IS NULL;
 
