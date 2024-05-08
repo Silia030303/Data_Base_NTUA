@@ -261,6 +261,7 @@ VALUES
 ('Ultimate BBQ', '2024-02-28', 1),
 ('Mystery Box Madness', '2024-03-06', 1),
 ('Grand Finale', '2024-03-13', 1);
+
 INSERT INTO episode (episode_name, episode_date, season)
 VALUES 
 ('Season Premiere: New Challenges', '2025-01-10', 2),
@@ -273,6 +274,7 @@ VALUES
 ('Culinary Showdown', '2025-02-28', 2),
 ('Mystery Box Mayhem', '2025-03-06', 2),
 ('Season Finale: The Ultimate Cook-Off', '2025-03-13', 2);
+
 INSERT INTO episode (episode_name, episode_date, season)
 VALUES 
 ('Season Premiere: New Beginnings', '2026-01-10', 3),
