@@ -911,6 +911,19 @@ FROM recipe r
 JOIN thematic_section ts ON ts.name IN ('Desserts', 'Italian Cuisine')
 WHERE r.recipe_name = 'Panna Cotta';
 
+INSERT INTO foodgroups (foodgroups_name, description) VALUES 
+('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.'),
+('Coffee, Tea, and Their Products', 'Covers coffee, tea, and related products.'),
+('Preserved Foods', 'Includes preserved or canned foods for longer shelf life.'),
+('Sweeteners', 'Encompasses various sweetening agents like sugar, honey, etc.'),
+('Fats and Oils', 'Includes fats and oils used in cooking and food preparation.'),
+('Milk, Eggs, and Their Products', 'Covers dairy products like milk, eggs, and their derivatives.'),
+('Meat and Meat Products', 'Encompasses various types of meat and processed meat products.'),
+('Fish and Fish Products', 'Includes different kinds of fish and fish-based products.'),
+('Cereals and Their Products', 'Covers grains and cereal-based products like bread, pasta, etc.'),
+('Various Plant-based Foods', 'Encompasses a variety of plant-based foods like fruits, vegetables, nuts, etc.'),
+('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
+('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
 
 
 
