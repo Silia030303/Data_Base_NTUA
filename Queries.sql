@@ -71,7 +71,7 @@ SELECT  c.first_name, c.last_name, e.season, count(e.episode_id) as part_count
 FROM cook c
 JOIN judge j on j.cook_id = c.cook_id
 JOIN episode e on e.episode_id = j.episode_id
-GROUP BY j.judge_id,e.season
+GROUP BY j.cook_id,e.season
 ORDER BY part_count;
 
 --------------------------------------------Query 6---------------------------------
