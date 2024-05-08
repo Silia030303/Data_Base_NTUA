@@ -285,50 +285,7 @@ VALUES
 ('Tropical Temptations', '2026-02-28', 3),
 ('Sizzling Steaks', '2026-03-06', 3),
 ('Season Finale: The Ultimate Showdown', '2026-03-13', 3);
-----------------------------------------------------------------------------------------------
-INSERT INTO judge (cook_id, partitipation_number, episode_id)
-VALUES 
--- Episode 1 judges
-(12, 1, 1),  -- Gino D'Acampo
-(13, 1, 1),  -- Curtis Stone
-(14, 1, 1),  -- Giada De Laurentiis
--- Episode 2 judges
-(15, 1, 2),  -- Emeril Lagasse
-(16, 1, 2),  -- Rick Bayless
-(17, 1, 2),  -- Guy Fieri
--- Episode 3 judges
-(18, 1, 3),  -- Bourdain Ramsay
-(19, 1, 3),  -- Heston Blumenthal
-(20, 1, 3),  -- José Andrés
--- Episode 4 judges
-(21, 1, 4),  -- Yotam Ottolenghi
-(22, 1, 4),  -- Laura Gomez
-(23, 1, 4),  -- Daniel Smith
--- Episode 5 judges
-(24, 1, 5),  -- Rachel Johnson
-(25, 1, 5),  -- Christopher Martinez
-(26, 1, 5),  -- Maria Lee
--- Episode 6 judges
-(27, 1, 6),  -- Alexander Brown
-(28, 1, 6),  -- Emma Davis
-(29, 1, 6),  -- Ryan Chen
--- Episode 7 judges
-(30, 1, 7),  -- Sara Lee
-(31, 1, 7),  -- Peter Pan
-(32, 1, 7),  -- Emily Ross
--- Episode 8 judges
-(33, 1, 8),  -- Paula Deen
-(34, 1, 8),  -- Rachael Ray
-(35, 1, 8),  -- Thomas Keller
--- Episode 9 judges
-(36, 1, 9),  -- Alice Waters
-(37, 1, 9),  -- Masaharu Morimoto
-(38, 1, 9),  -- David Cook
--- Episode 10 judges
-(39, 1, 10),  -- Michelle Nguyen
-(40, 1, 10),  -- James Wong
-(41, 1, 10);  -- Amanda Scott
--- Inserting evaluation data
+
 
 
 ---------------------------------------------------NEW DATA: ------------------------------------------------------------
