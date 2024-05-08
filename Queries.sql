@@ -93,6 +93,29 @@ JOIN episode ep ON ep.episode_id = ecr.episode_id
 GROUP BY ecr.episode_id
 ORDER BY equip_count DESC
 LIMIT 10;
+
+----------------------------------------Query 10-----------------------------------
+SELECT table1.natcuis_name, table1.season as name_of_season_of_participation_table1, table2.season as name_of_season_of_participation_table1, 
+table1.cuis_count1, table2.cuis_count2,(table1.cuis_count1 + table2.cuis_count2) AS total_count
+FROM 
+    (SELECT nc.natcuis_name, e.season, r.natcuis_id, count(ecr.episode_id) as cuis_count1
+     FROM national_cuisine nc
+     JOIN recipe r ON r.natcuis_id = nc.natcuis_id
+     JOIN episode_cook_recipe ecr ON r.recipe_id = ecr.recipe_id
+     JOIN episode e ON e.episode_id = ecr.episode_id
+     GROUP BY nc.natcuis_id,e.season
+     HAVING cuis_count1 >= 3) AS table1
+JOIN 
+    (SELECT nc2.natcuis_name, e2.season, r2.natcuis_id, count(ecr2.episode_id) as cuis_count2
+     FROM national_cuisine nc2
+     JOIN recipe r2 ON r2.natcuis_id = nc2.natcuis_id
+     JOIN episode_cook_recipe ecr2 ON r2.recipe_id = ecr2.recipe_id
+     JOIN episode e2 ON e2.episode_id = ecr2.episode_id
+     GROUP BY nc2.natcuis_id,e2.season
+     HAVING cuis_count2 >= 3) AS table2
+ON table1.natcuis_id = table2.natcuis_id
+WHERE ABS(table1.season - table2.season) =1  and table1.season< table2.season
+ORDER BY total_count DESC ;
 ----------------------------------------Query 12-----------------------------------
 SELECT season, AVG(avg_dif) AS avg_difficulty
 FROM (
