@@ -67,6 +67,13 @@ GROUP BY j.judge_id,e.season
 HAVING part_count>3
 ORDER BY part_count;
 
+SELECT  c.first_name, c.last_name, e.season, count(e.episode_id) as part_count
+FROM cook c
+JOIN judge j on j.cook_id = c.cook_id
+JOIN episode e on e.episode_id = j.episode_id
+GROUP BY j.judge_id,e.season
+ORDER BY part_count;
+
 --------------------------------------------Query 6---------------------------------
 SELECT t1.tag_name AS tag_name1, t2.tag_name AS tag_name2, COUNT(*) AS pair_count
 FROM recipe_tag rt1 
