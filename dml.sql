@@ -337,13 +337,13 @@ VALUES
 INSERT INTO judge (cook_id, partitipation_number, episode_id)
 VALUES
 -- Episode 11 judges
-(75, 1, 11),  
-(74, 1, 11),  
-(73, 1, 11),  
+(71, 1, 11),  
+(70, 1, 11),  
+(69, 1, 11),  
 -- Episode 12 judges
-(72, 1, 12),  
-(14, 1, 12),  
 (70, 1, 12),  
+(14, 1, 12),  
+(71, 1, 12),  
 -- Episode 13 judges
 (69, 1, 13),  
 (68, 2, 13),  
