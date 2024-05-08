@@ -92,11 +92,13 @@ CREATE TABLE recipe_tag(
 
     )
 -- PAIDIA EDOOOO primary_ingredient VARCHAR(50) NOT NULL
+
 CREATE TABLE ingredient(
     ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    foodgroups_id INT(10) unsigned  NOT NULL, 
     ingredient_name VARCHAR(50) NOT NULL,
     unit_of_measurement INT(10) UNSIGNED NOT NULL ,
-    PRIMARY KEY(ingredient_id)
+    PRIMARY KEY(ingredient_id),  
     FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
 );
 
