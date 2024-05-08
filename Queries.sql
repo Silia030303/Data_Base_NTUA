@@ -24,7 +24,7 @@ GROUP BY cook_id,natcuis_id;
 
 
 --Panos
-SELECT c.last_name, e.grade , e.judge_id, e.episode_id, AVG(e.grade) as aver_grade
+SELECT c.last_name, e.grade ,e.episode_id, AVG(e.grade) as aver_grade
 FROM cook c
 JOIN evaluation e ON c.cook_id = e.cook_id
 JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
@@ -34,7 +34,7 @@ GROUP BY c.cook_id
 ORDER BY aver_grade;
 
 
-SELECT c.cook_id, c.last_name, e.grade , e.judge_id, e.episode_id, AVG(e.grade) as aver_grade
+SELECT n.natcuis_name, e.grade , e.episode_id, AVG(e.grade) as aver_grade
 FROM cook c
 JOIN evaluation e ON c.cook_id = e.cook_id
 JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
