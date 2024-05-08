@@ -456,6 +456,12 @@ INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
 (34, 23, 8, 4),  -- Rachael Ray
 (35, 24, 8, 3);  -- Thomas Keller
 
+INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
+(12, 2, 21, 5),
+(12, 3, 21, 1),
+(31, 2, 21, 2),
+(31, 3, 21, 1);
+
 -- Inserting data for Episode 1
 INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (12, 1, 1),  -- Gino D'Acampo - Grilled Salmon
