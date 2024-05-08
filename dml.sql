@@ -285,7 +285,7 @@ VALUES
 ('Tropical Temptations', '2026-02-28', 3),
 ('Sizzling Steaks', '2026-03-06', 3),
 ('Season Finale: The Ultimate Showdown', '2026-03-13', 3);
-
+----------------------------------------------------------------------------------------------
 INSERT INTO judge (cook_id, partitipation_number, episode_id)
 VALUES 
 -- Episode 1 judges
@@ -330,6 +330,92 @@ VALUES
 (41, 1, 10);  -- Amanda Scott
 -- Inserting evaluation data
 
+
+---------------------------------------------------NEW DATA: ------------------------------------------------------------
+INSERT INTO judge (cook_id, partitipation_number, episode_id)
+VALUES 
+-- Episode 1 judges
+(12, 3, 1),  -- Gino D'Acampo
+(23, 1, 1),  -- Curtis Stone
+(14, 1, 1),  -- Giada De Laurentiis
+-- Episode 2 judges
+(15, 1, 2),  -- Emeril Lagasse
+(16, 1, 2),  -- Rick Bayless
+(12, 3, 2),  -- Gino D'Acampo
+-- Episode 3 judges
+(18, 1, 3),  -- Bourdain Ramsay
+(29, 2, 3),  -- Ryan Chen
+(20, 1, 3),  -- José Andrés
+-- Episode 4 judges
+(21, 2, 4),  -- Yotam Ottolenghi
+(22, 1, 4),  -- Laura Gomez
+(23, 1, 4),  -- Daniel Smith
+-- Episode 5 judges
+(24, 1, 5),  -- Rachel Johnson
+(21, 2, 5),  -- Yotam Ottolenghi
+(26, 1, 5),  -- Maria Lee
+-- Episode 6 judges
+(22, 1, 6),  -- Alexander Brown
+(28, 1, 6),  -- Emma Davis
+(29, 2, 6),  -- Ryan Chen
+-- Episode 7 judges
+(30, 1, 7),  -- Sara Lee
+(31, 1, 7),  -- Peter Pan
+(32, 2, 7),  -- Emily Ross
+-- Episode 8 judges
+(32, 2, 8),  -- Emily Ross
+(30, 1, 8),  -- Rachael Ray
+(35, 1, 8),  -- Thomas Keller
+-- Episode 9 judges
+(36, 1, 9),  -- Alice Waters
+(41, 2, 9),  -- Amanda Scott
+(38, 1, 9),  -- David Cook
+-- Episode 10 judges
+(39, 1, 10),  -- Michelle Nguyen
+(12, 3, 10),  -- Gino D'Acampo
+(41, 2, 10);  -- Amanda Scott
+-- Episode 11 judges
+(75, 1, 11),  
+(74, 1, 11),  
+(73, 1, 11),  
+-- Episode 12 judges
+(72, 1, 12),  
+(14, 1, 12),  
+(70, 1, 12),  
+-- Episode 13 judges
+(69, 1, 13),  
+(68, 2, 13),  
+(67, 1, 13),  
+-- Episode 14 judges
+(57, 2, 14),  
+(28, 1, 14),  
+(68, 2, 14),  
+-- Episode 15 judges
+(13, 1, 15),  
+(62, 2, 15),  
+(61, 1, 15),  
+-- Episode 16 judges
+(12, 1, 16),  
+(59, 1, 16),  -- Emma Davis
+(58, 2, 16),  -- Ryan Chen
+-- Episode 17 judges
+(57, 2, 17),  
+(58, 2, 17),  
+(72, 1, 17),  
+-- Episode 18 judges
+(53, 1, 18),  
+(52, 1, 18),  
+(51, 1, 18),  
+-- Episode 19 judges
+(27, 1, 19),  
+(41, 2, 19),  
+(70, 1, 19),  
+-- Episode 20 judges
+(39, 1, 20),  
+(40, 1, 20),  
+(41, 1, 20);  
+
+---------------------------------------------------------------------------------------------------------------
 INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
 -- Evaluations for Episode 1
 (12, 1, 1, 4),  -- Gino DAcampo
