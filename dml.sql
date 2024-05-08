@@ -374,6 +374,9 @@ VALUES
 (39, 1, 10),  -- Michelle Nguyen
 (12, 3, 10),  -- Gino D'Acampo
 (41, 2, 10);  -- Amanda Scott
+
+INSERT INTO judge (cook_id, partitipation_number, episode_id)
+VALUES
 -- Episode 11 judges
 (75, 1, 11),  
 (74, 1, 11),  
