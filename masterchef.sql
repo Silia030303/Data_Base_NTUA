@@ -91,7 +91,7 @@ CREATE TABLE recipe_tag(
 
 
     )
--- PAIDIA EDOOOO primary_ingredient VARCHAR(50) NOT NULL
+
 
 CREATE TABLE ingredient(
     ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
