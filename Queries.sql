@@ -44,7 +44,7 @@ GROUP BY n.natcuis_id
 ORDER BY aver_grade;
 
 
-SELECT n.natcuis_name , ecr.episode_cook_recipe , e.grade
+SELECT n.natcuis_name , ecr.episode_id , e.grade
 FROM cook c
 JOIN evaluation e ON c.cook_id = e.cook_id
 JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
