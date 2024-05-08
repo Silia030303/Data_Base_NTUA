@@ -482,7 +482,7 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 -- Inserting data for Episode 8
 (33, 8, 4),  -- Paula Deen - Apple Pie
 (34, 8, 5),  -- Rachael Ray - Vegetable Stir-Fry
-(35, 8, 6),  -- Thomas Keller - Vanilla Cupcakes
+(35, 8, 6);  -- Thomas Keller - Vanilla Cupcakes
  -- Inserting data for Episode 1 (Season 2)
 INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (42, 11, 1),  -- Amit Patel - Grilled Salmon
