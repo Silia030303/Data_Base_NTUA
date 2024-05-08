@@ -7,6 +7,7 @@ use project84_DB_2024;
 
 --DROP DATABASE project84_DB_2024;
 --DROP TABLE IF EXISTS recipe;
+-- DELETE FROM table_name;
 
 
 CREATE TABLE equipment(
