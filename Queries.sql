@@ -95,7 +95,7 @@ ORDER BY equip_count DESC
 LIMIT 10;
 
 ----------------------------------------Query 10-----------------------------------
-SELECT table1.natcuis_name, table1.season as name_of_season_of_participation_table1, table2.season as name_of_season_of_participation_table1, 
+SELECT table1.natcuis_name, table1.season as name_of_season_of_participation_table1, table2.season as name_of_season_of_participation_table2, 
 table1.cuis_count1, table2.cuis_count2,(table1.cuis_count1 + table2.cuis_count2) AS total_count
 FROM 
     (SELECT nc.natcuis_name, e.season, r.natcuis_id, count(ecr.episode_id) as cuis_count1
