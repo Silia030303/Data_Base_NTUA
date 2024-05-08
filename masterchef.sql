@@ -110,7 +110,7 @@ entity relationship:
 which and how many ingredients are contained in which recipe
 */
 
-CREATE TABLE ingedient_VS_recipe(
+CREATE TABLE ingredient_VS_recipe(
     recipe_id INT(10) unsigned NOT NULL,
     ingredient_id INT(10) unsigned NOT NULL,
     PRIMARY KEY (recipe_id, ingredient_id),
