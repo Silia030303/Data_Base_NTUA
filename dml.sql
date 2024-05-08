@@ -296,10 +296,10 @@ VALUES
 -- Episode 1 judges
 (12, 3, 1),  -- Gino D'Acampo
 (23, 1, 1),  -- Curtis Stone
-(14, 1, 1),  -- Giada De Laurentiis
+(41, 1, 1),  -- Giada De Laurentiis
 -- Episode 2 judges
 (15, 1, 2),  -- Emeril Lagasse
-(16, 1, 2),  -- Rick Bayless
+(21, 1, 2),  -- Rick Bayless
 (12, 3, 2),  -- Gino D'Acampo
 -- Episode 3 judges
 (18, 1, 3),  -- Bourdain Ramsay
@@ -314,7 +314,7 @@ VALUES
 (21, 2, 5),  -- Yotam Ottolenghi
 (26, 1, 5),  -- Maria Lee
 -- Episode 6 judges
-(22, 1, 6),  -- Alexander Brown
+(41, 1, 6),  -- Alexander Brown
 (28, 1, 6),  -- Emma Davis
 (29, 2, 6),  -- Ryan Chen
 -- Episode 7 judges
@@ -323,7 +323,7 @@ VALUES
 (32, 2, 7),  -- Emily Ross
 -- Episode 8 judges
 (32, 2, 8),  -- Emily Ross
-(30, 1, 8),  -- Rachael Ray
+(21, 1, 8),  -- Rachael Ray
 (35, 1, 8),  -- Thomas Keller
 -- Episode 9 judges
 (36, 1, 9),  -- Alice Waters
@@ -346,10 +346,10 @@ VALUES
 (71, 1, 12),  
 -- Episode 13 judges
 (69, 1, 13),  
-(68, 2, 13),  
+(14, 2, 13),  
 (67, 1, 13),  
 -- Episode 14 judges
-(57, 2, 14),  
+(70, 2, 14),  
 (28, 1, 14),  
 (68, 2, 14),  
 -- Episode 15 judges
@@ -361,12 +361,12 @@ VALUES
 (59, 1, 16),  -- Emma Davis
 (58, 2, 16),  -- Ryan Chen
 -- Episode 17 judges
-(57, 2, 17),  
+(61, 2, 17),  
 (58, 2, 17),  
 (55, 1, 17),  
 -- Episode 18 judges
 (53, 1, 18),  
-(52, 1, 18),  
+(71, 1, 18),  
 (51, 1, 18),  
 -- Episode 19 judges
 (27, 1, 19),  
@@ -374,8 +374,8 @@ VALUES
 (70, 1, 19),  
 -- Episode 20 judges
 (39, 1, 20),  
-(40, 1, 20),  
-(41, 1, 20);  
+(61, 1, 20),  
+(71, 1, 20);  
 
 ---------------------------------------------------------------------------------------------------------------
 INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
