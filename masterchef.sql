@@ -90,8 +90,6 @@ CREATE TABLE recipe_tag(
     
 
 
-    )
-
 
 CREATE TABLE ingredient(
     ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
