@@ -196,7 +196,7 @@ LIMIT 1;
 -------------------------------------------------------------------------Query 15--------------------------------------------------------------------- 
 
 SELECT fg.foodgroups_name 
-FROM ingedient_VS_recipe ir
+FROM ingredient_VS_recipe ir
 JOIN ingredient i ON i.ingredient_id = ir.ingredient_id
 JOIN episode_cook_recipe ecr ON ecr.ingredient_id= ir.ingredient_id
 LEFT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
