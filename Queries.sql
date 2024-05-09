@@ -198,9 +198,10 @@ LIMIT 1;
 SELECT fg.foodgroups_name 
 FROM ingredient_VS_recipe ir
 JOIN ingredient i ON i.ingredient_id = ir.ingredient_id
-JOIN episode_cook_recipe ecr ON ecr.ingredient_id= ir.ingredient_id
+JOIN episode_cook_recipe ecr ON ecr.recipe_id= ir.recipe_id
 LEFT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
 WHERE fg.foodgroups_id  IS NULL;
+--needs insert in ingredient to return smth
 
 
 
