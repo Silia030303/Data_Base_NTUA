@@ -1,4 +1,5 @@
 -------------------------------------------------------------------------Query 1--------------------------------------------------------------------- 
+
 SELECT c.cook_id,c.first_name, c.last_name, e.grade, e.episode_id, ecr.recipe_id,r.natcuis_id,n.natcuis_name, avg(*)
 FROM cook c
 JOIN evaluation e ON c.cook_id = e.cook_id
@@ -30,6 +31,7 @@ GROUP BY n.natcuis_id
 ORDER BY aver_grade;
 
 -------------------------------------------------------------------------Query 2--------------------------------------------------------------------- 
+
 SELECT c.first_name,c.last_name
 from cook c 
 JOIN cook_nat_cuis cn on c.cook_id = cn.cook_id
@@ -43,6 +45,7 @@ JOIN episode e on e.episode_id = cer.episode_id
 where e.season = 2 ;  --needs more data in other seasons
 
 -------------------------------------------------------------------------Query 3--------------------------------------------------------------------- 
+
 SELECT 
     c.first_name,
     c.last_name,
@@ -60,6 +63,7 @@ ORDER BY
     total_recipes DESC;
 
 -------------------------------------------------------------------------Query 4--------------------------------------------------------------------- 
+
 SELECT 
     c.first_name,
     c.last_name
@@ -71,6 +75,7 @@ WHERE
     j.judge_id IS NULL;
 
 -------------------------------------------------------------------------Query 5--------------------------------------------------------------------- 
+
 SELECT  c.first_name, c.last_name, e.season, count(e.episode_id) as part_count
 FROM cook c
 JOIN judge j on j.cook_id = c.cook_id
@@ -80,6 +85,7 @@ HAVING part_count>3
 ORDER BY part_count;
 
 -------------------------------------------------------------------------Query 6--------------------------------------------------------------------- 
+
 SELECT t1.tag_name AS tag_name1, t2.tag_name AS tag_name2, COUNT(*) AS pair_count
 FROM recipe_tag rt1 
 JOIN episode_cook_recipe ecr ON rt1.recipe_id = ecr.recipe_id
@@ -91,6 +97,7 @@ ORDER BY pair_count DESC
 LIMIT 3;
 
 -------------------------------------------------------------------------Query 7--------------------------------------------------------------------- 
+
 SELECT c.cook_id, c.first_name, c.last_name, COUNT(ecr.episode_id) AS participation
 FROM cook c
 JOIN episode_cook_recipe ecr ON c.cook_id = ecr.cook_id
@@ -106,6 +113,7 @@ HAVING COUNT(ecr.episode_id) <= (
 );
 
 -------------------------------------------------------------------------Query 8--------------------------------------------------------------------- 
+
 SELECT episode_name, COUNT(DISTINCT re.equipment_id) AS equip_count
 FROM episode_cook_recipe ecr
 JOIN recipe_equipment re ON re.recipe_id = ecr.recipe_id
@@ -115,6 +123,7 @@ ORDER BY equip_count DESC
 LIMIT 10;
 
 -------------------------------------------------------------------------Query 10--------------------------------------------------------------------- 
+
 SELECT table1.natcuis_name, table1.season as name_of_season_of_participation_table1, table2.season as name_of_season_of_participation_table2, 
 table1.cuis_count1, table2.cuis_count2,(table1.cuis_count1 + table2.cuis_count2) AS total_count
 FROM 
@@ -138,6 +147,7 @@ WHERE ABS(table1.season - table2.season) =1  and table1.season< table2.season
 ORDER BY total_count DESC ;
 
 -------------------------------------------------------------------------Query 12--------------------------------------------------------------------- 
+
 SELECT season, AVG(avg_dif) AS avg_difficulty
 FROM (
     SELECT season, episode_name, AVG(difficulty_level) AS avg_dif
@@ -149,6 +159,7 @@ FROM (
 GROUP BY season;
 
 -------------------------------------------------------------------------Query 14--------------------------------------------------------------------- 
+
 select ts.name as thematic_section_name ,COUNT(ts.them_sec_id) as appearance_count
 from episode_cook_recipe ecr
 join recipe r on ecr.recipe_id = r.recipe_id
@@ -159,6 +170,7 @@ order by appearance_count DESC
 LIMIT 1;
 
 -------------------------------------------------------------------------Query 15--------------------------------------------------------------------- 
+
 SELECT fg.foodgroups_name 
 FROM ingedient_VS_recipe ir
 JOIN ingredient i ON i.ingredient_id = ir.ingredient_id
