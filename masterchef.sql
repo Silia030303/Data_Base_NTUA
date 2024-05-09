@@ -178,6 +178,7 @@ CREATE TABLE recipe_step (
 CREATE TABLE image (
     type VARCHAR(100)  NOT NULL,
     image_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    image_url text NOT NULL,
     image_description text DEFAULT NULL ,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY(image_id)
