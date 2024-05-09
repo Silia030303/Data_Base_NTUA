@@ -11,24 +11,33 @@ GROUP BY cook_id,natcuis_id;
 
 
 --Panos
-SELECT c.last_name, AVG(e.grade) as aver_grade
-FROM cook c
-JOIN evaluation e ON c.cook_id = e.cook_id
-JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
-JOIN recipe r ON r.recipe_id = ecr.recipe_id
-JOIN national_cuisine n ON r.natcuis_id = n.natcuis_id 
-GROUP BY c.cook_id
-ORDER BY aver_grade;
+--per cook
+SELECT 
+    c.last_name, AVG(e.grade) as aver_grade
+FROM 
+    cook c
+    JOIN evaluation e ON c.cook_id = e.cook_id
+    JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
+    JOIN recipe r ON r.recipe_id = ecr.recipe_id
+    JOIN national_cuisine n ON r.natcuis_id = n.natcuis_id 
+GROUP BY 
+    c.cook_id
+ORDER BY 
+    aver_grade;
 
-
-SELECT n.natcuis_name,  AVG(e.grade) as aver_grade
-FROM cook c
-JOIN evaluation e ON c.cook_id = e.cook_id
-JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
-JOIN recipe r ON r.recipe_id = ecr.recipe_id
-JOIN national_cuisine n ON r.natcuis_id = n.natcuis_id
-GROUP BY n.natcuis_id   
-ORDER BY aver_grade;
+--per national cuisine
+SELECT 
+    n.natcuis_name, AVG(e.grade) as aver_grade
+FROM 
+    cook c
+    JOIN evaluation e ON c.cook_id = e.cook_id
+    JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
+    JOIN recipe r ON r.recipe_id = ecr.recipe_id
+    JOIN national_cuisine n ON r.natcuis_id = n.natcuis_id
+GROUP BY 
+    n.natcuis_id   
+ORDER BY 
+    aver_grade;
 
 -------------------------------------------------------------------------Query 2--------------------------------------------------------------------- 
 
