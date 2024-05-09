@@ -42,8 +42,7 @@ CREATE TABLE meal(
     PRIMARY KEY(meal_id)
 );
 
--- each recipe has only one time so we can add it directly to recipe
--- in minutes
+
 CREATE TABLE recipe(
     recipe_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
@@ -64,6 +63,8 @@ CREATE TABLE recipe(
     FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
     PRIMARY KEY(recipe_id)
 );
+
+
 CREATE TABLE recipe_equipment(
  recipe_id INT unsigned NOT NULL,
  equipment_id INT unsigned NOT NULL,
@@ -72,12 +73,15 @@ CREATE TABLE recipe_equipment(
  FOREIGN KEY(equipment_id) REFERENCES equipment(equipment_id),
  PRIMARY KEY(recipe_id,equipment_id)
     );
+
+
 CREATE TABLE tags(
     tag_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     tag_name VARCHAR(50) NOT NULL,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY(tag_id)
 );
+
 
 CREATE TABLE recipe_tag(
  recipe_id INT unsigned NOT NULL,
@@ -90,7 +94,6 @@ CREATE TABLE recipe_tag(
     
 
 
-
 CREATE TABLE ingredient(
     ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     foodgroups_id INT(10) unsigned  NOT NULL, 
@@ -100,15 +103,7 @@ CREATE TABLE ingredient(
     FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
 );
 
-/*
-We want the recipe_id to go to the ingredient table with a many to many relationship
-since many ingredients go into many recipes
-*/
 
-/*
-entity relationship:
-which and how many ingredients are contained in which recipe
-*/
 
 CREATE TABLE ingredient_VS_recipe(
     recipe_id INT(10) unsigned NOT NULL,
@@ -116,7 +111,6 @@ CREATE TABLE ingredient_VS_recipe(
     PRIMARY KEY (recipe_id, ingredient_id),
     FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
     FOREIGN KEY (ingredient_id) REFERENCES ingredient(ingredient_id),
-
     quantity INT NULL CHECK (quantity >= 0),
     unit_of_measurement INT(20) unsigned NOT NULL ,
     calories_per_100ml INT(20) unsigned NOT NULL , 
@@ -165,9 +159,9 @@ CREATE TABLE judge(
    cook_id INT(10) unsigned NOT NULL,
    partitipation_number INT(10) unsigned,
    episode_id INT(10) unsigned NOT NULL,
- PRIMARY KEY(judge_id),
- FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
- FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
+   PRIMARY KEY(judge_id),
+   FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
+   FOREIGN KEY(episode_id) REFERENCES episode(episode_id)
 );
 
 CREATE TABLE recipe_step (
