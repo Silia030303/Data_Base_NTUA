@@ -53,7 +53,7 @@ SELECT c.first_name,c.last_name
 from cook c 
 JOIN episode_cook_recipe cer on c.cook_id = cer.cook_id
 JOIN episode e on e.episode_id = cer.episode_id
-where year(episode_date)=2024 ;
+where e.season = 2 ;
 -------------------------------------------Query 3--------------------------------------------
 SELECT 
     c.first_name,
