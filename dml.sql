@@ -460,7 +460,9 @@ INSERT INTO evaluation(cook_id, judge_id, episode_id, grade) VALUES
 (12, 2, 21, 5),
 (12, 3, 21, 1),
 (31, 2, 21, 2),
-(31, 3, 21, 1);
+(31, 3, 21, 1);  -- no sure if this is valid with all the constraints
+
+
 
 -- Inserting data for Episode 1
 INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
@@ -916,6 +918,9 @@ SELECT r.recipe_id, ts.them_sec_id
 FROM recipe r
 JOIN thematic_section ts ON ts.name IN ('Desserts', 'Italian Cuisine')
 WHERE r.recipe_name = 'Panna Cotta';
+-- it says zero rows affected here (?)
+
+
 
 INSERT INTO foodgroups (foodgroups_name, description) VALUES 
 ('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.'),
