@@ -10,7 +10,9 @@ GROUP BY cook_id,natcuis_id;
 
 
 
---Panos
+--Panos:
+
+
 --per cook
 SELECT 
     c.last_name, AVG(e.grade) as aver_grade
