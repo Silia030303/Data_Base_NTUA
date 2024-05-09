@@ -1,5 +1,8 @@
 -------------------------------------------------------------------------Query 1--------------------------------------------------------------------- 
 
+--Eugene
+
+--per cook and nat cius
 SELECT c.cook_id,c.first_name, c.last_name, e.grade, e.episode_id, ecr.recipe_id,r.natcuis_id,n.natcuis_name, avg(*)
 FROM cook c
 JOIN evaluation e ON c.cook_id = e.cook_id
