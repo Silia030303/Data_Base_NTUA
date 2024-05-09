@@ -27,6 +27,8 @@ GROUP BY
 ORDER BY 
     aver_grade;
 
+
+
 --per national cuisine
 SELECT 
     n.natcuis_name, AVG(e.grade) as aver_grade
