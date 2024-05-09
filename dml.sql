@@ -936,8 +936,12 @@ INSERT INTO foodgroups (foodgroups_name, description) VALUES
 ('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
 ('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
 
-INSERT INTO image (type, image_url)
-VALUES ('cook', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ramsay-in-the-semi-finale-pt-2-3-chef-news-photo-1699984599.jpg?crop=0.788xw:1.00xh;0.212xw,0&resize=1200:*');
+INSERT INTO image (type,type_id, image_url)
+VALUES ('cook', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ramsay-in-the-semi-finale-pt-2-3-chef-news-photo-1699984599.jpg?crop=0.788xw:1.00xh;0.212xw,0&resize=1200:*'),
 ('national_cuisine','https://irp.cdn-website.com/560b6587/dms3rep/multi/image20-f1109880.png'),
-
-
+('equipment', 'https://cdn.shopify.com/s/files/1/0372/6232/7941/products/Wu_estof_Classic_8-inch_Chef_Bobbi_Lin_0348x_58ab572f-cc6f-40b4-9597-451149205c05.jpg?v=1713982031'),
+('thematic_section','https://irepo.primecp.com/2015/05/220374/Country-Cookin-Recipes_ExtraLarge1000_ID-994664.jpg?v=994664'),
+('recipe', 'https://www.dinneratthezoo.com/wp-content/uploads/2019/05/grilled-salmon-final-2.jpg'),
+('episode','https://pbs.twimg.com/media/FTnZZRPWQAE0cXH.jpg:large'),
+('tags','https://aclassictwist.com/wp-content/uploads/2022/04/Brunch-Charcuterie-Board-8.jpg'),
+('foodgroups','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
