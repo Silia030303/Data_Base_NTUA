@@ -401,7 +401,7 @@ VALUES
 (21, 2, 25),  
 (15, 1, 25),  
 -- Episode 16 judges
-(16 1, 26),  
+(16, 1, 26),  
 (7, 1, 26),  -- Emma Davis
 (18, 2, 26),  -- Ryan Chen
 -- Episode 17 judges
