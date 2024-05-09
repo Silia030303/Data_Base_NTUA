@@ -929,12 +929,15 @@ INSERT INTO foodgroups (foodgroups_name, description) VALUES
 ('Sweeteners', 'Encompasses various sweetening agents like sugar, honey, etc.'),
 ('Fats and Oils', 'Includes fats and oils used in cooking and food preparation.'),
 ('Milk, Eggs, and Their Products', 'Covers dairy products like milk, eggs, and their derivatives.'),
-('Meat and Meat Products', 'Encompasses various types of meat and processed meat products.'),
-('Fish and Fish Products', 'Includes different kinds of fish and fish-based products.'),
+('Meat and Meat Products, 'Encompasses various types of meat and processed meat products.'),
+('Fish and Fish Products, 'Includes different kinds of fish and fish-based products.'),
 ('Cereals and Their Products', 'Covers grains and cereal-based products like bread, pasta, etc.'),
 ('Various Plant-based Foods', 'Encompasses a variety of plant-based foods like fruits, vegetables, nuts, etc.'),
 ('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
 ('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
 
+INSERT INTO image (type, image_url)
+VALUES ('cook', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ramsay-in-the-semi-finale-pt-2-3-chef-news-photo-1699984599.jpg?crop=0.788xw:1.00xh;0.212xw,0&resize=1200:*');
+('national_cuisine','https://irp.cdn-website.com/560b6587/dms3rep/multi/image20-f1109880.png'),
 
 
