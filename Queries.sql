@@ -1,17 +1,4 @@
-select r.recipe_name,n.natcuis_name 
-from recipe r join national_cuisine n
-on r.natcuis_id = n.natcuis_id; 
 
-select c.cook_id,c.first_name, c.last_name, e.grade
-from cook c join evaluation e
-on c.cook_id = e.cook_id;
-
-SELECT c.first_name, c.last_name, e.grade, e.episode_id, ecr.recipe_id,r.natcuis_id
-FROM cook c
-JOIN evaluation e ON c.cook_id = e.cook_id
-JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
-JOIN recipe r on r.recipe_id = ecr.recipe_id
-JOIN national_cuisine n on r.natcuis_id = n.natcuis_id;
 -------------------------------------------------------------------------QUERY 1--------------------------------------------------------------------- 
 SELECT c.cook_id,c.first_name, c.last_name, e.grade, e.episode_id, ecr.recipe_id,r.natcuis_id,n.natcuis_name, avg(*)
 FROM cook c
