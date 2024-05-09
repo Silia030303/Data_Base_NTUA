@@ -1,11 +1,11 @@
-
-create database project84_DB_2024;
-use project84_DB_2024;
-
-
 --DDL
 
---DROP DATABASE project84_DB_2024;
+
+DROP DATABASE IF EXISTS project84_DB_2024;
+
+CREATE database project84_DB_2024;
+use project84_DB_2024;
+
 --DROP TABLE IF EXISTS recipe;
 -- DELETE FROM table_name;
 
