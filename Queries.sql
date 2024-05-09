@@ -56,10 +56,7 @@ where e.season = 2 ;  --needs more data in other seasons
 -------------------------------------------------------------------------Query 3--------------------------------------------------------------------- 
 
 SELECT 
-    c.first_name,
-    c.last_name,
-    c.age,
-    COUNT(ecr.recipe_id) AS total_recipes
+    c.first_name, c.last_name, c.age, COUNT(ecr.recipe_id) AS total_recipes
 FROM 
     cook c
 JOIN 
