@@ -388,35 +388,35 @@ VALUES
 (4, 1, 22),  
 (5, 1, 22),  
 (6, 1, 22),  
--- Episode 13 judges
+-- Episode 23 judges
 (7, 1, 23),  
 (8, 2, 23),  
 (9, 1, 23),  
--- Episode 14 judges
+-- Episode 24 judges
 (10, 2, 24),  
 (21, 1, 24),  
 (9, 2, 24),  
--- Episode 15 judges
+-- Episode 25 judges
 (13, 1, 25),  
 (21, 2, 25),  
 (15, 1, 25),  
--- Episode 16 judges
+-- Episode 26 judges
 (16, 1, 26),  
-(7, 1, 26),  -- Emma Davis
-(18, 2, 26),  -- Ryan Chen
--- Episode 17 judges
+(7, 1, 26), 
+(18, 2, 26), 
+-- Episode 27 judges
 (9, 2, 27),  
 (20, 2, 27),  
 (21, 1, 27),  
--- Episode 18 judges
+-- Episode 28 judges
 (1, 1, 28),  
 (3, 1, 28),  
 (5, 1, 28),  
--- Episode 19 judges
+-- Episode 29 judges
 (1, 1, 29),  
 (7, 2, 29),  
 (9, 1, 29),  
--- Episode 20 judges
+-- Episode 30 judges
 (1, 1, 30),  
 (5, 1, 30),  
 (21, 1, 30);  
