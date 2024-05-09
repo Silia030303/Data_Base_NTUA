@@ -201,7 +201,7 @@ JOIN ingredient i ON i.ingredient_id = ir.ingredient_id
 JOIN episode_cook_recipe ecr ON ecr.recipe_id= ir.recipe_id
 LEFT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
 WHERE fg.foodgroups_id  IS NULL;
---needs insert in ingredient and ingredient_VS_recipe  to return smth
+--needs inserts in ingredient and ingredient_VS_recipe  to return smth
 
 
 
