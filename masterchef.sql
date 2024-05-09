@@ -261,7 +261,7 @@ CREATE TABLE winner(
 );
 
 
---not sure what this is for :(
+--unfinished
 CREATE TABLE nutritional_info_recipe(
  nutinf_id INT(10) unsigned NOT NULL,
 PRIMARY KEY(nutinf_id)
