@@ -40,7 +40,7 @@ SELECT c.first_name,c.last_name
 from cook c 
 JOIN episode_cook_recipe cer on c.cook_id = cer.cook_id
 JOIN episode e on e.episode_id = cer.episode_id
-where e.season = 2 ;  --more data in other seasons
+where e.season = 2 ;  --needs more data in other seasons
 -------------------------------------------Query 3--------------------------------------------
 SELECT 
     c.first_name,
