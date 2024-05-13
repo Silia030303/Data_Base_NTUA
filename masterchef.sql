@@ -174,7 +174,7 @@ CREATE TABLE recipe_step (
     PRIMARY KEY(step_id)
 );
 
-
+--delete this
 CREATE TABLE image (
     type VARCHAR(100)  NOT NULL,
     image_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
@@ -184,6 +184,11 @@ CREATE TABLE image (
     PRIMARY KEY(image_id)
 
 );  
+
+
+-- this in every table that needs images
+-- image text NULL,
+-- image_description text NULL ,
 
 CREATE TABLE thematic_section(
     them_sec_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
