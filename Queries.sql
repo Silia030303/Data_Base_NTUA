@@ -203,9 +203,3 @@ LEFT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
 WHERE fg.foodgroups_id  IS NULL;
 --needs inserts in ingredient and ingredient_VS_recipe  to return smth
 
-
-
-
-
-
---end
