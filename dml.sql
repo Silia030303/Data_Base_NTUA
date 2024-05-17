@@ -257,6 +257,26 @@ INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, recipe_description
 ('Grilled Chicken Caesar Salad', 'main course', 15, 'Grilled chicken served on a bed of crisp romaine lettuce with Caesar dressing', 4, 2, 20, 15, 'Marinate the chicken in Caesar dressing for extra flavor.', 'Grill the chicken until charred and cooked through.', 'Toss the lettuce with dressing just before serving to prevent wilting.'),
 ('Panna Cotta', 'dessert', 16, 'Creamy Italian dessert made with sweetened cream and gelatin', 6, 3, 20, 10, 'Use vanilla bean for a more intense flavor or vanilla extract as a substitute.', 'Bloom gelatin in cold water before adding to the warm cream mixture.', 'Serve with fresh berries or a fruit compote on top.');
 
+UPDATE recipes r
+JOIN ingredient i ON r.prim_ingredient_id = i.ingredient_id
+JOIN foodgroups f ON i.foodgroups_id = f.foodgroups_id
+SET r.classification = CASE
+    WHEN f.foodgroups_name = 'Various Plant-based Foods' THEN 'Vegetarian'
+    WHEN f.foodgroups_name = 'Fish and Fish Products' THEN 'Seafood'
+    WHEN f.foodgroups_name = 'Meat and Meat Products' THEN 'Meat'
+    WHEN f.foodgroups_name = 'Aromatic Herbs and Essential Oils' THEN 'Plant-based'
+    WHEN f.foodgroups_name = 'Coffee, Tea, and Their Products' THEN 'Beverage'
+    WHEN f.foodgroups_name = 'Preserved Foods' THEN 'Preserved'
+    WHEN f.foodgroups_name = 'Sweeteners' THEN 'Sweetener'
+    WHEN f.foodgroups_name = 'Fats and Oils' THEN 'Fat/Oil'
+    WHEN f.foodgroups_name = 'Milk, Eggs, and Their Products' THEN 'Dairy/Egg'
+    WHEN f.foodgroups_name = 'Cereals and Their Products' THEN 'Cereal'
+    WHEN f.foodgroups_name = 'Products with Sweeteners' THEN 'Sweetened Product'
+    WHEN f.foodgroups_name = 'Various Beverages' THEN 'Beverage'
+    ELSE 'Other'
+END;
+
+
 INSERT INTO episode (episode_name, episode_date, season)
 VALUES 
 ('Season Premiere', '2024-01-10', 1),
