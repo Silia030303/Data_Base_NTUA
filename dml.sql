@@ -238,6 +238,95 @@ VALUES
 ('Culinary Adventures', 'Embark on culinary journeys with these adventurous and exotic recipes.'),
 ('Classic Cocktails', 'Mix up classic cocktails and elevate your home bartending skills.');
 
+INSERT INTO ingredient (foodgroups_id, ingredient_name)
+VALUES 
+(1, 'Basil'),                -- Aromatic Herbs and Essential Oils
+(2, 'Green Tea'),            -- Coffee, Tea, and Their Products
+(3, 'Pickles'),              -- Preserved Foods
+(4, 'Honey'),                -- Sweeteners
+(5, 'Olive Oil'),            -- Fats and Oils
+(6, 'Milk'),                 -- Milk, Eggs, and Their Products
+(7, 'Chicken Breast'),       -- Meat and Meat Products
+(8, 'Salmon'),               -- Fish and Fish Products
+(9, 'Wheat Bread'),          -- Cereals and Their Products
+(10, 'Apple'),               -- Various Plant-based Foods
+(11, 'Chocolate Bar'),       -- Products with Sweeteners
+(12, 'Orange Juice'),        -- Various Beverages
+(1, 'Rosemary'),             -- Aromatic Herbs and Essential Oils
+(2, 'Coffee Beans'),         -- Coffee, Tea, and Their Products
+(3, 'Olives'),               -- Preserved Foods
+(4, 'Maple Syrup'),          -- Sweeteners
+(5, 'Butter'),               -- Fats and Oils
+(6, 'Cheese'),               -- Milk, Eggs, and Their Products
+(7, 'Bacon'),                -- Meat and Meat Products
+(8, 'Tuna'),                 -- Fish and Fish Products
+(9, 'Rice'),                 -- Cereals and Their Products
+(10, 'Carrot'),              -- Various Plant-based Foods
+(11, 'Candy'),               -- Products with Sweeteners
+(12, 'Cola'),                -- Various Beverages
+(1, 'Thyme'),                -- Aromatic Herbs and Essential Oils
+(2, 'Black Tea'),            -- Coffee, Tea, and Their Products
+(3, 'Canned Tomatoes'),      -- Preserved Foods
+(4, 'Agave Syrup'),          -- Sweeteners
+(5, 'Coconut Oil'),          -- Fats and Oils
+(6, 'Yogurt'),               -- Milk, Eggs, and Their Products
+(7, 'Ham'),                  -- Meat and Meat Products
+(8, 'Cod'),                  -- Fish and Fish Products
+(9, 'Pasta'),                -- Cereals and Their Products
+(10, 'Banana'),              -- Various Plant-based Foods
+(11, 'Cookies'),             -- Products with Sweeteners
+(12, 'Lemonade'),            -- Various Beverages
+(1, 'Oregano'),              -- Aromatic Herbs and Essential Oils
+(2, 'Herbal Tea'),           -- Coffee, Tea, and Their Products
+(3, 'Jam'),                  -- Preserved Foods
+(4, 'Molasses'),             -- Sweeteners
+(5, 'Ghee'),                 -- Fats and Oils
+(6, 'Eggs'),                 -- Milk, Eggs, and Their Products
+(7, 'Sausage'),              -- Meat and Meat Products
+(8, 'Shrimp'),               -- Fish and Fish Products
+(9, 'Oatmeal'),              -- Cereals and Their Products
+(10, 'Broccoli'),            -- Various Plant-based Foods
+(11, 'Cake'),                -- Products with Sweeteners
+(12, 'Iced Tea');            -- Various Beverages
+
+
+INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, prim_ingredient_id, recipe_description, quantity_of_servings, difficulty_level, prep_time, cooking_time, tip_1, tip_2, tip_3)
+VALUES 
+('Grilled Salmon', 'main course', 1, 8, 'Delicious grilled salmon seasoned with herbs', 4, 3, 20, 15, 'Make sure to preheat the grill before cooking.', 'Marinate the salmon for at least 30 minutes before grilling.', NULL),
+('Chocolate Cake', 'dessert', 2, 11, 'Decadent chocolate cake topped with chocolate ganache', 8, 4, 30, 40, 'Use high-quality cocoa powder for a richer flavor.', 'Allow the cake to cool completely before adding the ganache.', 'Garnish with fresh berries before serving.'),
+('Chicken Alfredo Pasta', 'main course', 3, 7, 'Creamy chicken Alfredo pasta with Parmesan cheese', 6, 3, 25, 20, 'Use fresh Parmesan cheese for best flavor.', 'Cook the pasta al dente for optimal texture.', 'Garnish with chopped parsley before serving.'),
+('Apple Pie', 'dessert', 4, 10, 'Classic homemade apple pie with cinnamon-spiced apples', 8, 4, 40, 50, 'Make sure to use a mix of sweet and tart apples for the filling.', 'Brush the top crust with egg wash for a golden finish.', 'Serve warm with vanilla ice cream.'),
+('Vegetable Stir-Fry', 'main course', 5, 22, 'Healthy vegetable stir-fry with tofu in a savory sauce', 4, 2, 15, 15, 'Cut vegetables uniformly for even cooking.', 'Add tofu towards the end to prevent overcooking.', 'Serve hot over steamed rice.'),
+('Vanilla Cupcakes', 'dessert', 6, 6, 'Soft and fluffy vanilla cupcakes with buttercream frosting', 12, 3, 30, 20, 'Make sure all ingredients are at room temperature for best results.', 'Use a piping bag to frost the cupcakes for a professional look.', 'Decorate with sprinkles or edible flowers.'),
+('Spaghetti Bolognese', 'main course', 7, 33, 'Classic Italian spaghetti with rich Bolognese sauce', 6, 3, 20, 30, 'Cook pasta until al dente for the perfect texture.', 'Simmer the sauce on low heat for at least 1 hour to develop flavors.', 'Serve with freshly grated Parmesan cheese.'),
+('New York Cheesecake', 'dessert', 8, 18, 'Creamy and decadent New York-style cheesecake with graham cracker crust', 10, 5, 45, 50, 'Ensure all ingredients are at room temperature for a smooth batter.', 'Bake the cheesecake in a water bath to prevent cracking.', 'Chill the cheesecake for at least 4 hours before serving.'),
+('Beef Tacos', 'main course', 9, 7, 'Tender beef tacos with homemade salsa and guacamole', 4, 2, 25, 20, 'Season the beef with Mexican spices for authentic flavor.', 'Warm the tortillas before assembling the tacos for better texture.', 'Top with fresh cilantro and a squeeze of lime juice.'),
+('Tiramisu', 'dessert', 10, 14, 'Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream', 8, 4, 30, 0, 'Use espresso or strong coffee for dipping the ladyfingers.', 'Dust the top with cocoa powder just before serving.', 'Chill the tiramisu for at least 4 hours to set.'),
+('Chicken Curry', 'main course', 11, 7, 'Flavorful chicken curry with aromatic spices and coconut milk', 6, 3, 25, 30, 'Toast whole spices before grinding for enhanced flavor.', 'Simmer the curry on low heat to allow flavors to develop.', 'Garnish with fresh cilantro and a squeeze of lime juice.'),
+('Lemon Bars', 'dessert', 12, 10, 'Tangy and sweet lemon bars with buttery shortbread crust', 12, 2, 20, 35, 'Zest the lemons before juicing for maximum flavor.', 'Chill the bars before cutting into squares for cleaner edges.', 'Dust with powdered sugar just before serving.'),
+('Mushroom Risotto', 'main course', 13, 22, 'Creamy mushroom risotto cooked with Arborio rice and Parmesan cheese', 4, 4, 30, 25, 'Use a combination of mushrooms for depth of flavor.', 'Add hot broth gradually and stir frequently for creamy texture.', 'Finish with a drizzle of truffle oil for a luxurious touch.'),
+('Chocolate Chip Cookies', 'dessert', 14, 11, 'Classic chocolate chip cookies with chewy centers and crispy edges', 24, 2, 15, 12, 'Chill the cookie dough for at least 30 minutes before baking for thicker cookies.', 'Use high-quality chocolate chips for the best flavor.', 'Bake until the edges are golden brown for the perfect texture.'),
+('Grilled Chicken Caesar Salad', 'main course', 15, 7, 'Grilled chicken served on a bed of crisp romaine lettuce with Caesar dressing', 4, 2, 20, 15, 'Marinate the chicken in Caesar dressing for extra flavor.', 'Grill the chicken until charred and cooked through.', 'Toss the lettuce with dressing just before serving to prevent wilting.'),
+('Panna Cotta', 'dessert', 16, 6, 'Creamy Italian dessert made with sweetened cream and gelatin', 6, 3, 20, 10, 'Use vanilla bean for a more intense flavor or vanilla extract as a substitute.', 'Bloom gelatin in cold water before adding to the warm cream mixture.', 'Serve with fresh berries or a fruit compote on top.'),
+('Tomato Basil Soup', 'main course', 17, 1, 'A rich and creamy tomato basil soup perfect for a light meal', 4, 2, 15, 30, 'Use ripe tomatoes for a better flavor.', 'Garnish with fresh basil leaves and a drizzle of olive oil.', NULL),
+('Green Tea Cheesecake', 'dessert', 18, 2, 'A smooth and creamy cheesecake infused with green tea flavor', 8, 3, 30, 50, 'Use matcha powder for a vibrant green color and distinct taste.', 'Chill for at least 4 hours before serving.', 'Serve with whipped cream and a dusting of matcha powder.'),
+('Olive Tapenade', 'main course', 19, 15, 'A savory olive tapenade perfect for spreading on bread or crackers', 6, 2, 10, 0, 'Use a mix of green and black olives for depth of flavor.', 'Serve with fresh baguette slices.', NULL),
+('Maple Syrup Pancakes', 'dessert', 20, 16, 'Fluffy pancakes drizzled with rich maple syrup', 4, 1, 10, 10, 'Make sure not to overmix the batter.', 'Serve hot with butter and additional syrup.', NULL),
+('Garlic Butter Shrimp', 'main course', 21, 44, 'Juicy shrimp cooked in a garlic butter sauce', 4, 2, 10, 5, 'Use fresh garlic for the best flavor.', 'Serve over rice or pasta.', NULL),
+('Cheese Omelette', 'main course', 22, 18, 'A classic cheese omelette perfect for breakfast', 2, 1, 5, 5, 'Use a non-stick pan for easy flipping.', 'Add a splash of milk for a fluffier texture.', NULL),
+('Bacon Wrapped Asparagus', 'main course', 23, 19, 'Crispy bacon wrapped around tender asparagus spears', 4, 2, 10, 15, 'Pre-cook the bacon slightly to reduce cooking time.', 'Serve immediately for the best texture.', NULL),
+('Tuna Salad', 'main course', 24, 20, 'A light and healthy tuna salad with a lemon dressing', 4, 1, 10, 0, 'Use canned tuna in water for a lighter option.', 'Add diced avocado for extra creaminess.', NULL),
+('Rice Pudding', 'dessert', 25, 21, 'A creamy and comforting rice pudding with a hint of cinnamon', 4, 2, 20, 30, 'Use Arborio rice for a creamier texture.', 'Garnish with a sprinkle of ground cinnamon.', NULL),
+('Carrot Soup', 'main course', 26, 22, 'A smooth and flavorful carrot soup with a hint of ginger', 4, 1, 10, 20, 'Use fresh ginger for a more vibrant flavor.', 'Serve with a dollop of sour cream.', NULL),
+('Candy Apples', 'dessert', 27, 23, 'Crisp apples coated in a shiny candy shell', 8, 3, 15, 5, 'Use a candy thermometer to ensure the correct temperature.', 'Allow to cool completely before serving.', NULL),
+
+
+
+
+
+
+--previous recipe inserts below:
+
 
 INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, recipe_description, quantity_of_servings, difficulty_level, prep_time, cooking_time, tip_1, tip_2, tip_3) VALUES 
 ('Grilled Salmon', 'main course', 1, 'Delicious grilled salmon seasoned with herbs', 4, 3, 20, 15, 'Make sure to preheat the grill before cooking.', 'Marinate the salmon for at least 30 minutes before grilling.', NULL),
@@ -977,90 +1066,7 @@ VALUES ('cook', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ra
 
 
 
-INSERT INTO ingredient (foodgroups_id, ingredient_name)
-VALUES 
-(1, 'Basil'),                -- Aromatic Herbs and Essential Oils
-(2, 'Green Tea'),            -- Coffee, Tea, and Their Products
-(3, 'Pickles'),              -- Preserved Foods
-(4, 'Honey'),                -- Sweeteners
-(5, 'Olive Oil'),            -- Fats and Oils
-(6, 'Milk'),                 -- Milk, Eggs, and Their Products
-(7, 'Chicken Breast'),       -- Meat and Meat Products
-(8, 'Salmon'),               -- Fish and Fish Products
-(9, 'Wheat Bread'),          -- Cereals and Their Products
-(10, 'Apple'),               -- Various Plant-based Foods
-(11, 'Chocolate Bar'),       -- Products with Sweeteners
-(12, 'Orange Juice'),        -- Various Beverages
-(1, 'Rosemary'),             -- Aromatic Herbs and Essential Oils
-(2, 'Coffee Beans'),         -- Coffee, Tea, and Their Products
-(3, 'Olives'),               -- Preserved Foods
-(4, 'Maple Syrup'),          -- Sweeteners
-(5, 'Butter'),               -- Fats and Oils
-(6, 'Cheese'),               -- Milk, Eggs, and Their Products
-(7, 'Bacon'),                -- Meat and Meat Products
-(8, 'Tuna'),                 -- Fish and Fish Products
-(9, 'Rice'),                 -- Cereals and Their Products
-(10, 'Carrot'),              -- Various Plant-based Foods
-(11, 'Candy'),               -- Products with Sweeteners
-(12, 'Cola'),                -- Various Beverages
-(1, 'Thyme'),                -- Aromatic Herbs and Essential Oils
-(2, 'Black Tea'),            -- Coffee, Tea, and Their Products
-(3, 'Canned Tomatoes'),      -- Preserved Foods
-(4, 'Agave Syrup'),          -- Sweeteners
-(5, 'Coconut Oil'),          -- Fats and Oils
-(6, 'Yogurt'),               -- Milk, Eggs, and Their Products
-(7, 'Ham'),                  -- Meat and Meat Products
-(8, 'Cod'),                  -- Fish and Fish Products
-(9, 'Pasta'),                -- Cereals and Their Products
-(10, 'Banana'),              -- Various Plant-based Foods
-(11, 'Cookies'),             -- Products with Sweeteners
-(12, 'Lemonade'),            -- Various Beverages
-(1, 'Oregano'),              -- Aromatic Herbs and Essential Oils
-(2, 'Herbal Tea'),           -- Coffee, Tea, and Their Products
-(3, 'Jam'),                  -- Preserved Foods
-(4, 'Molasses'),             -- Sweeteners
-(5, 'Ghee'),                 -- Fats and Oils
-(6, 'Eggs'),                 -- Milk, Eggs, and Their Products
-(7, 'Sausage'),              -- Meat and Meat Products
-(8, 'Shrimp'),               -- Fish and Fish Products
-(9, 'Oatmeal'),              -- Cereals and Their Products
-(10, 'Broccoli'),            -- Various Plant-based Foods
-(11, 'Cake'),                -- Products with Sweeteners
-(12, 'Iced Tea');            -- Various Beverages
-
-
-INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, prim_ingredient_id, recipe_description, quantity_of_servings, difficulty_level, prep_time, cooking_time, tip_1, tip_2, tip_3)
-VALUES 
-('Grilled Salmon', 'main course', 1, 8, 'Delicious grilled salmon seasoned with herbs', 4, 3, 20, 15, 'Make sure to preheat the grill before cooking.', 'Marinate the salmon for at least 30 minutes before grilling.', NULL),
-('Chocolate Cake', 'dessert', 2, 11, 'Decadent chocolate cake topped with chocolate ganache', 8, 4, 30, 40, 'Use high-quality cocoa powder for a richer flavor.', 'Allow the cake to cool completely before adding the ganache.', 'Garnish with fresh berries before serving.'),
-('Chicken Alfredo Pasta', 'main course', 3, 7, 'Creamy chicken Alfredo pasta with Parmesan cheese', 6, 3, 25, 20, 'Use fresh Parmesan cheese for best flavor.', 'Cook the pasta al dente for optimal texture.', 'Garnish with chopped parsley before serving.'),
-('Apple Pie', 'dessert', 4, 10, 'Classic homemade apple pie with cinnamon-spiced apples', 8, 4, 40, 50, 'Make sure to use a mix of sweet and tart apples for the filling.', 'Brush the top crust with egg wash for a golden finish.', 'Serve warm with vanilla ice cream.'),
-('Vegetable Stir-Fry', 'main course', 5, 22, 'Healthy vegetable stir-fry with tofu in a savory sauce', 4, 2, 15, 15, 'Cut vegetables uniformly for even cooking.', 'Add tofu towards the end to prevent overcooking.', 'Serve hot over steamed rice.'),
-('Vanilla Cupcakes', 'dessert', 6, 6, 'Soft and fluffy vanilla cupcakes with buttercream frosting', 12, 3, 30, 20, 'Make sure all ingredients are at room temperature for best results.', 'Use a piping bag to frost the cupcakes for a professional look.', 'Decorate with sprinkles or edible flowers.'),
-('Spaghetti Bolognese', 'main course', 7, 33, 'Classic Italian spaghetti with rich Bolognese sauce', 6, 3, 20, 30, 'Cook pasta until al dente for the perfect texture.', 'Simmer the sauce on low heat for at least 1 hour to develop flavors.', 'Serve with freshly grated Parmesan cheese.'),
-('New York Cheesecake', 'dessert', 8, 18, 'Creamy and decadent New York-style cheesecake with graham cracker crust', 10, 5, 45, 50, 'Ensure all ingredients are at room temperature for a smooth batter.', 'Bake the cheesecake in a water bath to prevent cracking.', 'Chill the cheesecake for at least 4 hours before serving.'),
-('Beef Tacos', 'main course', 9, 7, 'Tender beef tacos with homemade salsa and guacamole', 4, 2, 25, 20, 'Season the beef with Mexican spices for authentic flavor.', 'Warm the tortillas before assembling the tacos for better texture.', 'Top with fresh cilantro and a squeeze of lime juice.'),
-('Tiramisu', 'dessert', 10, 14, 'Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream', 8, 4, 30, 0, 'Use espresso or strong coffee for dipping the ladyfingers.', 'Dust the top with cocoa powder just before serving.', 'Chill the tiramisu for at least 4 hours to set.'),
-('Chicken Curry', 'main course', 11, 7, 'Flavorful chicken curry with aromatic spices and coconut milk', 6, 3, 25, 30, 'Toast whole spices before grinding for enhanced flavor.', 'Simmer the curry on low heat to allow flavors to develop.', 'Garnish with fresh cilantro and a squeeze of lime juice.'),
-('Lemon Bars', 'dessert', 12, 10, 'Tangy and sweet lemon bars with buttery shortbread crust', 12, 2, 20, 35, 'Zest the lemons before juicing for maximum flavor.', 'Chill the bars before cutting into squares for cleaner edges.', 'Dust with powdered sugar just before serving.'),
-('Mushroom Risotto', 'main course', 13, 22, 'Creamy mushroom risotto cooked with Arborio rice and Parmesan cheese', 4, 4, 30, 25, 'Use a combination of mushrooms for depth of flavor.', 'Add hot broth gradually and stir frequently for creamy texture.', 'Finish with a drizzle of truffle oil for a luxurious touch.'),
-('Chocolate Chip Cookies', 'dessert', 14, 11, 'Classic chocolate chip cookies with chewy centers and crispy edges', 24, 2, 15, 12, 'Chill the cookie dough for at least 30 minutes before baking for thicker cookies.', 'Use high-quality chocolate chips for the best flavor.', 'Bake until the edges are golden brown for the perfect texture.'),
-('Grilled Chicken Caesar Salad', 'main course', 15, 7, 'Grilled chicken served on a bed of crisp romaine lettuce with Caesar dressing', 4, 2, 20, 15, 'Marinate the chicken in Caesar dressing for extra flavor.', 'Grill the chicken until charred and cooked through.', 'Toss the lettuce with dressing just before serving to prevent wilting.'),
-('Panna Cotta', 'dessert', 16, 6, 'Creamy Italian dessert made with sweetened cream and gelatin', 6, 3, 20, 10, 'Use vanilla bean for a more intense flavor or vanilla extract as a substitute.', 'Bloom gelatin in cold water before adding to the warm cream mixture.', 'Serve with fresh berries or a fruit compote on top.'),
-('Tomato Basil Soup', 'main course', 17, 1, 'A rich and creamy tomato basil soup perfect for a light meal', 4, 2, 15, 30, 'Use ripe tomatoes for a better flavor.', 'Garnish with fresh basil leaves and a drizzle of olive oil.', NULL),
-('Green Tea Cheesecake', 'dessert', 18, 2, 'A smooth and creamy cheesecake infused with green tea flavor', 8, 3, 30, 50, 'Use matcha powder for a vibrant green color and distinct taste.', 'Chill for at least 4 hours before serving.', 'Serve with whipped cream and a dusting of matcha powder.'),
-('Olive Tapenade', 'main course', 19, 15, 'A savory olive tapenade perfect for spreading on bread or crackers', 6, 2, 10, 0, 'Use a mix of green and black olives for depth of flavor.', 'Serve with fresh baguette slices.', NULL),
-('Maple Syrup Pancakes', 'dessert', 20, 16, 'Fluffy pancakes drizzled with rich maple syrup', 4, 1, 10, 10, 'Make sure not to overmix the batter.', 'Serve hot with butter and additional syrup.', NULL),
-('Garlic Butter Shrimp', 'main course', 21, 44, 'Juicy shrimp cooked in a garlic butter sauce', 4, 2, 10, 5, 'Use fresh garlic for the best flavor.', 'Serve over rice or pasta.', NULL),
-('Cheese Omelette', 'main course', 22, 18, 'A classic cheese omelette perfect for breakfast', 2, 1, 5, 5, 'Use a non-stick pan for easy flipping.', 'Add a splash of milk for a fluffier texture.', NULL),
-('Bacon Wrapped Asparagus', 'main course', 23, 19, 'Crispy bacon wrapped around tender asparagus spears', 4, 2, 10, 15, 'Pre-cook the bacon slightly to reduce cooking time.', 'Serve immediately for the best texture.', NULL),
-('Tuna Salad', 'main course', 24, 20, 'A light and healthy tuna salad with a lemon dressing', 4, 1, 10, 0, 'Use canned tuna in water for a lighter option.', 'Add diced avocado for extra creaminess.', NULL),
-('Rice Pudding', 'dessert', 25, 21, 'A creamy and comforting rice pudding with a hint of cinnamon', 4, 2, 20, 30, 'Use Arborio rice for a creamier texture.', 'Garnish with a sprinkle of ground cinnamon.', NULL),
-('Carrot Soup', 'main course', 26, 22, 'A smooth and flavorful carrot soup with a hint of ginger', 4, 1, 10, 20, 'Use fresh ginger for a more vibrant flavor.', 'Serve with a dollop of sour cream.', NULL),
-('Candy Apples', 'dessert', 27, 23, 'Crisp apples coated in a shiny candy shell', 8, 3, 15, 5, 'Use a candy thermometer to ensure the correct temperature.', 'Allow to cool completely before serving.', NULL),
-
-
-
+--
 
 
 
