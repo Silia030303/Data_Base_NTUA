@@ -14,6 +14,8 @@ CREATE TABLE equipment(
     equipment_id INT(10) unsigned AUTO_INCREMENT NOT NULL, 
     equipment_name VARCHAR(50) NOT NULL ,
     instructions text DEFAULT NULL ,
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     PRIMARY KEY(equipment_id)
 );  
 
@@ -21,6 +23,8 @@ CREATE TABLE foodgroups(
  foodgroups_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
  foodgroups_name VARCHAR(50) NOT NULL,
  description text DEFAULT NULL,
+ image_url text DEFAULT NULL,
+ image_description text DEFAULT NULL,
  PRIMARY KEY(foodgroups_id)
  
     );
@@ -29,6 +33,8 @@ CREATE TABLE foodgroups(
 CREATE TABLE national_cuisine(
     natcuis_id INT(10) unsigned AUTO_INCREMENT  NOT NULL,
     natcuis_name VARCHAR(50) NOT NULL,
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     PRIMARY KEY(natcuis_id)
 );  
 
@@ -61,6 +67,8 @@ CREATE TABLE recipe(
     total_time INT unsigned AS (prep_time + cooking_time) STORED,
     KEY idx_total_time (total_time),
     FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     PRIMARY KEY(recipe_id)
 );
 
@@ -79,6 +87,8 @@ CREATE TABLE tags(
     tag_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     tag_name VARCHAR(50) NOT NULL,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     PRIMARY KEY(tag_id)
 );
 
@@ -99,6 +109,8 @@ CREATE TABLE ingredient(
     foodgroups_id INT(10) unsigned  NOT NULL, 
     ingredient_name VARCHAR(50) NOT NULL,
     unit_of_measurement INT(10) UNSIGNED NOT NULL ,
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     PRIMARY KEY(ingredient_id),  
     FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
 );
@@ -136,6 +148,8 @@ CREATE TABLE episode(
    episode_name VARCHAR(50) NOT NULL,
    episode_date date NOT NULL,
    season INT NOT NULL CHECK (season >= 0),
+   image_url text DEFAULT NULL,
+   image_description text DEFAULT NULL,
    primary key(episode_id)
 );
 
@@ -151,6 +165,8 @@ CREATE TABLE cook(
  phone_number CHAR(10) NOT NULL,
  position_level VARCHAR(30) CHECK (position_level IN ('cook A','cook B','cook C','chef assistant','chef')), 
  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(),
+ image_url text DEFAULT NULL,
+ image_description text DEFAULT NULL,
  PRIMARY KEY(cook_id)
 );
 
@@ -174,27 +190,13 @@ CREATE TABLE recipe_step (
     PRIMARY KEY(step_id)
 );
 
---delete this
-CREATE TABLE image (
-    type VARCHAR(100)  NOT NULL,
-    image_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-    image_url text NOT NULL,
-    image_description text DEFAULT NULL ,
-    last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    PRIMARY KEY(image_id)
-
-);  
-
-
--- this in every table that needs images
--- image text NULL,
--- image_description text NULL ,
-
 CREATE TABLE thematic_section(
     them_sec_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     name VARCHAR(50) NOT NULL,
     description text DEFAULT NULL,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     PRIMARY KEY(them_sec_id)
 );
 
