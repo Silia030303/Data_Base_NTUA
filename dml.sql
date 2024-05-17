@@ -973,3 +973,58 @@ VALUES ('cook', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ra
 ('episode','https://pbs.twimg.com/media/FTnZZRPWQAE0cXH.jpg:large'),
 ('tags','https://aclassictwist.com/wp-content/uploads/2022/04/Brunch-Charcuterie-Board-8.jpg'),
 ('foodgroups','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
+
+
+
+
+INSERT INTO ingredient (foodgroups_id, ingredient_name)
+VALUES 
+(1, 'Basil'),                -- Aromatic Herbs and Essential Oils
+(2, 'Green Tea'),            -- Coffee, Tea, and Their Products
+(3, 'Pickles'),              -- Preserved Foods
+(4, 'Honey'),                -- Sweeteners
+(5, 'Olive Oil'),            -- Fats and Oils
+(6, 'Milk'),                 -- Milk, Eggs, and Their Products
+(7, 'Chicken Breast'),       -- Meat and Meat Products
+(8, 'Salmon'),               -- Fish and Fish Products
+(9, 'Wheat Bread'),          -- Cereals and Their Products
+(10, 'Apple'),               -- Various Plant-based Foods
+(11, 'Chocolate Bar'),       -- Products with Sweeteners
+(12, 'Orange Juice'),        -- Various Beverages
+(1, 'Rosemary'),             -- Aromatic Herbs and Essential Oils
+(2, 'Coffee Beans'),         -- Coffee, Tea, and Their Products
+(3, 'Olives'),               -- Preserved Foods
+(4, 'Maple Syrup'),          -- Sweeteners
+(5, 'Butter'),               -- Fats and Oils
+(6, 'Cheese'),               -- Milk, Eggs, and Their Products
+(7, 'Bacon'),                -- Meat and Meat Products
+(8, 'Tuna'),                 -- Fish and Fish Products
+(9, 'Rice'),                 -- Cereals and Their Products
+(10, 'Carrot'),              -- Various Plant-based Foods
+(11, 'Candy'),               -- Products with Sweeteners
+(12, 'Cola'),                -- Various Beverages
+(1, 'Thyme'),                -- Aromatic Herbs and Essential Oils
+(2, 'Black Tea'),            -- Coffee, Tea, and Their Products
+(3, 'Canned Tomatoes'),      -- Preserved Foods
+(4, 'Agave Syrup'),          -- Sweeteners
+(5, 'Coconut Oil'),          -- Fats and Oils
+(6, 'Yogurt'),               -- Milk, Eggs, and Their Products
+(7, 'Ham'),                  -- Meat and Meat Products
+(8, 'Cod'),                  -- Fish and Fish Products
+(9, 'Pasta'),                -- Cereals and Their Products
+(10, 'Banana'),              -- Various Plant-based Foods
+(11, 'Cookies'),             -- Products with Sweeteners
+(12, 'Lemonade'),            -- Various Beverages
+(1, 'Oregano'),              -- Aromatic Herbs and Essential Oils
+(2, 'Herbal Tea'),           -- Coffee, Tea, and Their Products
+(3, 'Jam'),                  -- Preserved Foods
+(4, 'Molasses'),             -- Sweeteners
+(5, 'Ghee'),                 -- Fats and Oils
+(6, 'Eggs'),                 -- Milk, Eggs, and Their Products
+(7, 'Sausage'),              -- Meat and Meat Products
+(8, 'Shrimp'),               -- Fish and Fish Products
+(9, 'Oatmeal'),              -- Cereals and Their Products
+(10, 'Broccoli'),            -- Various Plant-based Foods
+(11, 'Cake'),                -- Products with Sweeteners
+(12, 'Iced Tea');            -- Various Beverages
+
