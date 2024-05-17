@@ -63,6 +63,8 @@ CREATE TABLE recipe(
     tip_1 text DEFAULT NULL,
     tip_2 text DEFAULT NULL,
     tip_3 text DEFAULT NULL,
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
     prep_time INT unsigned NOT NULL,  
     classification VARCHAR(50),
     cooking_time INT unsigned NOT NULL,
