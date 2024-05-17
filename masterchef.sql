@@ -64,6 +64,7 @@ CREATE TABLE recipe(
     tip_2 text DEFAULT NULL,
     tip_3 text DEFAULT NULL,
     prep_time INT unsigned NOT NULL,  
+    classification VARCHAR(50),
     cooking_time INT unsigned NOT NULL,
     total_time INT unsigned AS (prep_time + cooking_time) STORED,
     KEY idx_total_time (total_time),
