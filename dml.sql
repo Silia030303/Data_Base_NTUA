@@ -1,5 +1,9 @@
-INSERT INTO national_cuisine (natcuis_name) VALUES ('Afghan cuisine'),
- ('Albanian cuisine'),
+INSERT INTO national_cuisine (natcuis_name, image_url)
+VALUES 
+('Albanian cuisine','https://irp.cdn-website.com/560b6587/dms3rep/multi/image20-f1109880.png'),
+
+INSERT INTO national_cuisine (natcuis_name) VALUES
+ ('Afghan cuisine'),
 ('Algerian cuisine'),
  ('American cuisine'),
 ('Argentine cuisine'),
