@@ -81,9 +81,13 @@ INSERT INTO national_cuisine (natcuis_name) VALUES ('Afghan cuisine'),
 ('Slovak cuisine'),
 ('Spanish cuisine')
 ;
-INSERT INTO cook (first_name, last_name, birth_date, years_of_experience, phone_number, position_level)
+
+
+INSERT INTO cook (first_name, last_name, birth_date, years_of_experience, phone_number, position_level, image_url)
+VALUES ('Gordon', 'Ramsey', '1966-11-08', 30, '1234567890', 'chef', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ramsay-in-the-semi-finale-pt-2-3-chef-news-photo-1699984599.jpg?crop=0.788xw:1.00xh;0.212xw,0&resize=1200:*');
+
+ INSERT INTO cook (first_name, last_name, birth_date, years_of_experience, phone_number, position_level)
 VALUES 
-('Gordon', 'Ramsey', '1966-11-08', 30, '1234567890', 'chef'),
 ('Jamie', 'Oliver', '1975-05-27', 25, '9876543210', 'chef'),
 ('Bobby', 'Flay', '1964-12-10', 35, '5551234567', 'chef'),
 ('Nigella', 'Lawson', '1960-01-06', 40, '1112223333', 'chef'),
