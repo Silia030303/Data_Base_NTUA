@@ -55,6 +55,7 @@ CREATE TABLE recipe(
     recipe_category VARCHAR(20) NOT NULL,
     CONSTRAINT Check_YourColumn CHECK (recipe_category IN ('main course', 'dessert')) ,
     natcuis_id  INT(10) unsigned NOT NULL ,
+    prim_ingredient_id INT(10) unsigned NOT NULL, 
     recipe_description text DEFAULT NULL ,
     quantity_of_servings INT NOT NULL,
     difficulty_level INT NOT NULL,
@@ -67,8 +68,7 @@ CREATE TABLE recipe(
     total_time INT unsigned AS (prep_time + cooking_time) STORED,
     KEY idx_total_time (total_time),
     FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
-    image_url text DEFAULT NULL,
-    image_description text DEFAULT NULL,
+    FOREIGN KEY(prim_ingredient_id) REFERENCES ingredient(ingredient_id),
     PRIMARY KEY(recipe_id)
 );
 
