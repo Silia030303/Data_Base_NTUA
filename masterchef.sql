@@ -67,6 +67,10 @@ CREATE TABLE recipe(
     classification VARCHAR(50),
     cooking_time INT unsigned NOT NULL,
     total_time INT unsigned AS (prep_time + cooking_time) STORED,
+    fat_per_portion INT NOT NULL,
+    protein_per_portion INT NOT NULL,
+    carbohydrate_per_portion INT NOT NULL,
+    calories_per_calories INT NOT NULL,
     KEY idx_total_time (total_time),
     FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
     FOREIGN KEY(prim_ingredient_id) REFERENCES ingredient(ingredient_id),
@@ -252,14 +256,7 @@ CREATE TABLE cook_nat_cuis(
  FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
  PRIMARY KEY(cook_id,natcuis_id)
     );
-
-
---unfinished
-CREATE TABLE nutritional_info_recipe(
- nutinf_id INT(10) unsigned NOT NULL,
-PRIMARY KEY(nutinf_id)
  
-    );
     
 
 
