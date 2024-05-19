@@ -109,7 +109,6 @@ CREATE TABLE ingredient(
     ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     foodgroups_id INT(10) unsigned  NOT NULL, 
     ingredient_name VARCHAR(50) NOT NULL,
-    unit_of_measurement INT(10) UNSIGNED NOT NULL ,
     image_url text DEFAULT NULL,
     image_description text DEFAULT NULL,
     PRIMARY KEY(ingredient_id),  
