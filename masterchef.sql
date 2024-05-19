@@ -255,17 +255,6 @@ CREATE TABLE cook_nat_cuis(
     );
 
 
-CREATE TABLE winner(
-  episode_id INT unsigned NOT NULL,
-  cook_id INT unsigned NOT NULL,
-  sum_of_grades INT NOT NULL CHECK (sum_of_grades >= 0 and sum_of_grades <= 15),
-  PRIMARY KEY(episode_id,cook_id),
-  FOREIGN KEY(episode_id) REFERENCES episode(episode_id),
-  FOREIGN KEY(cook_id) REFERENCES cook(cook_id)
-
-);
-
-
 --unfinished
 CREATE TABLE nutritional_info_recipe(
  nutinf_id INT(10) unsigned NOT NULL,
