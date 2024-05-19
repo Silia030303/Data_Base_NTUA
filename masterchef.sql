@@ -39,11 +39,11 @@ CREATE TABLE national_cuisine(
 );  
 
 
-CREATE TABLE meal(
-    meal_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-    meal_name VARCHAR(50) NOT NULL,
+CREATE TABLE meal_type(
+    meal_type_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    meal_type_name VARCHAR(50) NOT NULL,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    PRIMARY KEY(meal_id)
+    PRIMARY KEY(meal_type_id)
 );
 
 
@@ -132,13 +132,13 @@ CREATE TABLE ingredient_VS_recipe(
 );
 
 
-CREATE TABLE recipe_meal (
+CREATE TABLE recipe_meal_type (
     recipe_id INT unsigned NOT NULL,
-    meal_id INT unsigned NOT NULL,
+    meal_type_id INT unsigned NOT NULL,
     FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
-    FOREIGN KEY(meal_id) REFERENCES meal(meal_id),
+    FOREIGN KEY(meal_type_id) REFERENCES meal_type(meal_type_id),
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    PRIMARY KEY(recipe_id,meal_id)
+    PRIMARY KEY(recipe_id,meal_type_id)
 );
 
 -- normalization 100 ml 
