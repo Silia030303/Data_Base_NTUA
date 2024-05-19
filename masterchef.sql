@@ -42,8 +42,6 @@ CREATE TABLE national_cuisine(
 CREATE TABLE meal(
     meal_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     meal_name VARCHAR(50) NOT NULL,
-    meal_calories INT(10) UNSIGNED NOT NULL,
-    meal_type VARCHAR(50) NOT NULL,
     last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY(meal_id)
 );
