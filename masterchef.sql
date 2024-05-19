@@ -124,8 +124,7 @@ CREATE TABLE ingredient_VS_recipe(
     FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
     FOREIGN KEY (ingredient_id) REFERENCES ingredient(ingredient_id),
     quantity INT NULL CHECK (quantity >= 0),
-    unit_of_measurement INT(20) unsigned NOT NULL ,
-    calories_per_100ml INT(20) unsigned NOT NULL , 
+    unit_of_measurement VARCHAR() unsigned NOT NULL ,
     calories INT(20) NOT NULL CHECK (calories >= 0) 
 
 );
