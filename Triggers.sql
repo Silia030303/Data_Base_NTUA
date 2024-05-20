@@ -68,8 +68,34 @@ CREATE TRIGGER check_unit_of_measurement_quantity_update
 BEFORE UPDATE ON ingredient_VS_recipe
 FOR EACH ROW
 BEGIN
-    IF NEW.unit_of_measurement_quantity NOT IN ('Γραμμάριο (g)', 'Κιλό (kg)', 'Μιλιγκράμ (mg)','Ουγγιά (oz)','Λίβρα (lb)','Κούπα (cup)','Μισή κούπα (½ cup)','Τέταρτο κούπας (¼ cup)','Τρια τέταρτα κούπας (¾ cup)','Κουτάλι της σούπας (tbsp ή T)','Κουταλάκι του γλυκού (tsp ή t)','Μιλιλίτρο (ml)','Λίτρο (L)','Πίντα (pint)','Γαλόνι (gallon)','Φλιτζάνι (fl. oz)','Ένα κομμάτι (piece)','Μισό κομμάτι (half piece)','Φέτα (slice)','Σφήνα (wedge)','Σκελίδα (clove, για το σκόρδο)','Κεφάλι (head, για το μαρούλι ή το σκόρδο)','Σταγόνα (drop)','Σφηνάκι (shot, για τα υγρά)','Συσκευασία (pack ή package)') THEN
-        SIGNAL SQLSTATE '45000'
+    IF NEW.unit_of_measurement_quantity NOT IN (
+    'Gram (g)',
+    'Kilogram (kg)',
+    'Milligram (mg)',
+    'Ounce (oz)',
+    'Pound (lb)',
+    'Cup (cup)',
+    'Half cup (½ cup)',
+    'Quarter cup (¼ cup)',
+    'Three-quarters cup (¾ cup)',
+    'Tablespoon (tbsp or T)',
+    'Teaspoon (tsp or t)',
+    'Milliliter (ml)',
+    'Liter (L)',
+    'Pint (pint)',
+    'Gallon (gallon)',
+    'Fluid ounce (fl. oz)',
+    'One piece (piece)',
+    'Half piece (half piece)',
+    'Slice (slice)',
+    'Wedge (wedge)',
+    'Clove (for garlic) (clove)',
+    'Head (for lettuce or garlic) (head)',
+    'Drop (drop)',
+    'Shot (for liquids) (shot)',
+    'Pack or package (pack or package)'
+)
+    SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement_quantity. Allowed values are: Γραμμάριο (g), Κιλό (kg), Μιλιγκράμ (mg),Ουγγιά (oz),Λίβρα (lb),Κούπα (cup),Μισή κούπα (½ cup),Τέταρτο κούπας (¼ cup),Τρια τέταρτα κούπας (¾ cup),Κουτάλι της σούπας (tbsp ή T),Κουταλάκι του γλυκού (tsp ή t),Μιλιλίτρο (ml),Λίτρο (L),Πίντα (pint),Γαλόνι (gallon),Φλιτζάνι (fl. oz),Ένα κομμάτι (piece),Μισό κομμάτι (half piece),Φέτα (slice),Σφήνα (wedge),Σκελίδα (clove, για το σκόρδο),Κεφάλι (head, για το μαρούλι ή το σκόρδο),Σταγόνα (drop),Σφηνάκι (shot, για τα υγρά),Συσκευασία (pack ή package)';
     END IF;
 END; //
