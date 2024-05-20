@@ -184,6 +184,37 @@ ORDER BY e.grade DESC
 LIMIT 5;
 
 
+--or for more general : 
+
+WITH RankedJudges AS (
+    SELECT
+        c2.last_name AS judge_name,
+        c.last_name AS cook_name,
+        e.grade,
+        e.episode_id,
+        ROW_NUMBER() OVER (PARTITION BY c.last_name ORDER BY e.grade DESC) AS rank
+    FROM
+        judge j
+    JOIN
+        evaluation e ON j.judge_id = e.judge_id
+    JOIN
+        episode_cook_recipe ecr ON ecr.cook_id = e.cook_id
+    JOIN
+        cook c ON c.cook_id = ecr.cook_id
+    JOIN
+        cook c2 ON c2.cook_id = j.cook_id
+)
+SELECT
+    judge_name,
+    cook_name,
+    grade,
+    episode_id
+FROM
+    RankedJudges
+WHERE
+    rank <= 5;
+
+
 -------------------------------------------------------------------------Query 12--------------------------------------------------------------------- 
 
 SELECT season, AVG(avg_dif) AS avg_difficulty
