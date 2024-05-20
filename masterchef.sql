@@ -70,7 +70,6 @@ CREATE TABLE recipe(
     fat_per_portion INT NOT NULL,
     protein_per_portion INT NOT NULL,
     carbohydrate_per_portion INT NOT NULL,
-    calories_per_calories INT NOT NULL,
     KEY idx_total_time (total_time),
     FOREIGN KEY(natcuis_id) REFERENCES national_cuisine(natcuis_id),
     FOREIGN KEY(prim_ingredient_id) REFERENCES ingredient(ingredient_id),
