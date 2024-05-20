@@ -290,40 +290,50 @@ VALUES
 (12, 'Iced Tea');            -- Various Beverages
 
 
-INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, prim_ingredient_id, recipe_description, quantity_of_servings, difficulty_level, prep_time, cooking_time, tip_1, tip_2, tip_3)
-VALUES 
-('Grilled Salmon', 'main course', 1, 8, 'Delicious grilled salmon seasoned with herbs', 4, 3, 20, 15, 'Make sure to preheat the grill before cooking.', 'Marinate the salmon for at least 30 minutes before grilling.', NULL),
-('Chocolate Cake', 'dessert', 2, 11, 'Decadent chocolate cake topped with chocolate ganache', 8, 4, 30, 40, 'Use high-quality cocoa powder for a richer flavor.', 'Allow the cake to cool completely before adding the ganache.', 'Garnish with fresh berries before serving.'),
-('Chicken Alfredo Pasta', 'main course', 3, 7, 'Creamy chicken Alfredo pasta with Parmesan cheese', 6, 3, 25, 20, 'Use fresh Parmesan cheese for best flavor.', 'Cook the pasta al dente for optimal texture.', 'Garnish with chopped parsley before serving.'),
-('Apple Pie', 'dessert', 4, 10, 'Classic homemade apple pie with cinnamon-spiced apples', 8, 4, 40, 50, 'Make sure to use a mix of sweet and tart apples for the filling.', 'Brush the top crust with egg wash for a golden finish.', 'Serve warm with vanilla ice cream.'),
-('Vegetable Stir-Fry', 'main course', 5, 22, 'Healthy vegetable stir-fry with tofu in a savory sauce', 4, 2, 15, 15, 'Cut vegetables uniformly for even cooking.', 'Add tofu towards the end to prevent overcooking.', 'Serve hot over steamed rice.'),
-('Vanilla Cupcakes', 'dessert', 6, 6, 'Soft and fluffy vanilla cupcakes with buttercream frosting', 12, 3, 30, 20, 'Make sure all ingredients are at room temperature for best results.', 'Use a piping bag to frost the cupcakes for a professional look.', 'Decorate with sprinkles or edible flowers.'),
-('Spaghetti Bolognese', 'main course', 7, 33, 'Classic Italian spaghetti with rich Bolognese sauce', 6, 3, 20, 30, 'Cook pasta until al dente for the perfect texture.', 'Simmer the sauce on low heat for at least 1 hour to develop flavors.', 'Serve with freshly grated Parmesan cheese.'),
-('New York Cheesecake', 'dessert', 8, 18, 'Creamy and decadent New York-style cheesecake with graham cracker crust', 10, 5, 45, 50, 'Ensure all ingredients are at room temperature for a smooth batter.', 'Bake the cheesecake in a water bath to prevent cracking.', 'Chill the cheesecake for at least 4 hours before serving.'),
-('Beef Tacos', 'main course', 9, 7, 'Tender beef tacos with homemade salsa and guacamole', 4, 2, 25, 20, 'Season the beef with Mexican spices for authentic flavor.', 'Warm the tortillas before assembling the tacos for better texture.', 'Top with fresh cilantro and a squeeze of lime juice.'),
-('Tiramisu', 'dessert', 10, 14, 'Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream', 8, 4, 30, 0, 'Use espresso or strong coffee for dipping the ladyfingers.', 'Dust the top with cocoa powder just before serving.', 'Chill the tiramisu for at least 4 hours to set.'),
-('Chicken Curry', 'main course', 11, 7, 'Flavorful chicken curry with aromatic spices and coconut milk', 6, 3, 25, 30, 'Toast whole spices before grinding for enhanced flavor.', 'Simmer the curry on low heat to allow flavors to develop.', 'Garnish with fresh cilantro and a squeeze of lime juice.'),
-('Lemon Bars', 'dessert', 12, 10, 'Tangy and sweet lemon bars with buttery shortbread crust', 12, 2, 20, 35, 'Zest the lemons before juicing for maximum flavor.', 'Chill the bars before cutting into squares for cleaner edges.', 'Dust with powdered sugar just before serving.'),
-('Mushroom Risotto', 'main course', 13, 22, 'Creamy mushroom risotto cooked with Arborio rice and Parmesan cheese', 4, 4, 30, 25, 'Use a combination of mushrooms for depth of flavor.', 'Add hot broth gradually and stir frequently for creamy texture.', 'Finish with a drizzle of truffle oil for a luxurious touch.'),
-('Chocolate Chip Cookies', 'dessert', 14, 11, 'Classic chocolate chip cookies with chewy centers and crispy edges', 24, 2, 15, 12, 'Chill the cookie dough for at least 30 minutes before baking for thicker cookies.', 'Use high-quality chocolate chips for the best flavor.', 'Bake until the edges are golden brown for the perfect texture.'),
-('Grilled Chicken Caesar Salad', 'main course', 15, 7, 'Grilled chicken served on a bed of crisp romaine lettuce with Caesar dressing', 4, 2, 20, 15, 'Marinate the chicken in Caesar dressing for extra flavor.', 'Grill the chicken until charred and cooked through.', 'Toss the lettuce with dressing just before serving to prevent wilting.'),
-('Panna Cotta', 'dessert', 16, 6, 'Creamy Italian dessert made with sweetened cream and gelatin', 6, 3, 20, 10, 'Use vanilla bean for a more intense flavor or vanilla extract as a substitute.', 'Bloom gelatin in cold water before adding to the warm cream mixture.', 'Serve with fresh berries or a fruit compote on top.'),
-('Tomato Basil Soup', 'main course', 17, 1, 'A rich and creamy tomato basil soup perfect for a light meal', 4, 2, 15, 30, 'Use ripe tomatoes for a better flavor.', 'Garnish with fresh basil leaves and a drizzle of olive oil.', NULL),
-('Green Tea Cheesecake', 'dessert', 18, 2, 'A smooth and creamy cheesecake infused with green tea flavor', 8, 3, 30, 50, 'Use matcha powder for a vibrant green color and distinct taste.', 'Chill for at least 4 hours before serving.', 'Serve with whipped cream and a dusting of matcha powder.'),
-('Olive Tapenade', 'main course', 19, 15, 'A savory olive tapenade perfect for spreading on bread or crackers', 6, 2, 10, 0, 'Use a mix of green and black olives for depth of flavor.', 'Serve with fresh baguette slices.', NULL),
-('Maple Syrup Pancakes', 'dessert', 20, 16, 'Fluffy pancakes drizzled with rich maple syrup', 4, 1, 10, 10, 'Make sure not to overmix the batter.', 'Serve hot with butter and additional syrup.', NULL),
-('Garlic Butter Shrimp', 'main course', 21, 44, 'Juicy shrimp cooked in a garlic butter sauce', 4, 2, 10, 5, 'Use fresh garlic for the best flavor.', 'Serve over rice or pasta.', NULL),
-('Cheese Omelette', 'main course', 22, 18, 'A classic cheese omelette perfect for breakfast', 2, 1, 5, 5, 'Use a non-stick pan for easy flipping.', 'Add a splash of milk for a fluffier texture.', NULL),
-('Bacon Wrapped Asparagus', 'main course', 23, 19, 'Crispy bacon wrapped around tender asparagus spears', 4, 2, 10, 15, 'Pre-cook the bacon slightly to reduce cooking time.', 'Serve immediately for the best texture.', NULL),
-('Tuna Salad', 'main course', 24, 20, 'A light and healthy tuna salad with a lemon dressing', 4, 1, 10, 0, 'Use canned tuna in water for a lighter option.', 'Add diced avocado for extra creaminess.', NULL),
-('Rice Pudding', 'dessert', 25, 21, 'A creamy and comforting rice pudding with a hint of cinnamon', 4, 2, 20, 30, 'Use Arborio rice for a creamier texture.', 'Garnish with a sprinkle of ground cinnamon.', NULL),
-('Carrot Soup', 'main course', 26, 22, 'A smooth and flavorful carrot soup with a hint of ginger', 4, 1, 10, 20, 'Use fresh ginger for a more vibrant flavor.', 'Serve with a dollop of sour cream.', NULL),
-('Candy Apples', 'dessert', 27, 23, 'Crisp apples coated in a shiny candy shell', 8, 3, 15, 5, 'Use a candy thermometer to ensure the correct temperature.', 'Allow to cool completely before serving.', NULL),
-
-
-
-
-
+INSERT INTO recipe (
+    recipe_name, 
+    recipe_category, 
+    natcuis_id, 
+    prim_ingredient_id, 
+    recipe_description, 
+    quantity_of_servings, 
+    difficulty_level, 
+    prep_time, 
+    cooking_time, 
+    tip_1, 
+    tip_2, 
+    tip_3,
+    fat_per_portion,
+    protein_per_portion,
+    carbohydrate_per_portion
+) VALUES 
+('Grilled Salmon', 'main course', 1, 8, 'Delicious grilled salmon seasoned with herbs', 4, 3, 20, 15, 'Make sure to preheat the grill before cooking.', 'Marinate the salmon for at least 30 minutes before grilling.', NULL, 10, 25, 5),
+('Chocolate Cake', 'dessert', 2, 11, 'Decadent chocolate cake topped with chocolate ganache', 8, 4, 30, 40, 'Use high-quality cocoa powder for a richer flavor.', 'Allow the cake to cool completely before adding the ganache.', 'Garnish with fresh berries before serving.', 20, 6, 50),
+('Chicken Alfredo Pasta', 'main course', 3, 7, 'Creamy chicken Alfredo pasta with Parmesan cheese', 6, 3, 25, 20, 'Use fresh Parmesan cheese for best flavor.', 'Cook the pasta al dente for optimal texture.', 'Garnish with chopped parsley before serving.', 15, 30, 45),
+('Apple Pie', 'dessert', 4, 10, 'Classic homemade apple pie with cinnamon-spiced apples', 8, 4, 40, 50, 'Make sure to use a mix of sweet and tart apples for the filling.', 'Brush the top crust with egg wash for a golden finish.', 'Serve warm with vanilla ice cream.', 15, 2, 55),
+('Vegetable Stir-Fry', 'main course', 5, 22, 'Healthy vegetable stir-fry with tofu in a savory sauce', 4, 2, 15, 15, 'Cut vegetables uniformly for even cooking.', 'Add tofu towards the end to prevent overcooking.', 'Serve hot over steamed rice.', 5, 10, 30),
+('Vanilla Cupcakes', 'dessert', 6, 6, 'Soft and fluffy vanilla cupcakes with buttercream frosting', 12, 3, 30, 20, 'Make sure all ingredients are at room temperature for best results.', 'Use a piping bag to frost the cupcakes for a professional look.', 'Decorate with sprinkles or edible flowers.', 12, 2, 40),
+('Spaghetti Bolognese', 'main course', 7, 33, 'Classic Italian spaghetti with rich Bolognese sauce', 6, 3, 20, 30, 'Cook pasta until al dente for the perfect texture.', 'Simmer the sauce on low heat for at least 1 hour to develop flavors.', 'Serve with freshly grated Parmesan cheese.', 18, 20, 55),
+('New York Cheesecake', 'dessert', 8, 18, 'Creamy and decadent New York-style cheesecake with graham cracker crust', 10, 5, 45, 50, 'Ensure all ingredients are at room temperature for a smooth batter.', 'Bake the cheesecake in a water bath to prevent cracking.', 'Chill the cheesecake for at least 4 hours before serving.', 25, 7, 50),
+('Beef Tacos', 'main course', 9, 7, 'Tender beef tacos with homemade salsa and guacamole', 4, 2, 25, 20, 'Season the beef with Mexican spices for authentic flavor.', 'Warm the tortillas before assembling the tacos for better texture.', 'Top with fresh cilantro and a squeeze of lime juice.', 20, 30, 40),
+('Tiramisu', 'dessert', 10, 14, 'Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream', 8, 4, 30, 0, 'Use espresso or strong coffee for dipping the ladyfingers.', 'Dust the top with cocoa powder just before serving.', 'Chill the tiramisu for at least 4 hours to set.', 15, 8, 45),
+('Chicken Curry', 'main course', 11, 7, 'Flavorful chicken curry with aromatic spices and coconut milk', 6, 3, 25, 30, 'Toast whole spices before grinding for enhanced flavor.', 'Simmer the curry on low heat to allow flavors to develop.', 'Garnish with fresh cilantro and a squeeze of lime juice.', 18, 25, 35),
+('Lemon Bars', 'dessert', 12, 10, 'Tangy and sweet lemon bars with buttery shortbread crust', 12, 2, 20, 35, 'Zest the lemons before juicing for maximum flavor.', 'Chill the bars before cutting into squares for cleaner edges.', 'Dust with powdered sugar just before serving.', 10, 2, 50),
+('Mushroom Risotto', 'main course', 13, 22, 'Creamy mushroom risotto cooked with Arborio rice and Parmesan cheese', 4, 4, 30, 25, 'Use a combination of mushrooms for depth of flavor.', 'Add hot broth gradually and stir frequently for creamy texture.', 'Finish with a drizzle of truffle oil for a luxurious touch.', 15, 10, 60),
+('Chocolate Chip Cookies', 'dessert', 14, 11, 'Classic chocolate chip cookies with chewy centers and crispy edges', 24, 2, 15, 12, 'Chill the cookie dough for at least 30 minutes before baking for thicker cookies.', 'Use high-quality chocolate chips for the best flavor.', 'Bake until the edges are golden brown for the perfect texture.', 10, 3, 25),
+('Grilled Chicken Caesar Salad', 'main course', 15, 7, 'Grilled chicken served on a bed of crisp romaine lettuce with Caesar dressing', 4, 2, 20, 15, 'Marinate the chicken in Caesar dressing for extra flavor.', 'Grill the chicken until charred and cooked through.', 'Toss the lettuce with dressing just before serving to prevent wilting.', 12, 25, 5),
+('Panna Cotta', 'dessert', 16, 6, 'Creamy Italian dessert made with sweetened cream and gelatin', 6, 3, 20, 10, 'Use vanilla bean for a more intense flavor or vanilla extract as a substitute.', 'Bloom gelatin in cold water before adding to the warm cream mixture.', 'Serve with fresh berries or a fruit compote on top.', 18, 4, 20),
+('Tomato Basil Soup', 'main course', 17, 1, 'A rich and creamy tomato basil soup perfect for a light meal', 4, 2, 15, 30, 'Use ripe tomatoes for a better flavor.', 'Garnish with fresh basil leaves and a drizzle of olive oil.', NULL, 6, 2, 25),
+('Green Tea Cheesecake', 'dessert', 18, 2, 'A smooth and creamy cheesecake infused with green tea flavor', 8, 3, 30, 50, 'Use matcha powder for a vibrant green color and distinct taste.', 'Chill for at least 4 hours before serving.', 'Serve with whipped cream and a dusting of matcha powder.', 20, 6, 45),
+('Olive Tapenade', 'main course', 19, 15, 'A savory olive tapenade perfect for spreading on bread or crackers', 6, 2, 10, 0, 'Use a mix of green and black olives for depth of flavor.', 'Serve with fresh baguette slices.', NULL, 12, 1, 5),
+('Maple Syrup Pancakes', 'dessert', 20, 16, 'Fluffy pancakes drizzled with rich maple syrup', 4, 1, 10, 10, 'Make sure not to overmix the batter.', 'Serve hot with butter and additional syrup.', NULL, 8, 4, 35),
+('Garlic Butter Shrimp', 'main course', 21, 44, 'Juicy shrimp cooked in a garlic butter sauce', 4, 2, 10, 5, 'Use fresh garlic for the best flavor.', 'Serve over rice or pasta.', NULL, 20, 10, 2),
+('Cheese Omelette', 'main course', 22, 18, 'A classic cheese omelette perfect for breakfast', 2, 1, 5, 5, 'Use a non-stick pan for easy flipping.', 'Add a splash of milk for a fluffier texture.', NULL, 10, 6, 1),
+('Bacon Wrapped Asparagus', 'main course', 23, 19, 'Crispy bacon wrapped around tender asparagus spears', 4, 2, 10, 15, 'Pre-cook the bacon slightly to reduce cooking time.', 'Serve immediately for the best texture.', NULL, 25, 4, 6),
+('Tuna Salad', 'main course', 24, 20, 'A light and healthy tuna salad with a lemon dressing', 4, 1, 10, 0, 'Use canned tuna in water for a lighter option.', 'Add diced avocado for extra creaminess.', NULL, 5, 20, 2),
+('Rice Pudding', 'dessert', 25, 21, 'A creamy and comforting rice pudding with a hint of cinnamon', 4, 2, 20, 30, 'Use Arborio rice for a creamier texture.', 'Garnish with a sprinkle of ground cinnamon.', NULL, 5, 4, 45),
+('Carrot Soup', 'main course', 26, 22, 'A smooth and flavorful carrot soup with a hint of ginger', 4, 1, 10, 20, 'Use fresh ginger for a more vibrant flavor.', 'Serve with a dollop of sour cream.', NULL, 3, 2, 15),
+('Candy Apples', 'dessert', 27, 23, 'Crisp apples coated in a shiny candy shell', 8, 3, 15, 5, 'Use a candy thermometer to ensure the correct temperature.', 'Allow to cool completely before serving.', NULL, 0, 1, 75);
 
 --previous recipe inserts below:
 
