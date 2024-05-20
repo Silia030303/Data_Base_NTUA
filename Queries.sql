@@ -228,8 +228,49 @@ FROM (
 GROUP BY season;
 
 -------------------------------------------------------------------------Query 13--------------------------------------------------------------------- 
+SELECT 
+    combined.episode_id,
+    combined.episode_name, 
+    combined.episode_date,
+    SUM(
+        CASE combined.position_level
+            WHEN 'cook A' THEN 1
+            WHEN 'cook B' THEN 2
+            WHEN 'cook C' THEN 3
+            WHEN 'chef assistant' THEN 4
+            WHEN 'chef' THEN 5
+        END
+    ) AS total_position_level
+FROM (
+    SELECT 
+        e.episode_id,
+        e.episode_name, 
+        e.episode_date,
+        c.position_level
+    FROM 
+        episode e
+    JOIN 
+        episode_cook_recipe ecr ON e.episode_id = ecr.episode_id
+    JOIN 
+        cook c ON ecr.cook_id = c.cook_id
+    UNION ALL   
+    SELECT 
+        e.episode_id,
+        e.episode_name, 
+        e.episode_date,
+        c.position_level
+    FROM judge j
+    JOIN cook c ON j.cook_id = c.cook_id
+    JOIN evaluation ev ON ev.judge_id = j.judge_id
+    JOIN episode e ON ev.episode_id = e.episode_id
+) AS combined
+GROUP BY combined.episode_id
+ORDER BY 
+    total_position_level ASC 
+;
+--LIMIT 1;
 
-
+-- needs more inserts
 
 -------------------------------------------------------------------------Query 14--------------------------------------------------------------------- 
 
