@@ -136,7 +136,7 @@ LIMIT 10;
 
 -------------------------------------------------------------------------Query 9--------------------------------------------------------------------- 
 SELECT 
-    YEAR(e.episode_date) AS year,
+    YEAR(e.episode_date) AS year, e.season,
     AVG(r.carbohydrate_per_portion * r.quantity_of_servings) AS total_carbohydrates
 FROM 
     episode e
@@ -145,7 +145,7 @@ JOIN
 JOIN 
     recipe r ON ecr.recipe_id = r.recipe_id
 GROUP BY 
-    YEAR(e.episode_date)
+    e.season
 ORDER BY 
     year;
 -------------------------------------------------------------------------Query 10--------------------------------------------------------------------- 
