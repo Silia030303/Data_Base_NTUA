@@ -135,9 +135,19 @@ ORDER BY equip_count DESC
 LIMIT 10;
 
 -------------------------------------------------------------------------Query 9--------------------------------------------------------------------- 
-
-
-
+SELECT 
+    YEAR(e.episode_date) AS year,
+    AVG(r.carbohydrate_per_portion * r.quantity_of_servings) AS total_carbohydrates
+FROM 
+    episode e
+JOIN 
+    episode_cook_recipe ecr ON e.episode_id = ecr.episode_id
+JOIN 
+    recipe r ON ecr.recipe_id = r.recipe_id
+GROUP BY 
+    YEAR(e.episode_date)
+ORDER BY 
+    year;
 -------------------------------------------------------------------------Query 10--------------------------------------------------------------------- 
 
 SELECT table1.natcuis_name, table1.season as name_of_season_of_participation_table1, table2.season as name_of_season_of_participation_table2, 
@@ -202,4 +212,5 @@ JOIN episode_cook_recipe ecr ON ecr.recipe_id= ir.recipe_id
 LEFT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
 WHERE fg.foodgroups_id  IS NULL;
 --needs inserts in ingredient and ingredient_VS_recipe  to return smth
+
 
