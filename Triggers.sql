@@ -26,7 +26,7 @@ END; //
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
 CREATE TRIGGER check_foodgroups_update
-BEFORE UPDATE ON  foodgroups_name
+BEFORE UPDATE ON  foodgroups
 FOR EACH ROW
 BEGIN
     IF NEW.foodgroups_name  IN ('Aromatic Herbs and Essential Oils', 'Coffee, Tea, and Their Products','Preserved Foods','Sweeteners','Fats and Oils','Milk, Eggs, and Their Products','Meat and Meat Products', 'Fish and Fish Products' ,'Cereals and Their Products','Various Plant-based Foods','Products with Sweeteners', 'Various Beverages') THEN
