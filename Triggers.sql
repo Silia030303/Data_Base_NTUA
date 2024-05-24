@@ -110,7 +110,7 @@ BEGIN
 END; //
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
-CREATE TRIGGER check_foodgroups_update
+CREATE TRIGGER check_foodgroups_update_in_ingridient
 BEFORE UPDATE ON  ingredient
 FOR EACH ROW
 BEGIN
