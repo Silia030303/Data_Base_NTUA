@@ -1131,87 +1131,8 @@ INSERT INTO recipe_meal_type (recipe_id, meal_type_id) VALUES
 -- Maple Syrup Pancakes
 (20, 1), -- Breakfast
 (20, 2), -- Brunch
--- Garlic Butter Shrimp
-(21, 5), -- Dinner
--- Cheese Omelette
-(22, 1), -- Breakfast
-(22, 2), -- Brunch
--- Bacon Wrapped Asparagus
-(23, 5), -- Dinner
--- Tuna Salad
-(24, 2), -- Brunch
--- Rice Pudding
-(25, 4), -- Afternoon Snack
--- Carrot Soup
-(26, 3), -- Lunch
--- Candy Apples
-(27, 4), -- Afternoon Snack
--- Greek Salad
-(28, 3), -- Lunch
-(28, 2), -- Brunch
--- Beef Stroganoff
-(29, 3), -- Lunch
--- Lentil Soup
-(30, 3), -- Lunch
--- French Toast
-(31, 1), -- Breakfast
--- Caprese Salad
-(32, 3), -- Lunch
--- Spicy Tuna Roll
-(33, 4), -- Afternoon Snack
--- Vegetable Curry
-(34, 5), -- Dinner
-(34, 3), -- Lunch
--- Blueberry Muffins
-(35, 4), -- Afternoon Snack
--- Quiche Lorraine
-(36, 3), -- Lunch
--- Pad Thai
-(37, 5), -- Dinner
--- Pancakes
-(38, 2), -- Brunch
--- Roast Chicken
-(39, 5), -- Dinner
--- Mango Smoothie
-(40, 1), -- Breakfast
--- Stuffed Peppers
-(41, 5), -- Dinner
--- Falafel Wrap
-(42, 3), -- Lunch
-(42, 4), -- Afternoon Snack
--- Clam Chowder
-(43, 3), -- Lunch
--- Eggplant Parmesan
-(44, 5), -- Dinner
--- Banana Bread
-(45, 1), -- Breakfast
-(45, 4), -- Afternoon Snack
--- Caesar Salad
-(46, 3), -- Lunch
--- Teriyaki Chicken
-(47, 3), -- Lunch
--- Shrimp Scampi
-(48, 5), -- Dinner
--- Chocolate Mousse
-(49, 4), -- Afternoon Snack
--- Minestrone Soup
-(50, 3), -- Lunch
--- Pork Chops
-(51, 5), -- Dinner
--- Greek Yogurt Parfait
-(52, 1), -- Breakfast
--- Spinach and Feta Pie
-(53, 5), -- Dinner
-(53, 3), -- Lunch
--- Lamb Kebabs
-(54, 5), -- Dinner
--- Pumpkin Soup
-(55, 3), -- Lunch
--- Cheese Pizza
-(56, 5), -- Dinner
--- Mango Sorbet
-(57, 4), -- Afternoon Snack;
- ----- only the 20 first recipes have steps----------
+
+ ----- Only the first 20 recipes have steps----------
 INSERT INTO recipe_step (step_description, serial_number, recipe_id) VALUES 
 -- Grilled Salmon
 ('Preheat the grill to medium-high heat.', 1, 1),
@@ -1296,6 +1217,123 @@ INSERT INTO recipe_step (step_description, serial_number, recipe_id) VALUES
 ('Mix the pancake batter until just combined.', 1, 20),
 ('Cook the pancakes on a hot griddle until bubbles form.', 2, 20),
 ('Serve with butter and maple syrup.', 3, 20);
+
+INSERT INTO recipe_equipment (recipe_id, equipment_id) VALUES 
+-- Grilled Salmon
+(1, 1), -- Chef Knife
+(1, 2), -- Cutting Board
+(1, 5), -- Frying Pan
+-- Chocolate Cake
+(2, 1), -- Chef Knife
+(2, 2), -- Cutting Board
+(2, 3), -- Mixing Bowl
+(2, 6), -- Oven
+(2, 7), -- Blender
+(2, 8), -- Food Processor
+(2, 17), -- Mixer
+(2, 24), -- Cooling Rack
+(2, 25), -- Cake Pan
+-- Chicken Alfredo Pasta
+(3, 1), -- Chef Knife
+(3, 2), -- Cutting Board
+(3, 3), -- Mixing Bowl
+(3, 4), -- Saucepan
+(3, 5), -- Frying Pan
+(3, 19), -- Strainer
+-- Apple Pie
+(4, 1), -- Chef Knife
+(4, 2), -- Cutting Board
+(4, 3), -- Mixing Bowl
+(4, 6), -- Oven
+(4, 22), -- Pie Dish
+(4, 26), -- Sieve
+(4, 27), -- Basting Brush
+(4, 30), -- Rolling Pin
+-- Vegetable Stir-Fry
+(5, 1), -- Chef Knife
+(5, 2), -- Cutting Board
+(5, 3), -- Mixing Bowl
+(5, 5), -- Frying Pan
+(5, 42), -- Wok
+-- Vanilla Cupcakes
+(6, 1), -- Chef Knife
+(6, 3), -- Mixing Bowl
+(6, 6), -- Oven
+(6, 17), -- Mixer
+(6, 25), -- Cake Pan
+(6, 28), -- Muffin Tin
+-- Spaghetti Bolognese
+(7, 1), -- Chef Knife
+(7, 2), -- Cutting Board
+(7, 3), -- Mixing Bowl
+(7, 4), -- Saucepan
+(7, 5), -- Frying Pan
+(7, 19), -- Strainer
+-- New York Cheesecake
+(8, 3), -- Mixing Bowl
+(8, 6), -- Oven
+(8, 25), -- Cake Pan
+(8, 24), -- Cooling Rack
+-- Beef Tacos
+(9, 1), -- Chef Knife
+(9, 2), -- Cutting Board
+(9, 5), -- Frying Pan
+(9, 13), -- Grater
+-- Tiramisu
+(10, 3), -- Mixing Bowl
+(10, 7), -- Blender
+-- Chicken Curry
+(11, 1), -- Chef Knife
+(11, 2), -- Cutting Board
+(11, 3), -- Mixing Bowl
+(11, 4), -- Saucepan
+-- Lemon Bars
+(12, 1), -- Chef Knife
+(12, 3), -- Mixing Bowl
+(12, 6), -- Oven
+(12, 26), -- Sieve
+(12, 25), -- Cake Pan
+(12, 24), -- Cooling Rack
+-- Mushroom Risotto
+(13, 1), -- Chef Knife
+(13, 2), -- Cutting Board
+(13, 3), -- Mixing Bowl
+(13, 4), -- Saucepan
+-- Chocolate Chip Cookies
+(14, 3), -- Mixing Bowl
+(14, 6), -- Oven
+(14, 19), -- Strainer
+(14, 24), -- Cooling Rack
+(14, 28), -- Muffin Tin
+-- Grilled Chicken Caesar Salad
+(15, 1), -- Chef Knife
+(15, 2), -- Cutting Board
+(15, 3), -- Mixing Bowl
+(15, 5), -- Frying Pan
+-- Panna Cotta
+(16, 3), -- Mixing Bowl
+(16, 4), -- Saucepan
+-- Tomato Basil Soup
+(17, 1), -- Chef Knife
+(17, 2), -- Cutting Board
+(17, 3), -- Mixing Bowl
+(17, 4), -- Saucepan
+(17, 19), -- Strainer
+-- Green Tea Cheesecake
+(18, 3), -- Mixing Bowl
+(18, 6), -- Oven
+(18, 25), -- Cake Pan
+(18, 24), -- Cooling Rack
+-- Olive Tapenade
+(19, 1), -- Chef Knife
+(19, 2), -- Cutting Board
+(19, 7), -- Blender
+(19, 8), -- Food Processor
+-- Maple Syrup Pancakes
+(20, 1), -- Chef Knife
+(20, 3), -- Mixing Bowl
+(20, 5), -- Frying Pan
+(20, 19); -- Strainer
 
 
 
