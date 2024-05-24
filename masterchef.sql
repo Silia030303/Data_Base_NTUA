@@ -47,6 +47,16 @@ CREATE TABLE meal_type(
 );
 
 
+CREATE TABLE ingredient(
+    ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    foodgroups_id INT(10) unsigned  NOT NULL, 
+    ingredient_name VARCHAR(50) NOT NULL,
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
+    PRIMARY KEY(ingredient_id),  
+    FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
+);
+
 CREATE TABLE recipe(
     recipe_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
@@ -76,15 +86,15 @@ CREATE TABLE recipe(
     PRIMARY KEY(recipe_id)
 );
 
-CREATE TABLE ingredient(
-    ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-    foodgroups_id INT(10) unsigned  NOT NULL, 
-    ingredient_name VARCHAR(50) NOT NULL,
-    image_url text DEFAULT NULL,
-    image_description text DEFAULT NULL,
-    PRIMARY KEY(ingredient_id),  
-    FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
-);
+CREATE TABLE recipe_equipment(
+ recipe_id INT unsigned NOT NULL,
+ equipment_id INT unsigned NOT NULL,
+ last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+ FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
+ FOREIGN KEY(equipment_id) REFERENCES equipment(equipment_id),
+ PRIMARY KEY(recipe_id,equipment_id)
+    );
+
 
 CREATE TABLE ingredient_VS_recipe(
     recipe_id INT(10) unsigned NOT NULL,
@@ -96,16 +106,6 @@ CREATE TABLE ingredient_VS_recipe(
     unit_of_measurement VARCHAR(50) unsigned DEFAULT NULL ,
     calories INT(20) NOT NULL CHECK (calories >= 0) 
 );
-
-CREATE TABLE recipe_equipment(
- recipe_id INT unsigned NOT NULL,
- equipment_id INT unsigned NOT NULL,
- last_update timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
- FOREIGN KEY(recipe_id) REFERENCES recipe(recipe_id),
- FOREIGN KEY(equipment_id) REFERENCES equipment(equipment_id),
- PRIMARY KEY(recipe_id,equipment_id)
-    );
-
 
 CREATE TABLE tags(
     tag_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
