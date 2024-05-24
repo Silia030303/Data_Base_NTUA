@@ -104,6 +104,8 @@ conn.close()
 
 
 ###################################################################################################
+#Παναγιώτης 
+
 #insert the data to a table cooks
 conn = mysql.connector.connect(
     host="localhost",
