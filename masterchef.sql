@@ -51,7 +51,7 @@ CREATE TABLE recipe(
     recipe_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
     recipe_name VARCHAR(50) NOT NULL,
     recipe_category VARCHAR(20) NOT NULL,
-    CONSTRAINT Check_YourColumn CHECK (recipe_category IN ('main course', 'dessert')) ,
+    CONSTRAINT Check_YourCategory CHECK (recipe_category IN ('main course', 'dessert')) ,
     natcuis_id  INT(10) unsigned NOT NULL ,
     prim_ingredient_id INT(10) unsigned NOT NULL, 
     recipe_description text DEFAULT NULL ,
