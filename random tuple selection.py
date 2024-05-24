@@ -49,6 +49,8 @@ cursor.close()
 
 cursor1 = conn.cursor()
 cursor2 = conn.cursor()
+cursor3 = conn.cursor()
+cursor4 = conn.cursor()
 
 
 cursor1.execute("SELECT natcuis_id FROM  national_cuisine") 
@@ -63,15 +65,38 @@ for random_national_cuisine_id in random_national_cuisines_ids:
 
 for national_cuisine_id in random_national_cuisines_ids:
     cursor2.execute("SELECT cook_id FROM cook_nat_cuis WHERE natcuis_id= %s",( national_cuisine_id[0],))
-    results = cursor2.fetchall()
+    results2 = cursor2.fetchall()
+    cursor3.execute("SELECT recipe_id, recipe_name FROM recipe WHERE natcuis_id = %s",( national_cuisine_id[0],))
+    results3 = cursor3.fetchall()
+
     # Εκτύπωση των αποτελεσμάτων
     print(f"Results for National Cuisine ID {national_cuisine_id}:")
-    for result in results:
-        print("Cook ID:", result[0])
+    for result2 in results2:
+        print("Cook ID:", result2[0])
     print()
-    
+    for result3 in results3:
+        print("Recipe ID:", result3[0])
+        print("Recipe Name:", result3[1])
+    print()
+#######################################################################################################
+#INSERT episode_cook_recipe
+
+    #Δεν ξερω αν το for πρεπει να είναι εδω η πιο αριστερα??????????   
+    for result2, result3 in zip(results2, results3):
+        #cook_id = result2[0] if len(result2) > 0 else 0
+        #recipe_id = result3[0] if len(result3) > 0 else 0
+        query = "INSERT INTO episode_cook_recipe(cook_id,episode_id, recipe_id) VALUES (%s, %s, %s)"
+        cursor4.execute(query, (result2[0], 1 , result3[0]))
+
+query = "INSERT INTO episode_cook_recipe(cook_id, episode_id, recipe_id) VALUES (%s, %s, %s)"
+cursor4.execute(query, (5, 1 , 7))   
+
+conn.commit()
+     
 cursor1.close()
 cursor2.close()
+cursor3.close()
+cursor4.close()
 
 ###################################################################################################
 
