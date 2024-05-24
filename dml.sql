@@ -1134,7 +1134,7 @@ INSERT INTO recipe_meal_type (recipe_id, meal_type_id) VALUES
 (19, 3), -- Lunch
 -- Maple Syrup Pancakes
 (20, 1), -- Breakfast
-(20, 2), -- Brunch
+(20, 2); -- Brunch
 
 INSERT INTO recipe_step (step_description, serial_number, recipe_id) VALUES 
 -- Grilled Salmon
