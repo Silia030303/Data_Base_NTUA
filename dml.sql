@@ -32,8 +32,7 @@ INSERT INTO national_cuisine (natcuis_name) VALUES
  ('Latvian cuisine'),
  ('Ukrainian cuisine'),
  ('Liberian cuisine'),
- ('South African cuisine'),
- ('Namibian cuisine')
+ ('South African cuisine')
 ;
 
 INSERT INTO cook (first_name, last_name, birth_date, years_of_experience, phone_number, position_level, image_url)
