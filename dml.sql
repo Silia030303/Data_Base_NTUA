@@ -338,7 +338,37 @@ INSERT INTO recipe (
 ('Tuna Salad', 'main course', 24, 20, 'A light and healthy tuna salad with a lemon dressing', 4, 1, 10, 0, 'Use canned tuna in water for a lighter option.', 'Add diced avocado for extra creaminess.', NULL, 5, 20, 2),
 ('Rice Pudding', 'dessert', 25, 21, 'A creamy and comforting rice pudding with a hint of cinnamon', 4, 2, 20, 30, 'Use Arborio rice for a creamier texture.', 'Garnish with a sprinkle of ground cinnamon.', NULL, 5, 4, 45),
 ('Carrot Soup', 'main course', 26, 22, 'A smooth and flavorful carrot soup with a hint of ginger', 4, 1, 10, 20, 'Use fresh ginger for a more vibrant flavor.', 'Serve with a dollop of sour cream.', NULL, 3, 2, 15),
-('Candy Apples', 'dessert', 27, 23, 'Crisp apples coated in a shiny candy shell', 8, 3, 15, 5, 'Use a candy thermometer to ensure the correct temperature.', 'Allow to cool completely before serving.', NULL, 0, 1, 75);
+('Candy Apples', 'dessert', 27, 23, 'Crisp apples coated in a shiny candy shell', 8, 3, 15, 5, 'Use a candy thermometer to ensure the correct temperature.', 'Allow to cool completely before serving.', NULL, 0, 1, 75),
+('Greek Salad', 'salad', 5, 22, 'A refreshing salad with tomatoes, cucumbers, olives, and feta cheese', 4, 1, 15, 0, NULL, NULL, NULL, 12, 6, 10),
+('Beef Stroganoff', 'main course', 15, 7, 'Tender beef in a creamy mushroom sauce, served over egg noodles', 6, 3, 20, 30, NULL, NULL, NULL, 25, 30, 45),
+('Lentil Soup', 'main course', 23, 22, 'Hearty lentil soup with vegetables and spices', 6, 2, 15, 30, NULL, NULL, NULL, 6, 10, 25),
+('French Toast', 'breakfast', 12, 11, 'Golden-brown French toast served with maple syrup', 4, 1, 10, 10, NULL, NULL, NULL, 15, 6, 30),
+('Caprese Salad', 'salad', 8, 22, 'Simple salad with tomatoes, mozzarella, and basil drizzled with balsamic glaze', 4, 1, 10, 0, NULL, NULL, NULL, 8, 5, 6),
+('Spicy Tuna Roll', 'main course', 16, 20, 'Sushi roll filled with spicy tuna and cucumber', 8, 4, 25, 0, NULL, NULL, NULL, 5, 10, 30),
+('Vegetable Curry', 'main course', 30, 22, 'A flavorful vegetable curry with coconut milk and spices', 4, 3, 20, 25, NULL, NULL, NULL, 8, 5, 35),
+('Blueberry Muffins', 'dessert', 19, 6, 'Soft and moist blueberry muffins with a hint of lemon', 12, 2, 20, 25, NULL, NULL, NULL, 10, 4, 40),
+('Quiche Lorraine', 'main course', 24, 7, 'Savory quiche with bacon, cheese, and onions in a flaky crust', 6, 3, 30, 45, NULL, NULL, NULL, 20, 15, 25),
+('Pad Thai', 'main course', 33, 35, 'Stir-fried rice noodles with shrimp, tofu, peanuts, and bean sprouts', 4, 3, 20, 15, NULL, NULL, NULL, 15, 20, 45),
+('Pancakes', 'breakfast', 11, 16, 'Fluffy pancakes served with butter and syrup', 4, 1, 10, 10, NULL, NULL, NULL, 8, 4, 35),
+('Roast Chicken', 'main course', 22, 7, 'Juicy roast chicken with crispy skin and herbs', 6, 2, 15, 60, NULL, NULL, NULL, 25, 35, 2),
+('Mango Smoothie', 'beverage', 27, 3, 'A refreshing mango smoothie with yogurt and honey', 2, 1, 5, 0, NULL, NULL, NULL, 1, 5, 25),
+('Stuffed Peppers', 'main course', 29, 22, 'Bell peppers stuffed with a mixture of rice, ground beef, and spices', 4, 3, 20, 30, NULL, NULL, NULL, 10, 20, 40),
+('Falafel Wrap', 'main course', 13, 22, 'Crispy falafel wrapped in a pita with hummus and vegetables', 4, 2, 15, 10, NULL, NULL, NULL, 8, 12, 30),
+('Clam Chowder', 'main course', 35, 37, 'Creamy New England clam chowder with potatoes and bacon', 6, 3, 20, 30, NULL, NULL, NULL, 25, 15, 35),
+('Eggplant Parmesan', 'main course', 28, 22, 'Baked eggplant slices layered with marinara sauce and cheese', 6, 3, 30, 45, NULL, NULL, NULL, 18, 12, 40),
+('Banana Bread', 'dessert', 14, 11, 'Moist banana bread with walnuts and a hint of cinnamon', 10, 2, 15, 60, NULL, NULL, NULL, 12, 5, 50),
+('Caesar Salad', 'salad', 20, 7, 'Classic Caesar salad with romaine lettuce, croutons, and Parmesan', 4, 1, 10, 0, NULL, NULL, NULL, 10, 5, 10),
+('Teriyaki Chicken', 'main course', 17, 7, 'Grilled chicken glazed with a sweet and savory teriyaki sauce', 4, 2, 15, 20, NULL, NULL, NULL, 10, 25, 15),
+('Shrimp Scampi', 'main course', 2, 44, 'Shrimp cooked in a garlic butter sauce, served over pasta', 4, 3, 10, 10, NULL, NULL, NULL, 15, 20, 40),
+('Chocolate Mousse', 'dessert', 7, 11, 'Light and airy chocolate mousse topped with whipped cream', 6, 2, 15, 0, NULL, NULL, NULL, 18, 4, 25),
+('Minestrone Soup', 'main course', 21, 22, 'Hearty Italian vegetable soup with beans and pasta', 6, 2, 20, 30, NULL, NULL, NULL, 5, 10, 30),
+('Pork Chops', 'main course', 25, 7, 'Juicy pork chops cooked with a savory apple glaze', 4, 3, 15, 20, NULL, NULL, NULL, 20, 25, 15),
+('Greek Yogurt Parfait', 'dessert', 10, 6, 'Layers of Greek yogurt, honey, and fresh berries', 2, 1, 5, 0, NULL, NULL, NULL, 8, 10, 20),
+('Spinach and Feta Pie', 'main course', 26, 22, 'Savory pie with spinach, feta cheese, and flaky pastry', 6, 3, 30, 45, NULL, NULL, NULL, 12, 8, 35),
+('Lamb Kebabs', 'main course', 32, 7, 'Grilled lamb kebabs marinated with herbs and spices', 4, 3, 20, 15, NULL, NULL, NULL, 25, 30, 10),
+('Pumpkin Soup', 'main course', 18, 22, 'Creamy pumpkin soup with a hint of nutmeg', 4, 1, 15, 20, NULL, NULL, NULL, 8, 4, 20),
+('Cheese Pizza', 'main course', 30, 41, 'Classic cheese pizza with homemade tomato sauce', 8, 2, 20, 15, NULL, NULL, NULL, 12, 15, 40),
+('Mango Sorbet', 'dessert', 5, 3, 'Refreshing mango sorbet made with fresh mangoes', 4, 2, 10, 0, NULL, NULL, NULL, 0, 1, 30);
 
 INSERT INTO foodgroups (foodgroups_name, description,image_url) VALUES 
 ('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
@@ -1046,6 +1076,13 @@ JOIN thematic_section ts ON ts.name IN ('Desserts', 'Italian Cuisine')
 WHERE r.recipe_name = 'Panna Cotta';
 -- it says zero rows affected here (?)
 
+INSERT INTO meal_type (meal_type_name) VALUES
+    ('Breakfast'),
+    ('Brunch'),
+    ('Lunch'),
+    ('Afternoon Snack'),
+    ('Dinner'),
+    ('Midnight Snack');
 
 
 
