@@ -279,6 +279,8 @@ FROM
         r.recipe_id) AS table1;
 
 
+
+-- winner view
 CREATE VIEW winner_vw AS
 WITH RankedCooks AS (
     SELECT 
@@ -318,8 +320,8 @@ WITH RankedCooks AS (
         c.cook_id
 )
 SELECT 
-    episode_id, 
-    cook_id, 
+    episode_name, 
+    last_name, 
     position_level, 
     score
 FROM 
