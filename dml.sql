@@ -386,7 +386,7 @@ INSERT INTO foodgroups (foodgroups_name, description) VALUES
 ('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
 ('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
 
-UPDATE recipes r
+UPDATE recipe r
 JOIN ingredient i ON r.prim_ingredient_id = i.ingredient_id
 JOIN foodgroups f ON i.foodgroups_id = f.foodgroups_id
 SET r.classification = CASE
