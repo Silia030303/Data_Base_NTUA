@@ -329,7 +329,7 @@ INSERT INTO recipe (
 ('Pork Chops', 'main course', 25, 7, 'Juicy pork chops cooked with a savory apple glaze', 4, 3, 15, 20, NULL, NULL, NULL, 20, 25, 15),
 ('Greek Yogurt Parfait', 'dessert', 10, 6, 'Layers of Greek yogurt, honey, and fresh berries', 2, 1, 5, 0, NULL, NULL, NULL, 8, 10, 20),
 ('Spinach and Feta Pie', 'main course', 26, 22, 'Savory pie with spinach, feta cheese, and flaky pastry', 6, 3, 30, 45, NULL, NULL, NULL, 12, 8, 35),
-('Lamb Kebabs', 'main course', 32, 7, 'Grilled lamb kebabs marinated with herbs and spices', 4, 3, 20, 15, NULL, NULL, NULL, 25, 30, 10),
+('Lamb Kebabs', 'main course', 31, 7, 'Grilled lamb kebabs marinated with herbs and spices', 4, 3, 20, 15, NULL, NULL, NULL, 25, 30, 10),
 ('Pumpkin Soup', 'main course', 18, 22, 'Creamy pumpkin soup with a hint of nutmeg', 4, 1, 15, 20, NULL, NULL, NULL, 8, 4, 20),
 ('Cheese Pizza', 'main course', 30, 41, 'Classic cheese pizza with homemade tomato sauce', 8, 2, 20, 15, NULL, NULL, NULL, 12, 15, 40),
 ('Mango Sorbet', 'dessert', 5, 3, 'Refreshing mango sorbet made with fresh mangoes', 4, 2, 10, 0, NULL, NULL, NULL, 0, 1, 30);
