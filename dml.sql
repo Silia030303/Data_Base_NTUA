@@ -669,7 +669,8 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (45, 21, 3);
 
  INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
-(1, 1), 
+(1, 1),
+(1, 4),
 (2, 2),
 (3, 3), 
 (4, 4),
@@ -679,42 +680,75 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (8, 8), 
 (9, 9), 
 (10, 10), 
+(10, 30),
 (11, 11), 
 (12, 12), 
 (13, 13), 
 (14, 14),
 (15, 15), 
-(16, 16), -- Rick Bayless is associated with Mexican cuisine
-(17, 17), -- Guy Fieri is associated with Romanian cuisine
-(18, 18), -- Bourdain Ramsay is associated with Russian cuisine
-(19, 19), -- Heston Blumenthal is associated with Rwandan cuisine
-(20, 20), -- José Andrés is associated with Saudi Arabian cuisine
-(21, 21), -- Yotam Ottolenghi is associated with Serbian cuisine
-(22, 22), -- Laura Gomez is associated with Singaporean cuisine
-(23, 23), -- Daniel Smith is associated with Slovak cuisine
-(24, 24), -- Rachel Johnson is associated with Spanish cuisine
-(25, 25), -- Christopher Martinez is associated with Afghan cuisine
-(26, 26),  -- Maria Lee is associated with Albanian cuisine
-(27, 27),  -- Alexander Brown is associated with Algerian cuisine
-(28, 28),  -- Emma Davis is associated with American cuisine
-(29, 29),  -- Ryan Chen is associated with Argentine cuisine
-(30, 30),  -- Sara Lee is associated with Armenian cuisine
-(31, 31),  -- Peter Pan is associated with Australian cuisine
-(32, 1),  -- Emily Ross is associated with Austrian cuisine
-(33, 2),  -- Paula Deen is associated with Azerbaijani cuisine
-(34, 3),  -- Rachael Ray is associated with Bahraini cuisine
-(35, 4), -- Thomas Keller is associated with Bangladeshi cuisine
-(36, 5), -- Alice Waters is associated with Belgian cuisine
-(37, 6), -- Masaharu Morimoto is associated with Belarusian cuisine
-(38, 7), -- David Cook is associated with Bermudian cuisine
-(39, 8), -- Michelle Nguyen is associated with Bolivian cuisine
-(40, 9), -- James Wong is associated with Bosnia and Herzegovina cuisine
+(15 ,17),
+(16, 16), 
+(17, 17), 
+(18, 18), 
+(19, 19), 
+(20, 20), 
+(21, 21), 
+(22, 22), 
+(23, 23), 
+(24, 24), 
+(25, 25), 
+(26, 26),
+(27, 27), 
+(28, 28), 
+(29, 29),  
+(30, 30),
+(31, 31),  
+(32, 1), 
+(33, 2), 
+(34, 3),  
+(35, 4), 
+(36, 5), 
+(37, 6), 
+(38, 7), 
+(39, 8), 
+(40, 9), 
 (41,10),
 (42,11),
 (43,12),
 (44,13),
 (45,14),
-(46,15);
+(46,15),
+(47,16),
+  (48,17),
+  (49,18),
+  (50,19),
+  (51,20),
+  (52,21),
+  (53,22),
+  (54,23),
+  (55,24),
+  (56,25),
+  (57,26),
+  (58,27),
+  (59,28)
+  (59,15),
+  (60,29),
+  (61,30),
+  (62,31),
+  (63,1),
+  (63,2),
+  (64,5),
+  (65,12),
+  (66,17),
+  (67,9),
+  (68,23),
+  (69,24),
+  (70,28),
+  (71,31),
+  (72,1),
+  (72,16),
+  (72,18);
+ 
 
 -- Example insertions for recipe categories
 INSERT INTO tags (tag_name) VALUES
