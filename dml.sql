@@ -164,9 +164,11 @@ VALUES
 ('Petros','Kokkinos','2002-06-21', 4, '9998887782', 'cook A') ,
 ('Alexander','Koulakov','2002-05-23', 3, '9998387582', 'cook B') ;
 
+INSERT INTO equipment (equipment_name, instructions, image_url)
+VALUES 
+('Chef Knife', 'Use for chopping vegetables and meat. Keep it sharp and handle it with care.', 'https://cdn.shopify.com/s/files/1/0372/6232/7941/products/Wu_estof_Classic_8-inch_Chef_Bobbi_Lin_0348x_58ab572f-cc6f-40b4-9597-451149205c05.jpg?v=1713982031');
 INSERT INTO equipment (equipment_name, instructions)
 VALUES 
-    ('Chef Knife', 'Use for chopping vegetables and meat. Keep it sharp and handle with care.'),
     ('Cutting Board', 'Place it on a flat surface to chop vegetables or meat. Wash it thoroughly after each use.'),
     ('Mixing Bowl', 'Use for mixing ingredients like flour, eggs, and sugar. Comes in various sizes.'),
     ('Saucepan', 'Use for cooking sauces, soups, and boiling water. Comes with a lid.'),
@@ -209,10 +211,13 @@ VALUES
     ('Ice Cream Scoop', 'Use for scooping ice cream, sorbet, and other frozen desserts. Dip the scoop in warm water to ease scooping.'),
     ('Kitchen Torch', 'Use for caramelizing sugar, toasting meringue, and browning dishes. Hold the torch about 6 inches away from the food.'),
     ('Wok', 'Use for stir-frying, deep-frying, and steaming. Preheat the wok over high heat before adding ingredients.');
- 
+
+INSERT INTO thematic_section (name, description,image_url)
+VALUES 
+('Village Recipes', 'Traditional recipes from the countryside, passed down through generations.','https://irepo.primecp.com/2015/05/220374/Country-Cookin-Recipes_ExtraLarge1000_ID-994664.jpg?v=994664');
+
 INSERT INTO thematic_section (name, description)
 VALUES 
-('Village Recipes', 'Traditional recipes from the countryside, passed down through generations.'),
 ('Risotto Recipes', 'Delicious recipes for creamy and flavorful risottos, perfect for any occasion.'),
 ('Easter Desserts', 'Sweets and treats specially made for Easter celebrations.'),
 ('Mediterranean Dishes', 'Authentic dishes inspired by the flavors of the Mediterranean region.'),
@@ -1047,10 +1052,10 @@ JOIN thematic_section ts ON ts.name IN ('Desserts', 'Italian Cuisine')
 WHERE r.recipe_name = 'Panna Cotta';
 -- it says zero rows affected here (?)
 
-
+INSERT INTO foodgroups (foodgroups_name, description,image_url) VALUES 
+('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
 
 INSERT INTO foodgroups (foodgroups_name, description) VALUES 
-('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.'),
 ('Coffee, Tea, and Their Products', 'Covers coffee, tea, and related products.'),
 ('Preserved Foods', 'Includes preserved or canned foods for longer shelf life.'),
 ('Sweeteners', 'Encompasses various sweetening agents like sugar, honey, etc.'),
@@ -1063,15 +1068,7 @@ INSERT INTO foodgroups (foodgroups_name, description) VALUES
 ('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
 ('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
 
-INSERT INTO image (type,type_id, image_url)
-VALUES ('cook', 'https://hips.hearstapps.com/hmg-prod/images/chef-host-gordon-ramsay-in-the-semi-finale-pt-2-3-chef-news-photo-1699984599.jpg?crop=0.788xw:1.00xh;0.212xw,0&resize=1200:*'),
-('national_cuisine','https://irp.cdn-website.com/560b6587/dms3rep/multi/image20-f1109880.png'),
-('equipment', 'https://cdn.shopify.com/s/files/1/0372/6232/7941/products/Wu_estof_Classic_8-inch_Chef_Bobbi_Lin_0348x_58ab572f-cc6f-40b4-9597-451149205c05.jpg?v=1713982031'),
-('thematic_section','https://irepo.primecp.com/2015/05/220374/Country-Cookin-Recipes_ExtraLarge1000_ID-994664.jpg?v=994664'),
-('recipe', 'https://www.dinneratthezoo.com/wp-content/uploads/2019/05/grilled-salmon-final-2.jpg'),
-('episode','https://pbs.twimg.com/media/FTnZZRPWQAE0cXH.jpg:large'),
-('tags','https://aclassictwist.com/wp-content/uploads/2022/04/Brunch-Charcuterie-Board-8.jpg'),
-('foodgroups','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
+
 
 
 
