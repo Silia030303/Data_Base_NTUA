@@ -1211,6 +1211,91 @@ INSERT INTO recipe_meal_type (recipe_id, meal_type_id) VALUES
 (56, 5), -- Dinner
 -- Mango Sorbet
 (57, 4), -- Afternoon Snack;
+ ----- only the 20 first recipes have steps----------
+INSERT INTO recipe_step (step_description, serial_number, recipe_id) VALUES 
+-- Grilled Salmon
+('Preheat the grill to medium-high heat.', 1, 1),
+('Marinate the salmon with herbs and let it sit for 30 minutes.', 2, 1),
+('Grill the salmon for 15 minutes, turning halfway through.', 3, 1),
+-- Chocolate Cake
+('Preheat the oven to 350°F (175°C) and grease the cake pans.', 1, 2),
+('Mix the dry ingredients and the wet ingredients separately, then combine.', 2, 2),
+('Pour the batter into the pans and bake for 30-40 minutes.', 3, 2),
+('Allow the cake to cool before applying the ganache.', 4, 2),
+-- Chicken Alfredo Pasta
+('Cook the pasta according to package instructions until al dente.', 1, 3),
+('In a pan, cook the chicken pieces until browned and cooked through.', 2, 3),
+('Prepare the Alfredo sauce by melting butter, adding cream and Parmesan, then mix with the pasta and chicken.', 3, 3),
+-- Apple Pie
+('Preheat the oven to 375°F (190°C) and prepare the pie crust.', 1, 4),
+('Mix the sliced apples with cinnamon, sugar, and lemon juice.', 2, 4),
+('Fill the crust with the apple mixture, cover with top crust, and bake for 40-50 minutes.', 3, 4),
+-- Vegetable Stir-Fry
+('Heat oil in a wok over high heat.', 1, 5),
+('Add vegetables and stir-fry for 10 minutes.', 2, 5),
+('Add tofu and sauce, then cook for another 5 minutes.', 3, 5),
+-- Vanilla Cupcakes
+('Preheat the oven to 350°F (175°C) and line a cupcake pan with liners.', 1, 6),
+('Mix the cupcake batter and fill the liners halfway.', 2, 6),
+('Bake for 20 minutes, then cool before frosting.', 3, 6),
+-- Spaghetti Bolognese
+('Cook the spaghetti according to package instructions.', 1, 7),
+('In a separate pot, cook ground beef until browned, then add onions, garlic, and tomatoes.', 2, 7),
+('Simmer the sauce for 1 hour and serve over the cooked spaghetti.', 3, 7),
+-- New York Cheesecake
+('Preheat the oven to 325°F (163°C) and prepare the crust.', 1, 8),
+('Mix the cheesecake batter and pour it into the crust.', 2, 8),
+('Bake the cheesecake in a water bath for 50 minutes.', 3, 8),
+('Chill the cheesecake for at least 4 hours before serving.', 4, 8),
+-- Beef Tacos
+('Cook the beef with spices until browned.', 1, 9),
+('Warm the tortillas in a pan.', 2, 9),
+('Assemble the tacos with beef, salsa, and guacamole.', 3, 9),
+-- Tiramisu
+('Prepare the espresso and dip the ladyfingers in it.', 1, 10),
+('Layer the ladyfingers and mascarpone mixture in a dish.', 2, 10),
+('Chill the tiramisu for at least 4 hours before serving.', 3, 10),
+-- Chicken Curry
+('Cook onions, garlic, and ginger in a pot until softened.', 1, 11),
+('Add chicken and spices, cook until chicken is browned.', 2, 11),
+('Add coconut milk and simmer for 30 minutes.', 3, 11),
+-- Lemon Bars
+('Preheat the oven to 350°F (175°C) and prepare the crust.', 1, 12),
+('Mix the lemon filling and pour over the pre-baked crust.', 2, 12),
+('Bake for 35 minutes and chill before cutting into bars.', 3, 12),
+-- Mushroom Risotto
+('Cook the mushrooms in a pan until browned.', 1, 13),
+('In a separate pot, cook onions and rice, gradually adding broth.', 2, 13),
+('Stir in the cooked mushrooms and Parmesan cheese.', 3, 13),
+
+-- Chocolate Chip Cookies
+('Preheat the oven to 350°F (175°C) and prepare the cookie dough.', 1, 14),
+('Chill the dough for 30 minutes.', 2, 14),
+('Scoop dough onto a baking sheet and bake for 12 minutes.', 3, 14),
+-- Grilled Chicken Caesar Salad
+('Marinate the chicken in Caesar dressing.', 1, 15),
+('Grill the chicken until cooked through and slice.', 2, 15),
+('Toss the lettuce with dressing and top with chicken.', 3, 15),
+-- Panna Cotta
+('Bloom gelatin in cold water.', 1, 16),
+('Heat cream and sugar until warm, then add gelatin.', 2, 16),
+('Pour into molds and chill for 4 hours.', 3, 16),
+-- Tomato Basil Soup
+('Cook onions and garlic in a pot until softened.', 1, 17),
+('Add tomatoes and basil, simmer for 30 minutes.', 2, 17),
+('Blend the soup until smooth.', 3, 17),
+-- Green Tea Cheesecake
+('Preheat the oven to 325°F (163°C) and prepare the crust.', 1, 18),
+('Mix the cheesecake batter with matcha and pour into the crust.', 2, 18),
+('Bake the cheesecake for 50 minutes, then chill for 4 hours.', 3, 18),
+-- Olive Tapenade
+('Combine olives, capers, and garlic in a food processor.', 1, 19),
+('Blend until smooth, adding olive oil as needed.', 2, 19),
+('Serve with bread or crackers.', 3, 19),
+-- Maple Syrup Pancakes
+('Mix the pancake batter until just combined.', 1, 20),
+('Cook the pancakes on a hot griddle until bubbles form.', 2, 20),
+('Serve with butter and maple syrup.', 3, 20);
 
 
 
