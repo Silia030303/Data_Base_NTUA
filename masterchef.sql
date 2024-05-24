@@ -76,6 +76,26 @@ CREATE TABLE recipe(
     PRIMARY KEY(recipe_id)
 );
 
+CREATE TABLE ingredient(
+    ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    foodgroups_id INT(10) unsigned  NOT NULL, 
+    ingredient_name VARCHAR(50) NOT NULL,
+    image_url text DEFAULT NULL,
+    image_description text DEFAULT NULL,
+    PRIMARY KEY(ingredient_id),  
+    FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
+);
+
+CREATE TABLE ingredient_VS_recipe(
+    recipe_id INT(10) unsigned NOT NULL,
+    ingredient_id INT(10) unsigned NOT NULL,
+    PRIMARY KEY (recipe_id, ingredient_id),
+    FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
+    FOREIGN KEY (ingredient_id) REFERENCES ingredient(ingredient_id),
+    quantity INT NOT NULL CHECK (quantity >= 0),
+    unit_of_measurement VARCHAR(50) unsigned DEFAULT NULL ,
+    calories INT(20) NOT NULL CHECK (calories >= 0) 
+);
 
 CREATE TABLE recipe_equipment(
  recipe_id INT unsigned NOT NULL,
@@ -106,33 +126,6 @@ CREATE TABLE recipe_tag(
  PRIMARY KEY(recipe_id,tag_id)
     );
     
-
-
-CREATE TABLE ingredient(
-    ingredient_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-    foodgroups_id INT(10) unsigned  NOT NULL, 
-    ingredient_name VARCHAR(50) NOT NULL,
-    image_url text DEFAULT NULL,
-    image_description text DEFAULT NULL,
-    PRIMARY KEY(ingredient_id),  
-    FOREIGN KEY(foodgroups_id) REFERENCES foodgroups(foodgroups_id)
-);
-
-
-
-CREATE TABLE ingredient_VS_recipe(
-    recipe_id INT(10) unsigned NOT NULL,
-    ingredient_id INT(10) unsigned NOT NULL,
-    PRIMARY KEY (recipe_id, ingredient_id),
-    FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
-    FOREIGN KEY (ingredient_id) REFERENCES ingredient(ingredient_id),
-    quantity INT NOT NULL CHECK (quantity >= 0),
-    unit_of_measurement VARCHAR(50) unsigned DEFAULT NULL ,
-    calories INT(20) NOT NULL CHECK (calories >= 0) 
-
-);
-
-
 CREATE TABLE recipe_meal_type (
     recipe_id INT unsigned NOT NULL,
     meal_type_id INT unsigned NOT NULL,
@@ -142,8 +135,6 @@ CREATE TABLE recipe_meal_type (
     PRIMARY KEY(recipe_id,meal_type_id)
 );
 
--- normalization 100 ml 
--- for example 1 egg
 
 CREATE TABLE episode(
    episode_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
@@ -154,8 +145,6 @@ CREATE TABLE episode(
    image_description text DEFAULT NULL,
    primary key(episode_id)
 );
-
-   --winner VARCHAR(50)
 
 CREATE TABLE cook(
  cook_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
