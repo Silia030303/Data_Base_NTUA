@@ -1076,6 +1076,7 @@ JOIN thematic_section ts ON ts.name IN ('Desserts', 'Italian Cuisine')
 WHERE r.recipe_name = 'Panna Cotta';
 -- it says zero rows affected here (?)
 
+--These are some less important tables and so there are inserts for the first 20 recipes only 
 INSERT INTO meal_type (meal_type_name) VALUES
     ('Breakfast'),
     ('Brunch'),
@@ -1132,7 +1133,6 @@ INSERT INTO recipe_meal_type (recipe_id, meal_type_id) VALUES
 (20, 1), -- Breakfast
 (20, 2), -- Brunch
 
- ----- Only the first 20 recipes have steps----------
 INSERT INTO recipe_step (step_description, serial_number, recipe_id) VALUES 
 -- Grilled Salmon
 ('Preheat the grill to medium-high heat.', 1, 1),
@@ -1335,13 +1335,89 @@ INSERT INTO recipe_equipment (recipe_id, equipment_id) VALUES
 (20, 5), -- Frying Pan
 (20, 19); -- Strainer
 
+INSERT INTO recipe_thematic_section (recipe_id, them_sec_id) VALUES 
+-- Grilled Salmon
+(1, 7), -- Vegetarian Delights
+(1, 8), -- Seafood Extravaganza
+(1, 6), -- Summer Grilling
+-- Chocolate Cake
+(2, 10), -- International Cuisine
+(2, 14), -- Family Favorites
+(2, 19), -- Gourmet Desserts
+-- Chicken Alfredo Pasta
+(3, 10), -- International Cuisine
+(3, 9), -- Quick and Easy Meals
+(3, 13), -- Family Favorites
+-- Apple Pie
+(4, 1), -- Village Recipes
+(4, 14), -- Family Favorites
+(4, 19), -- Gourmet Desserts
+-- Vegetable Stir-Fry
+(5, 9), -- Quick and Easy Meals
+(5, 7), -- Vegetarian Delights
+(5, 18), -- One-Pot Wonders
+-- Vanilla Cupcakes
+(6, 11), -- Healthy Living
+(6, 15), -- Weekend Brunch
+(6, 19), -- Gourmet Desserts
+-- Spaghetti Bolognese
+(7, 5), -- Comfort Food Classics
+(7, 10), -- International Cuisine
+(7, 9), -- Quick and Easy Meals
+-- New York Cheesecake
+(8, 19), -- Gourmet Desserts
+(8, 14), -- Family Favorites
+(8, 10), -- International Cuisine
+-- Beef Tacos
+(9, 10), -- International Cuisine
+(9, 13), -- Family Favorites
+(9, 18), -- One-Pot Wonders
+-- Tiramisu
+(10, 19), -- Gourmet Desserts
+(10, 10), -- International Cuisine
+(10, 14), -- Family Favorites
+-- Chicken Curry
+(11, 10), -- International Cuisine
+(11, 13), -- Family Favorites
+(11, 5), -- Comfort Food Classics
+-- Lemon Bars
+(12, 19), -- Gourmet Desserts
+(12, 11), -- Healthy Living
+(12, 14), -- Family Favorites
+-- Mushroom Risotto
+(13, 2), -- Risotto Recipes
+(13, 4), -- Mediterranean Dishes
+(13, 7), -- Vegetarian Delights
+-- Chocolate Chip Cookies
+(14, 19), -- Gourmet Desserts
+(14, 14), -- Family Favorites
+(14, 10), -- International Cuisine
+-- Grilled Chicken Caesar Salad
+(15, 6), -- Summer Grilling
+(15, 8), -- Seafood Extravaganza
+(15, 14), -- Family Favorites
+-- Panna Cotta
+(16, 19), -- Gourmet Desserts
+(16, 10), -- International Cuisine
+(16, 14), -- Family Favorites
+-- Tomato Basil Soup
+(17, 7), -- Vegetarian Delights
+(17, 11), -- Healthy Living
+(17, 14), -- Family Favorites
+-- Green Tea Cheesecake
+(18, 19), -- Gourmet Desserts
+(18, 10), -- International Cuisine
+(18, 11), -- Healthy Living
+-- Olive Tapenade
+(19, 4), -- Mediterranean Dishes
+(19, 7), -- Vegetarian Delights
+(19, 11), -- Healthy Living
+-- Maple Syrup Pancakes
+(20, 15), -- Weekend Brunch
+(20, 18), -- One-Pot Wonders
+(20, 11); -- Healthy Living
 
 
-
-
-
-
---
 
 
 
