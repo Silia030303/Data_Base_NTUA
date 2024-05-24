@@ -293,7 +293,7 @@ FROM
 CREATE VIEW winner_vw AS
 WITH RankedCooks AS (
     SELECT 
-        ecr.episode_name, 
+        ep.episode_name, 
         c.last_name, 
         CASE c.position_level
             WHEN 'cook A' THEN 1
@@ -322,6 +322,8 @@ WITH RankedCooks AS (
         cook c ON c.cook_id = ecr.cook_id
     JOIN 
         evaluation e ON e.cook_id = c.cook_id
+    JOIN
+        episode ep ON ep.episode_id = ecr.episode_id
     GROUP BY 
         ecr.episode_id, 
         c.cook_id
