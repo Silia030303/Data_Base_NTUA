@@ -1417,6 +1417,87 @@ INSERT INTO recipe_thematic_section (recipe_id, them_sec_id) VALUES
 (20, 18), -- One-Pot Wonders
 (20, 11); -- Healthy Living
 
+INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories) VALUES
+(1, 8, 200, 'Gram (g)', 206),          -- Grilled Salmon
+(1, 1, 5, 'Gram (g)', 1),              -- Basil
+(1, 5, 1, 'Tablespoon (tbsp or T)', 120),  -- Olive Oil
+
+(2, 11, 200, 'Gram (g)', 598),         -- Chocolate Cake
+(2, 6, 250, 'Gram (g)', 180),          -- Milk
+(2, 5, 1, 'Cup (cup)', 1920),          -- Butter
+
+(3, 7, 300, 'Gram (g)', 264),          -- Chicken Alfredo Pasta
+(3, 9, 250, 'Gram (g)', 375),          -- Pasta
+(3, 6, 100, 'Gram (g)', 402),          -- Cheese
+
+(4, 10, 3, 'Piece (piece)', 240),      -- Apple Pie
+(4, 11, 150, 'Gram (g)', 300),         -- Sugar (Cake)
+(4, 6, 100, 'Gram (g)', 50),           -- Butter
+
+(5, 10, 200, 'Gram (g)', 80),          -- Vegetable Stir-Fry
+(5, 3, 100, 'Gram (g)', 50),           -- Olives
+(5, 4, 1, 'Tablespoon (tbsp or T)', 64), -- Honey
+
+(6, 6, 200, 'Gram (g)', 160),          -- Vanilla Cupcakes
+(6, 11, 150, 'Gram (g)', 300),         -- Sugar (Cake)
+(6, 4, 50, 'Gram (g)', 154),           -- Honey
+
+(7, 9, 300, 'Gram (g)', 450),          -- Spaghetti Bolognese
+(7, 6, 200, 'Gram (g)', 80),           -- Cheese
+(7, 1, 5, 'Gram (g)', 1),              -- Basil
+
+(8, 6, 500, 'Gram (g)', 80),           -- New York Cheesecake
+(8, 11, 100, 'Gram (g)', 100),         -- Sugar (Cake)
+(8, 5, 1, 'Cup (cup)', 1920),          -- Butter
+
+(9, 7, 300, 'Gram (g)', 264),          -- Beef Tacos
+(9, 6, 100, 'Gram (g)', 402),          -- Cheese
+(9, 9, 150, 'Gram (g)', 150),          -- Wheat Bread
+
+(10, 2, 50, 'Gram (g)', 2),            -- Tiramisu
+(10, 4, 100, 'Gram (g)', 308),         -- Honey
+(10, 6, 100, 'Gram (g)', 50),          -- Butter
+
+(11, 7, 300, 'Gram (g)', 264),         -- Chicken Curry
+(11, 6, 200, 'Gram (g)', 80),          -- Milk
+(11, 4, 100, 'Gram (g)', 308),         -- Honey
+
+(12, 10, 3, 'Piece (piece)', 240),     -- Lemon Bars
+(12, 11, 150, 'Gram (g)', 300),        -- Sugar (Cake)
+(12, 5, 100, 'Gram (g)', 884),         -- Butter
+
+(13, 10, 200, 'Gram (g)', 80),         -- Mushroom Risotto
+(13, 9, 250, 'Gram (g)', 375),         -- Rice
+(13, 5, 1, 'Cup (cup)', 1920),         -- Olive Oil
+
+(14, 11, 150, 'Gram (g)', 300),        -- Chocolate Chip Cookies
+(14, 6, 200, 'Gram (g)', 80),          -- Butter
+(14, 4, 100, 'Gram (g)', 308),         -- Honey
+
+(15, 7, 300, 'Gram (g)', 264),         -- Grilled Chicken Caesar Salad
+(15, 6, 200, 'Gram (g)', 80),          -- Cheese
+(15, 1, 5, 'Gram (g)', 1),             -- Basil
+
+(16, 6, 200, 'Gram (g)', 160),         -- Panna Cotta
+(16, 11, 150, 'Gram (g)', 300),        -- Sugar (Cake)
+(16, 5, 1, 'Cup (cup)', 1920),         -- Butter
+
+(17, 10, 200, 'Gram (g)', 80),         -- Tomato Basil Soup
+(17, 1, 5, 'Gram (g)', 1),             -- Basil
+(17, 4, 100, 'Gram (g)', 308),         -- Honey
+
+(18, 2, 50, 'Gram (g)', 2),            -- Green Tea Cheesecake
+(18, 6, 500, 'Gram (g)', 80),          -- Milk
+(18, 11, 100, 'Gram (g)', 100),        -- Sugar (Cake)
+
+(19, 3, 100, 'Gram (g)', 50),          -- Olive Tapenade
+(19, 5, 1, 'Cup (cup)', 1920),         -- Olive Oil
+(19, 1, 5, 'Gram (g)', 1),             -- Basil
+
+(20, 10, 200, 'Gram (g)', 80),         -- Maple Syrup Pancakes
+(20, 5, 1, 'Cup (cup)', 1920),         -- Butter
+(20, 4, 100, 'Gram (g)', 308);         -- Honey
+
 
 
 
