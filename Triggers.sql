@@ -132,48 +132,8 @@ BEGIN
     END IF;
 END; //
 
-DELIMITER ;
-
-
---trigger for ensuring primary ingredient is in the ingredientVSrecipe table 
-DELIMITER //
-
-CREATE TRIGGER before_recipe_insert
-BEFORE INSERT ON recipe
-FOR EACH ROW
-BEGIN
-    -- Insert the primary ingredient into the ingredient_VS_recipe table
-    INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories)
-    VALUES (NEW.recipe_id, NEW.prim_ingredient_id, 0, NULL, 0);
-END; //
-
-DELIMITER ;
-
-
--- trigger for updating primary ingredient 
-DELIMITER //
-
-CREATE TRIGGER before_recipe_update
-BEFORE UPDATE ON recipe
-FOR EACH ROW
-BEGIN
-    -- If the primary ingredient is updated, update the ingredient_VS_recipe table
-    IF NEW.prim_ingredient_id != OLD.prim_ingredient_id THEN
-        -- Delete the old primary ingredient entry
-        DELETE FROM ingredient_VS_recipe 
-        WHERE recipe_id = OLD.recipe_id AND ingredient_id = OLD.prim_ingredient_id;
-
-        -- Insert the new primary ingredient entry
-        INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories)
-        VALUES (NEW.recipe_id, NEW.prim_ingredient_id, 0, NULL, 0);
-    END IF;
-END; //
-
-DELIMITER ;
-
-
 -- trigger for only 10 cooks and recipes in each episode
-DELIMITER //
+
 
 CREATE TRIGGER before_episode_cook_recipe_insert
 BEFORE INSERT ON episode_cook_recipe
