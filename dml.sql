@@ -1084,6 +1084,134 @@ INSERT INTO meal_type (meal_type_name) VALUES
     ('Dinner'),
     ('Midnight Snack');
 
+INSERT INTO recipe_meal_type (recipe_id, meal_type_id) VALUES 
+-- Grilled Salmon
+(1, 5), -- Dinner
+-- Chocolate Cake
+(2, 4), -- Afternoon Snack
+-- Chicken Alfredo Pasta
+(3, 5), -- Dinner
+-- Apple Pie
+(4, 4), -- Afternoon Snack
+-- Vegetable Stir-Fry
+(5, 5), -- Dinner
+-- Vanilla Cupcakes
+(6, 4), -- Afternoon Snack
+-- Spaghetti Bolognese
+(7, 5), -- Dinner
+(7, 3), -- Lunch
+-- New York Cheesecake
+(8, 4), -- Afternoon Snack
+-- Beef Tacos
+(9, 3), -- Lunch
+-- Tiramisu
+(10, 6), -- Midnight Snack
+-- Chicken Curry
+(11, 5), -- Dinner
+(11, 3), -- Lunch
+-- Lemon Bars
+(12, 4), -- Afternoon Snack
+-- Mushroom Risotto
+(13, 5), -- Dinner
+(13, 3), -- Lunch
+-- Chocolate Chip Cookies
+(14, 4), -- Afternoon Snack
+(14, 6), -- Midnight Snack
+-- Grilled Chicken Caesar Salad
+(15, 2), -- Brunch
+-- Panna Cotta
+(16, 4), -- Afternoon Snack
+-- Tomato Basil Soup
+(17, 3), -- Lunch
+-- Green Tea Cheesecake
+(18, 4), -- Afternoon Snack
+(18, 6), -- Midnight Snack
+-- Olive Tapenade
+(19, 3), -- Lunch
+-- Maple Syrup Pancakes
+(20, 1), -- Breakfast
+(20, 2), -- Brunch
+-- Garlic Butter Shrimp
+(21, 5), -- Dinner
+-- Cheese Omelette
+(22, 1), -- Breakfast
+(22, 2), -- Brunch
+-- Bacon Wrapped Asparagus
+(23, 5), -- Dinner
+-- Tuna Salad
+(24, 2), -- Brunch
+-- Rice Pudding
+(25, 4), -- Afternoon Snack
+-- Carrot Soup
+(26, 3), -- Lunch
+-- Candy Apples
+(27, 4), -- Afternoon Snack
+-- Greek Salad
+(28, 3), -- Lunch
+(28, 2), -- Brunch
+-- Beef Stroganoff
+(29, 3), -- Lunch
+-- Lentil Soup
+(30, 3), -- Lunch
+-- French Toast
+(31, 1), -- Breakfast
+-- Caprese Salad
+(32, 3), -- Lunch
+-- Spicy Tuna Roll
+(33, 4), -- Afternoon Snack
+-- Vegetable Curry
+(34, 5), -- Dinner
+(34, 3), -- Lunch
+-- Blueberry Muffins
+(35, 4), -- Afternoon Snack
+-- Quiche Lorraine
+(36, 3), -- Lunch
+-- Pad Thai
+(37, 5), -- Dinner
+-- Pancakes
+(38, 2), -- Brunch
+-- Roast Chicken
+(39, 5), -- Dinner
+-- Mango Smoothie
+(40, 1), -- Breakfast
+-- Stuffed Peppers
+(41, 5), -- Dinner
+-- Falafel Wrap
+(42, 3), -- Lunch
+(42, 4), -- Afternoon Snack
+-- Clam Chowder
+(43, 3), -- Lunch
+-- Eggplant Parmesan
+(44, 5), -- Dinner
+-- Banana Bread
+(45, 1), -- Breakfast
+(45, 4), -- Afternoon Snack
+-- Caesar Salad
+(46, 3), -- Lunch
+-- Teriyaki Chicken
+(47, 3), -- Lunch
+-- Shrimp Scampi
+(48, 5), -- Dinner
+-- Chocolate Mousse
+(49, 4), -- Afternoon Snack
+-- Minestrone Soup
+(50, 3), -- Lunch
+-- Pork Chops
+(51, 5), -- Dinner
+-- Greek Yogurt Parfait
+(52, 1), -- Breakfast
+-- Spinach and Feta Pie
+(53, 5), -- Dinner
+(53, 3), -- Lunch
+-- Lamb Kebabs
+(54, 5), -- Dinner
+-- Pumpkin Soup
+(55, 3), -- Lunch
+-- Cheese Pizza
+(56, 5), -- Dinner
+-- Mango Sorbet
+(57, 4), -- Afternoon Snack;
+
 
 
 
