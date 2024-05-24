@@ -35,67 +35,43 @@ BEGIN
     END IF;
 END //
 
+
+
 -- Trigger για την ενημέρωση δεδομένων στο unit_of_measurement
 CREATE TRIGGER check_unit_of_measurement_update
 BEFORE UPDATE ON ingredient_VS_recipe
 FOR EACH ROW
 BEGIN
     IF NEW.unit_of_measurement NOT IN (
-    'g',
-    'kg',
-    'mg',
-    'oz',
-    'lb',
-    'cup',
-    'half cup',
-    'quarter cup',
-    'three-quarters cup',
-    'tbsp',
-    'tsp',
-    'ml',
-    'L',
-    'pint',
-    'gallon',
-    'fl. oz',
-    'piece',
-    'half piece',
-    'slice',
-    'wedge',
-    'clove',
-    'head',
-    'shot',
-    'pack'
-) THEN
-    SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement. Allowed values are: (
-     'g',
-    'kg',
-    'mg',
-    'oz',
-    'lb',
-    'cup',
-    'half cup',
-    'quarter cup',
-    'three-quarters cup',
-    'tbsp',
-    'tsp',
-    'ml',
-    'L',
-    'pint',
-    'gallon',
-    'fl. oz',
-    'piece',
-    'half piece',
-    'slice',
-    'wedge',
-    'clove',
-    'head',
-    'shot',
-    'pack'
-) '   ; 
+        'g',
+        'kg',
+        'mg',
+        'oz',
+        'lb',
+        'cup',
+        'half cup',
+        'quarter cup',
+        'three-quarters cup',
+        'tbsp',
+        'tsp',
+        'ml',
+        'L',
+        'pint',
+        'gallon',
+        'fl. oz',
+        'piece',
+        'half piece',
+        'slice',
+        'wedge',
+        'clove',
+        'head',
+        'shot',
+        'pack'
+    ) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement. Allowed values are: g, kg, mg, oz, lb, cup, half cup, quarter cup, three-quarters cup, tbsp, tsp, ml, L, pint, gallon, fl. oz, piece, half piece, slice, wedge, clove, head, shot, pack';
     END IF;
-END; //
-
+END //
 
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
