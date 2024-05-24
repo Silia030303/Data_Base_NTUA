@@ -191,6 +191,22 @@ VALUES
 ('Culinary Adventures', 'Embark on culinary journeys with these adventurous and exotic recipes.'),
 ('Classic Cocktails', 'Mix up classic cocktails and elevate your home bartending skills.');
 
+INSERT INTO foodgroups (foodgroups_name, description,image_url) VALUES 
+('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
+
+INSERT INTO foodgroups (foodgroups_name, description) VALUES 
+('Coffee, Tea, and Their Products', 'Covers coffee, tea, and related products.'),
+('Preserved Foods', 'Includes preserved or canned foods for longer shelf life.'),
+('Sweeteners', 'Encompasses various sweetening agents like sugar, honey, etc.'),
+('Fats and Oils', 'Includes fats and oils used in cooking and food preparation.'),
+('Milk, Eggs, and Their Products', 'Covers dairy products like milk, eggs, and their derivatives.'),
+('Meat and Meat Products, 'Encompasses various types of meat and processed meat products.'),
+('Fish and Fish Products, 'Includes different kinds of fish and fish-based products.'),
+('Cereals and Their Products', 'Covers grains and cereal-based products like bread, pasta, etc.'),
+('Various Plant-based Foods', 'Encompasses a variety of plant-based foods like fruits, vegetables, nuts, etc.'),
+('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
+('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
+
 INSERT INTO ingredient (foodgroups_id, ingredient_name)
 VALUES 
 (1, 'Basil'),                -- Aromatic Herbs and Essential Oils
@@ -318,21 +334,6 @@ INSERT INTO recipe (
 ('Cheese Pizza', 'main course', 30, 41, 'Classic cheese pizza with homemade tomato sauce', 8, 2, 20, 15, NULL, NULL, NULL, 12, 15, 40),
 ('Mango Sorbet', 'dessert', 5, 3, 'Refreshing mango sorbet made with fresh mangoes', 4, 2, 10, 0, NULL, NULL, NULL, 0, 1, 30);
 
-INSERT INTO foodgroups (foodgroups_name, description,image_url) VALUES 
-('Aromatic Herbs and Essential Oils', 'Includes herbs and oils used for flavoring and aroma purposes.','https://img.freepik.com/premium-photo/bottles-essential-oils-table-with-aromatic-herbs-black-stones_100787-3014.jpg');
-
-INSERT INTO foodgroups (foodgroups_name, description) VALUES 
-('Coffee, Tea, and Their Products', 'Covers coffee, tea, and related products.'),
-('Preserved Foods', 'Includes preserved or canned foods for longer shelf life.'),
-('Sweeteners', 'Encompasses various sweetening agents like sugar, honey, etc.'),
-('Fats and Oils', 'Includes fats and oils used in cooking and food preparation.'),
-('Milk, Eggs, and Their Products', 'Covers dairy products like milk, eggs, and their derivatives.'),
-('Meat and Meat Products, 'Encompasses various types of meat and processed meat products.'),
-('Fish and Fish Products, 'Includes different kinds of fish and fish-based products.'),
-('Cereals and Their Products', 'Covers grains and cereal-based products like bread, pasta, etc.'),
-('Various Plant-based Foods', 'Encompasses a variety of plant-based foods like fruits, vegetables, nuts, etc.'),
-('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
-('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.');
 
 UPDATE recipe r
 JOIN ingredient i ON r.prim_ingredient_id = i.ingredient_id
