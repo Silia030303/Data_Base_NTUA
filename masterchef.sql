@@ -290,9 +290,59 @@ FROM
         r.recipe_id) AS table1;
 
 
+CREATE VIEW winner_vw AS
+WITH RankedCooks AS (
+    SELECT 
+        ecr.episode_id, 
+        c.cook_id, 
+        CASE c.position_level
+            WHEN 'cook A' THEN 1
+            WHEN 'cook B' THEN 2
+            WHEN 'cook C' THEN 3
+            WHEN 'chef assistant' THEN 4
+            WHEN 'chef' THEN 5
+        END as position_level, 
+        SUM(e.grade) AS score,
+        ROW_NUMBER() OVER (
+            PARTITION BY ecr.episode_id 
+            ORDER BY 
+                SUM(e.grade) DESC, 
+                CASE c.position_level
+                    WHEN 'cook A' THEN 1
+                    WHEN 'cook B' THEN 2
+                    WHEN 'cook C' THEN 3
+                    WHEN 'chef assistant' THEN 4
+                    WHEN 'chef' THEN 5
+                END DESC,
+                RAND()
+        ) AS rank
+    FROM 
+        episode_cook_recipe ecr
+    JOIN 
+        cook c ON c.cook_id = ecr.cook_id
+    JOIN 
+        evaluation e ON e.cook_id = c.cook_id
+    GROUP BY 
+        ecr.episode_id, 
+        c.cook_id
+)
+SELECT 
+    episode_id, 
+    cook_id, 
+    position_level, 
+    score
+FROM 
+    RankedCooks
+WHERE 
+    rank = 1;
 
 
 
+
+
+
+
+--end
 
 
 
