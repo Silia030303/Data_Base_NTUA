@@ -222,6 +222,30 @@ END; //
 DELIMITER ;
 
 
+-- trigger for only 10 cooks and recipes in each episode
+DELIMITER //
+
+CREATE TRIGGER before_episode_cook_recipe_insert
+BEFORE INSERT ON episode_cook_recipe
+FOR EACH ROW
+BEGIN
+    DECLARE count_episodes INT;
+    -- Count the number of tuples with the same episode_id
+    SELECT COUNT(*) INTO count_episodes
+    FROM episode_cook_recipe
+    WHERE episode_id = NEW.episode_id;
+
+    -- If the count is already 10, prevent insertion
+    IF count_episodes >= 10 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Cannot insert more than 10 tuples with the same episode_id';
+    END IF;
+END; //
+
+DELIMITER ;
+
+
+
 
 --end
 
