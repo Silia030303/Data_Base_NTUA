@@ -262,7 +262,6 @@ SELECT
     END AS calories_per_portion
 FROM 
     (SELECT 
-        r.recipe_id,
         r.recipe_name,
         r.quantity_of_servings,
         r.fat_per_portion,
