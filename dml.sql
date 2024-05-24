@@ -256,7 +256,23 @@ VALUES
 (9, 'Oatmeal'),              -- Cereals and Their Products
 (10, 'Broccoli'),            -- Various Plant-based Foods
 (11, 'Cake'),                -- Products with Sweeteners
-(12, 'Iced Tea');            -- Various Beverages
+(12, 'Iced Tea'),  
+ (7, 'Beef'),                  -- Meat and Meat Products
+(10, 'Lentil'),               -- Various Plant-based Foods
+(10, 'Curry'),                -- Various Plant-based Foods
+(10, 'Blueberry'),            -- Various Plant-based Foods
+(9, 'Flour'),                 -- Cereals and Their Products
+(10, 'Mango'),                -- Various Plant-based Foods
+(10, 'Pepper'),               -- Various Plant-based Foods
+(10, 'Chickpea'),             -- Various Plant-based Foods
+(8, 'Clam'),                  -- Fish and Fish Products
+(10, 'Eggplant'),             -- Various Plant-based Foods
+(10, 'Lettuce'),              -- Various Plant-based Foods
+(7, 'Pork'),                  -- Meat and Meat Products
+(10, 'Spinach'),              -- Various Plant-based Foods
+(7, 'Lamb'),                  -- Meat and Meat Products
+(10, 'Pumpkin'); 
+
 
 
 INSERT INTO recipe (
