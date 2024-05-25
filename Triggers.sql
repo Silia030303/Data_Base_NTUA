@@ -165,6 +165,7 @@ BEFORE INSERT ON episode_cook_recipe
 FOR EACH ROW
 BEGIN
     DECLARE episode_serial_number INT;
+    DECLARE prev_episode_count INT;
 
     -- Get the serial number of the episode being inserted
     SELECT serial_number INTO episode_serial_number
@@ -173,8 +174,6 @@ BEGIN
 
     -- Only perform the check if the episode serial number is greater than 2
     IF episode_serial_number > 2 THEN
-        DECLARE prev_episode_count INT;
-
         -- Check if the cook was in the previous two episodes
         SELECT COUNT(*)
         INTO prev_episode_count
