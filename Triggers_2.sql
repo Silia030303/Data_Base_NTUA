@@ -36,7 +36,7 @@ BEGIN
 END;
 
 //
---Silia : Αυτα που πρόσθεσα
+--Silia :   Αυτα που πρόσθεσα
 --TRIGGER : Recipe cannot appear in three consecutive episodes.
 
 CREATE TRIGGER before_episode_cook_recipe_insert_recipe
