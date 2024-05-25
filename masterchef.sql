@@ -138,6 +138,7 @@ CREATE TABLE recipe_meal_type (
 
 CREATE TABLE episode(
    episode_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
+    -- add episode serial number
    episode_name VARCHAR(50) NOT NULL,
    episode_date date NOT NULL,
    season INT NOT NULL CHECK (season >= 0),
