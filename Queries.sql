@@ -173,14 +173,25 @@ WHERE ABS(table1.season - table2.season) =1  and table1.season< table2.season
 ORDER BY total_count DESC ;
 
 -------------------------------------------------------------------------Query 11--------------------------------------------------------------------- 
-SELECT c2.last_name as judge_name, c.last_name as cook_name, e.grade, e.episode_id 
-FROM judge j 
-JOIN evaluation e on j.judge_id = e.judge_id 
-JOIN episode_cook_recipe ecr on ecr.cook_id = e.cook_id
-JOIN cook c on c.cook_id = ecr.cook_id
-JOIN cook c2 on c2.cook_id = j.cook_id 
-WHERE c.last_name= 'D Acampo'
-ORDER BY e.grade DESC 
+SELECT 
+    c2.last_name as judge_name, 
+    c.last_name as cook_name, 
+    e.grade, 
+    ecr.episode_id 
+FROM 
+    judge j 
+JOIN 
+    evaluation e on j.judge_id = e.judge_id 
+JOIN 
+    episode_cook_recipe ecr on ecr.cook_id = e.cook_id AND ecr.episode_id = j.episode_id
+JOIN 
+    cook c on c.cook_id = ecr.cook_id 
+JOIN 
+    cook c2 on c2.cook_id = j.cook_id 
+WHERE 
+    c.last_name = 'D Acampo' 
+ORDER BY 
+    e.grade DESC 
 LIMIT 5;
 
 
@@ -213,28 +224,7 @@ FROM
     RankedJudges
 WHERE
     rank <= 5;
--------------------------------------------------------------------------Query 11 vol 2--------------------------------------------------------------------- 
 
-SELECT 
-    c2.last_name as judge_name, 
-    c.last_name as cook_name, 
-    e.grade, 
-    ecr.episode_id 
-FROM 
-    judge j 
-JOIN 
-    evaluation e on j.judge_id = e.judge_id 
-JOIN 
-    episode_cook_recipe ecr on ecr.cook_id = e.cook_id AND ecr.episode_id = j.episode_id
-JOIN 
-    cook c on c.cook_id = ecr.cook_id 
-JOIN 
-    cook c2 on c2.cook_id = j.cook_id 
-WHERE 
-    c.last_name = 'D Acampo' 
-ORDER BY 
-    e.grade DESC 
-LIMIT 5;
 
 -------------------------------------------------------------------------Query 12--------------------------------------------------------------------- 
 
