@@ -411,6 +411,151 @@ VALUES
 (56, 18, 4, 'slice', 400),  -- Cheese Platter
 (57, 54, 3, 'cup', 300);  -- Mango Smoothie
 
+INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories)
+VALUES
+-- Grilled Salmon
+(1, 5, 2, 'tbsp', 180),  -- Olive Oil
+(1, 13, 1, 'tsp', 2),    -- Rosemary
+-- Chocolate Cake
+(2, 17, 100, 'g', 300),  -- Butter
+(2, 53, 250, 'g', 910),  -- Flour
+-- Chicken Alfredo Pasta
+(3, 33, 250, 'g', 310),  -- Pasta
+(3, 42, 1, 'cup', 150),  -- Eggs
+-- Apple Pie
+(4, 53, 200, 'g', 728),    -- Flour
+(4, 17, 100, 'g', 720),    -- Butter
+-- Vegetable Stir-Fry
+(5, 50, 150, 'g', 140),  -- Lentil
+(5, 46, 100, 'g', 50),   -- Broccoli
+-- Vanilla Cupcakes
+(6, 17, 150, 'g', 1080),  -- Butter
+(6, 53, 200, 'g', 728),   -- Flour
+-- Spaghetti Bolognese
+(7, 49, 300, 'g', 750),   -- Beef
+(7, 27, 400, 'g', 80),    -- Canned Tomatoes
+-- New York Cheesecake
+(8, 6, 2, 'cup', 300),   -- Milk
+(8, 17, 100, 'g', 720),  -- Butter
+-- Beef Tacos
+(9, 49, 300, 'g', 750),  -- Beef
+(9, 59, 100, 'g', 10),   -- Lettuce
+-- Tiramisu
+(10, 6, 200, 'ml', 120),  -- Milk
+(10, 11, 100, 'g', 200),  -- Chocolate Bar
+-- Chicken Curry
+(11, 51, 200, 'g', 150),  -- Curry
+(11, 42, 1, 'cup', 150),  -- Eggs
+-- Lemon Bars
+(12, 36, 100, 'ml', 30),    -- Lemonade
+(12, 17, 100, 'g', 720),    -- Butter
+-- Mushroom Risotto
+(13, 21, 200, 'g', 220),   -- Rice
+(13, 46, 100, 'g', 50),    -- Broccoli
+-- Chocolate Chip Cookies
+(14, 53, 200, 'g', 728),   -- Flour
+(14, 17, 100, 'g', 720),   -- Butter
+-- Grilled Chicken Caesar Salad
+(15, 59, 200, 'g', 20),    -- Lettuce
+(15, 18, 100, 'g', 400),   -- Cheese
+-- Panna Cotta
+(16, 4, 3, 'tbsp', 180),  -- Honey
+(16, 18, 200, 'g', 160),  -- Cheese
+-- Tomato Basil Soup
+(17, 27, 300, 'g', 60),   -- Canned Tomatoes
+(17, 17, 100, 'g', 720),  -- Butter
+-- Green Tea Cheesecake
+(18, 6, 200, 'ml', 120),  -- Milk
+(18, 18, 200, 'g', 160),  -- Cheese
+-- Olive Tapenade
+(19, 5, 2, 'tbsp', 180),  -- Olive Oil
+(19, 13, 1, 'tsp', 2),    -- Rosemary
+-- Maple Syrup Pancakes
+(20, 53, 200, 'g', 728),  -- Flour
+(20, 17, 100, 'g', 720),  -- Butter
+-- Garlic Butter Shrimp
+(21, 17, 100, 'g', 720),  -- Butter
+(21, 5, 2, 'tbsp', 180),  -- Olive Oil
+-- Cheese Omelette
+(22, 42, 2, 'piece', 150),  -- Eggs
+(22, 17, 50, 'g', 360),     -- Butter
+-- Bacon Wrapped Asparagus
+(23, 46, 200, 'g', 100),    -- Broccoli
+(23, 5, 2, 'tbsp', 180),    -- Olive Oil
+-- Tuna Salad
+(24, 59, 100, 'g', 10),   -- Lettuce
+(24, 5, 2, 'tbsp', 180),  -- Olive Oil
+-- Rice Pudding
+(25, 21, 200, 'g', 250),  -- Rice
+(25, 6, 500, 'ml', 400),  -- Milk
+(25, 4, 3, 'tbsp', 180),  -- Honey
+-- Carrot Soup
+(26, 27, 300, 'g', 60),    -- Canned Tomatoes
+(26, 17, 100, 'g', 720),   -- Butter
+-- Candy Apples
+(27, 10, 6, 'piece', 300),  -- Apple
+(27, 4, 3, 'tbsp', 180),    -- Honey
+(28, 1, 100, 'g', 20),    -- Basil
+(28, 18, 150, 'g', 120),  -- Cheese
+(29, 20, 100, 'g', 75),   -- Tuna
+(29, 21, 200, 'g', 220),  -- Rice
+(30, 22, 200, 'g', 150),  -- Carrot
+(30, 27, 300, 'g', 60),   -- Canned Tomatoes
+(31, 52, 100, 'g', 60),    -- Blueberry
+(31, 53, 200, 'g', 728),   -- Flour
+(32, 18, 150, 'g', 120),   -- Cheese
+(32, 42, 2, 'piece', 150), -- Eggs
+(33, 21, 200, 'g', 220),   -- Rice
+(33, 5, 2, 'tbsp', 180),   -- Olive Oil
+(34, 18, 200, 'g', 160),   -- Cheese
+(34, 53, 250, 'g', 910),   -- Flour
+(35, 54, 400, 'g', 240),   -- Mango
+(35, 4, 3, 'tbsp', 180),   -- Honey
+(36, 46, 200, 'g', 100),   -- Broccoli
+(36, 18, 150, 'g', 120),   -- Cheese
+(37, 56, 150, 'g', 180),   -- Chickpea
+(37, 5, 2, 'tbsp', 180),   -- Olive Oil
+(38, 57, 300, 'g', 150),   -- Clam
+(38, 6, 500, 'ml', 400),   -- Milk
+(39, 58, 200, 'g', 60),    -- Eggplant
+(39, 18, 150, 'g', 120),   -- Cheese
+(40, 34, 2, 'piece', 150), -- Banana
+(40, 53, 200, 'g', 728),   -- Flour
+(41, 59, 200, 'g', 20),    -- Lettuce
+(41, 18, 100, 'g', 80),    -- Cheese
+(42, 7, 400, 'g', 500),    -- Chicken Breast
+(42, 5, 2, 'tbsp', 180),   -- Olive Oil
+(43, 44, 150, 'g', 180),   -- Shrimp
+(43, 17, 100, 'g', 720),   -- Butter
+(44, 11, 200, 'g', 400),   -- Chocolate Bar
+(44, 17, 100, 'g', 720),   -- Butter
+(45, 27, 300, 'g', 60),    -- Canned Tomatoes
+(45, 22, 200, 'g', 150),   -- Carrot
+(46, 60, 300, 'g', 450),   -- Pork
+(46, 5, 2, 'tbsp', 180),   -- Olive Oil
+(47, 30, 300, 'g', 150),   -- Yogurt
+(47, 34, 2, 'piece', 150), -- Banana
+(48, 61, 300, 'g', 90),    -- Spinach
+(48, 18, 150, 'g', 120),   -- Cheese
+(49, 62, 300, 'g', 600),   -- Lamb
+(49, 17, 100, 'g', 720),   -- Butter
+(50, 63, 400, 'g', 120),   -- Pumpkin
+(50, 17, 100, 'g', 720),   -- Butter
+(51, 5, 2, 'tbsp', 180),   -- Olive Oil
+(51, 13, 1, 'tsp', 2),     -- Rosemary
+(52, 4, 3, 'tbsp', 180),   -- Honey
+(52, 34, 2, 'piece', 150), -- Banana
+(53, 33, 250, 'g', 310),   -- Pasta
+(53, 18, 150, 'g', 120),   -- Cheese
+(54, 5, 2, 'tbsp', 180),   -- Olive Oil
+(54, 13, 1, 'tsp', 2),     -- Rosemary
+(55, 53, 200, 'g', 728),   -- Flour
+(55, 17, 100, 'g', 720),   -- Butter
+(56, 1, 100, 'g', 20),     -- Basil
+(56, 15, 50, 'g', 75),     -- Olives
+(57, 6, 500, 'ml', 400),   -- Milk
+(57, 4, 3, 'tbsp', 180);   -- Honey
+
 UPDATE recipe r
 JOIN ingredient i ON r.prim_ingredient_id = i.ingredient_id
 JOIN foodgroups f ON i.foodgroups_id = f.foodgroups_id
