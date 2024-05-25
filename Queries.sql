@@ -191,7 +191,7 @@ WITH RankedJudges AS (
         c2.last_name AS judge_name,
         c.last_name AS cook_name,
         e.grade,
-        e.episode_id,
+        ecr.episode_id,
         ROW_NUMBER() OVER (PARTITION BY c.last_name ORDER BY e.grade DESC) AS rank
     FROM
         judge j
