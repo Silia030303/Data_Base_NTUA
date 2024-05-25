@@ -273,8 +273,7 @@ VALUES
 (7, 'Pork'),                  -- Meat and Meat Products
 (10, 'Spinach'),              -- Various Plant-based Foods
 (7, 'Lamb'),                  -- Meat and Meat Products
-(10, 'Pumpkin'),
-(13,'other ingredient'); 
+(10, 'Pumpkin');
 
 
 
@@ -353,10 +352,6 @@ INSERT INTO recipe (
 ('Cheese Pizza', 'main course', 30, 18, 'Classic cheese pizza with homemade tomato sauce', 8, 2, 20, 15, NULL, NULL, NULL, 12, 15, 40),
 ('Mango Sorbet', 'dessert', 5, 54, 'Refreshing mango sorbet made with fresh mangoes', 4, 2, 10, 0, NULL, NULL, NULL, 0, 1, 30);
 
---INSERT INTO recipe (recipe_name, recipe_category, natcuis_id, prim_ingredient_id, recipe_description, quantity_of_servings, difficulty_level, 
---   prep_time,  cooking_time, tip_1, tip_2,  tip_3,fat_per_portion, protein_per_portion, carbohydrate_per_portion)VALUES 
---('New recipe', 'dessert', 5, 64, 'Refreshing mango sorbet made with fresh mangoes', 4, 2, 10, 0, NULL, NULL, NULL, 0, 1, 30);
-
 ---inserting the primary ingredients of all the recipes
 
 INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories)
@@ -418,7 +413,6 @@ VALUES
 (55, 63, 300, 'g', 200),  -- Pumpkin Pie
 (56, 18, 4, 'slice', 400),  -- Cheese Platter
 (57, 54, 3, 'cup', 300);  -- Mango Smoothie
---INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories) VALUES(58,64, 3, 'cup', 300) ;
 
 INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories)
 VALUES
