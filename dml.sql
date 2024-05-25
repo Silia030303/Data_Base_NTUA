@@ -349,7 +349,7 @@ INSERT INTO recipe (
 ('Pumpkin Soup', 'main course', 18, 63, 'Creamy pumpkin soup with a hint of nutmeg', 4, 1, 15, 20, NULL, NULL, NULL, 8, 4, 20),
 ('Cheese Pizza', 'main course', 30, 18, 'Classic cheese pizza with homemade tomato sauce', 8, 2, 20, 15, NULL, NULL, NULL, 12, 15, 40),
 ('Mango Sorbet', 'dessert', 5, 54, 'Refreshing mango sorbet made with fresh mangoes', 4, 2, 10, 0, NULL, NULL, NULL, 0, 1, 30);
-
+---inserting the primary ingredients of all the recipes
 INSERT INTO ingredient_VS_recipe (recipe_id, ingredient_id, quantity, unit_of_measurement, calories)
 VALUES
 (1, 8, 500, 'g', 250),  -- Grilled Salmon
@@ -379,29 +379,37 @@ VALUES
 (25, 21, 200, 'g', 250),  -- Rice Pudding
 (26, 22, 500, 'ml', 150),  -- Carrot Soup
 (27, 23, 8, 'piece', 500),  -- Candy Apples
-(28, 1, 4, 'cup', 200),  -- Caprese Salad
-(29, 44, 4, 'piece', 200),  -- Spicy Tuna Roll
-(30, 22, 3, 'cup', 200),  -- Vegetable Curry
-(31, 52, 12, 'piece', 350),  -- Blueberry Muffins
-(32, 42, 6, 'piece', 400),  -- Quiche Lorraine
-(33, 21, 4, 'cup', 300),  -- Pad Thai
-(34, 18, 4, 'slice', 600),  -- Cheese Pizza
-(35, 54, 4, 'cup', 200),  -- Mango Sorbet
-(36, 55, 4, 'piece', 400),  -- Stuffed Peppers
-(37, 56, 4, 'piece', 300),  -- Falafel Wrap
-(38, 57, 6, 'cup', 500),  -- Clam Chowder
-(39, 58, 6, 'piece', 500),  -- Eggplant Parmesan
-(40, 34, 4, 'slice', 400),  -- Banana Bread
-(41, 59, 4, 'cup', 200),  -- Caesar Salad
-(42, 7, 4, 'piece', 300),  -- Teriyaki Chicken
-(43, 44, 4, 'piece', 400),  -- Shrimp Scampi
-(44, 11, 4, 'cup', 500),  -- Chocolate Mousse
-(45, 22, 4, 'cup', 300),  -- Minestrone Soup
-(46, 60, 4, 'piece', 500),  -- Pork Chops
-(47, 30, 4, 'cup', 300),  -- Greek Yogurt Parfait
-(48, 61, 6, 'piece', 500),  -- Spinach and Feta Pie
-(49, 62, 4, 'piece', 600),  -- Lamb Kebabs
-(50, 63, 4, 'cup', 200);  -- Pumpkin Soup
+-- Corrected and new entries
+(28, 5, 2, 'tbsp', 180),  -- Caprese Salad
+(29, 49, 200, 'g', 350),  -- Spicy Tuna Roll
+(30, 50, 300, 'g', 250),  -- Vegetable Curry
+(31, 6, 2, 'cup', 120),  -- Blueberry Muffins
+(32, 1, 100, 'g', 50),  -- Quiche Lorraine
+(33, 20, 250, 'g', 300),  -- Pad Thai
+(34, 51, 100, 'g', 200),  -- Cheese Pizza
+(35, 52, 500, 'g', 180),  -- Mango Sorbet
+(36, 42, 4, 'piece', 400),  -- Stuffed Peppers
+(37, 21, 200, 'g', 220),  -- Falafel Wrap
+(38, 53, 4, 'cup', 400),  -- Clam Chowder
+(39, 7, 300, 'g', 450),  -- Eggplant Parmesan
+(40, 54, 4, 'slice', 320),  -- Banana Bread
+(41, 55, 3, 'cup', 150),  -- Caesar Salad
+(42, 56, 300, 'g', 400),  -- Teriyaki Chicken
+(43, 57, 200, 'g', 180),  -- Shrimp Scampi
+(44, 58, 4, 'cup', 500),  -- Chocolate Mousse
+(45, 34, 500, 'ml', 300),  -- Minestrone Soup
+(46, 59, 4, 'piece', 500),  -- Pork Chops
+(47, 7, 2, 'cup', 200),  -- Greek Yogurt Parfait
+(48, 44, 6, 'piece', 450),  -- Spinach and Feta Pie
+(49, 11, 100, 'g', 400),  -- Lamb Kebabs
+(50, 22, 300, 'g', 150),  -- Pumpkin Soup
+(51, 60, 4, 'piece', 500),  -- Roast Pork
+(52, 30, 3, 'cup', 250),  -- Yogurt and Honey Parfait
+(53, 61, 200, 'g', 150),  -- Spinach Lasagna
+(54, 62, 400, 'g', 600),  -- Grilled Lamb Chops
+(55, 63, 300, 'g', 200),  -- Pumpkin Pie
+(56, 18, 4, 'slice', 400),  -- Cheese Platter
+(57, 54, 3, 'cup', 300);  -- Mango Smoothie
 
 UPDATE recipe r
 JOIN ingredient i ON r.prim_ingredient_id = i.ingredient_id
