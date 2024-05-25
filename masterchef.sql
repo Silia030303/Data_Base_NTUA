@@ -166,7 +166,7 @@ CREATE TABLE cook(
 CREATE TABLE judge(
    judge_id INT(10) unsigned NOT NULL AUTO_INCREMENT,
    cook_id INT(10) unsigned NOT NULL,
-   partitipation_number INT(10) unsigned,
+   participation_number INT unsigned DEFAULT NULL,
    episode_id INT(10) unsigned NOT NULL,
    PRIMARY KEY(judge_id),
    FOREIGN KEY (cook_id) REFERENCES cook(cook_id),
