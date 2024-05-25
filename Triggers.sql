@@ -193,6 +193,38 @@ END;
 //
 DELIMITER ;
 
+DELIMITER $$
+
+CREATE TRIGGER check_sequential_steps
+BEFORE INSERT ON recipe_step
+FOR EACH ROW
+BEGIN
+    DECLARE prev_step_count INT;
+    IF NEW.serial_number > 1 THEN
+        SELECT COUNT(*) INTO prev_step_count FROM recipe_step WHERE recipe_id = NEW.recipe_id AND serial_number = NEW.serial_number - 1;
+        IF prev_step_count = 0 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Cannot insert step without previous step.';
+        END IF;
+    END IF;
+END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE TRIGGER check_step_serial_number
+BEFORE INSERT ON recipe_step
+FOR EACH ROW
+BEGIN
+    DECLARE existing_serial_count INT;
+    SELECT COUNT(*) INTO existing_serial_count FROM recipe_step WHERE recipe_id = NEW.recipe_id AND serial_number = NEW.serial_number;
+    IF existing_serial_count > 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'A step with the same serial number already exists for this recipe.';
+    END IF;
+END$$
+
+DELIMITER ;
+
 
 
 --end
