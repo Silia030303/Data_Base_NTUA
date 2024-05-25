@@ -156,6 +156,45 @@ DELIMITER ;
 
 
 
+--trigger for non consecutive cooks
+
+DELIMITER //
+
+CREATE TRIGGER before_episode_cook_recipe_insert
+BEFORE INSERT ON episode_cook_recipe
+FOR EACH ROW
+BEGIN
+    DECLARE episode_serial_number INT;
+
+    -- Get the serial number of the episode being inserted
+    SELECT serial_number INTO episode_serial_number
+    FROM episode
+    WHERE episode_id = NEW.episode_id;
+
+    -- Only perform the check if the episode serial number is greater than 2
+    IF episode_serial_number > 2 THEN
+        DECLARE prev_episode_count INT;
+
+        -- Check if the cook was in the previous two episodes
+        SELECT COUNT(*)
+        INTO prev_episode_count
+        FROM episode_cook_recipe ecr
+        JOIN episode e ON ecr.episode_id = e.episode_id
+        WHERE ecr.cook_id = NEW.cook_id
+          AND e.serial_number IN (episode_serial_number - 1, episode_serial_number - 2);
+
+        -- If the cook was in both previous episodes, prevent the insert
+        IF prev_episode_count = 2 THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Cook cannot participate in three consecutive episodes.';
+        END IF;
+    END IF;
+END;
+
+//
+DELIMITER ;
+
+
 
 --end
 
