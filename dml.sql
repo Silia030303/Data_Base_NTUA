@@ -273,7 +273,7 @@ VALUES
 (7, 'Pork'),                  -- Meat and Meat Products
 (10, 'Spinach'),              -- Various Plant-based Foods
 (7, 'Lamb'),                  -- Meat and Meat Products
-(10, 'Pumpkin')
+(10, 'Pumpkin'),
 (13,'other ingredient'); 
 
 
