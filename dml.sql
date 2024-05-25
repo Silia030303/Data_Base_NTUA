@@ -205,7 +205,7 @@ INSERT INTO foodgroups (foodgroups_name, description) VALUES
 ('Cereals and Their Products', 'Covers grains and cereal-based products like bread, pasta, etc.'),
 ('Various Plant-based Foods', 'Encompasses a variety of plant-based foods like fruits, vegetables, nuts, etc.'),
 ('Products with Sweeteners', 'Includes products that contain added sweetening agents.'),
-('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.')
+('Various Beverages', 'Covers a range of different beverages including soft drinks, juices, etc.'),
 ('other foodgroup that hopefully doesnt show up in the competition', 'description');
 
 
