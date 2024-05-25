@@ -203,19 +203,6 @@ CREATE TABLE recipe_thematic_section(
 
 
     
-CREATE TABLE nutritional_info_ingredient(
-    nutinf_ingredient_id INT(10) unsigned NOT NULL,
-    ingredient_id INT(10) unsigned NOT NULL,
-    fat_per_portion INT NOT NULL,
-    protein_per_portion INT NOT NULL,
-    carbohydrate_per_portion INT NOT NULL,
-    FOREIGN KEY(ingredient_id) REFERENCES ingredient(ingredient_id),
-    PRIMARY KEY(nutinf_ingredient_id, ingredient_id)
-);
-/* είτε 100 gρ , είτε μία σκελιδα, είτε μία κουπα, μια κουταλια του γλυκου */
-/*αναγωγή μοναδων μετρησης σε 100 gρ*/
-
-
 CREATE TABLE evaluation (
     cook_id INT unsigned NOT NULL,
     judge_id INT unsigned NOT NULL,
