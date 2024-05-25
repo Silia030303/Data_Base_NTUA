@@ -950,7 +950,7 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
   (56,25),
   (57,26),
   (58,27),
-  (59,28)
+  (59,28),
   (59,15),
   (60,29),
   (61,30),
