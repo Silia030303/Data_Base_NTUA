@@ -121,12 +121,14 @@
 - **check_foodgroups_update_in_ingridient:** Αυτός ο trigger ελέγχει αν το foodgroups_id είναι ένα από τα καθορισμένα επιτρεπόμενα IDs πριν την εισαγωγή δεδομένων στον πίνακα ingredient.
 
 **4. Triggers για τον πίνακα: episode_cook_recipe**
+
   - **before_episode_cook_recipe_insert** Αυτός ο trigger ελέγχει αν ο αριθμός των συνταγών και μαγείρων ανά επεισόδιο δεν υπερβαίνει τις 10 πριν την εισαγωγή στον πίνακα episode_cook_recipe.
 
 - **before_episode_cook_insert** Αυτός ο trigger ελέγχει αν ένας μάγειρας δεν συμμετέχει σε τρία συνεχόμενα επεισόδια πριν την εισαγωγή στον πίνακα episode_cook_recipe**.**
 
 **5. Triggers για τον πίνακα recipe_step**
-    - **check_sequential_steps:** Αυτός ο trigger ελέγχει αν κάθε βήμα μιας συνταγής έχει το αμέσως προηγούμενο βήμα πριν την εισαγωγή του στον πίνακα recipe_step**.**
+
+  - **check_sequential_steps:** Αυτός ο trigger ελέγχει αν κάθε βήμα μιας συνταγής έχει το αμέσως προηγούμενο βήμα πριν την εισαγωγή του στον πίνακα recipe_step**.**
 
   - **check_step_serial_number:** Αυτός ο trigger ελέγχει αν υπάρχει ήδη βήμα με τον ίδιο σειριακό αριθμό για μια συγκεκριμένη συνταγή πριν την εισαγωγή του στον πίνακα recipe_step.
 
