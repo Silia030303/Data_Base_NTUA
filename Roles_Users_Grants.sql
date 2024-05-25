@@ -32,7 +32,7 @@ GRANT cook_role to 'gordon_ramsey'@'localhost';
 ---How to give grants to individual user ( meaning not though roles)
 GRANT SELECT, INSERT ON project84_DB_2024.recipe TO 'gordon_ramsey'@'localhost';
 
----mysql -u gordon_ramsey2 -p
+---mysql -u gordon_ramsey -p
 
 -------- Role Creation -> Administrator -----------------
 CREATE ROLE administrator;
