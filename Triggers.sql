@@ -76,7 +76,7 @@ END //
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
 CREATE TRIGGER check_foodgroups_update
-BEFORE UPDATE ON  foodgroups
+BEFORE INSERT ON  foodgroups
 FOR EACH ROW
 BEGIN
     IF NEW.foodgroups_name  IN (
@@ -91,7 +91,7 @@ BEGIN
     'Cereals and Their Products',
     'Various Plant-based Foods',
     'Products with Sweeteners', 
-    'Various Beverages') THEN
+    'Various Beverages', 'other foodgroup') THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement_quantity. Allowed values are
     Aromatic Herbs and Essential Oils, 
@@ -111,10 +111,10 @@ END; //
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
 CREATE TRIGGER check_foodgroups_update_in_ingridient
-BEFORE UPDATE ON  ingredient
+BEFORE INSERT ON  ingredient
 FOR EACH ROW
 BEGIN
-    IF NEW.foodgroups_id IN (1,2,3,4,5,6,7,8,9,10,11,12) THEN
+    IF NEW.foodgroups_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13) THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement_quantity. Allowed values are:
     1 = Aromatic Herbs and Essential Oils,
@@ -128,7 +128,8 @@ BEGIN
     9 = Cereals and Their Products, 
     10 = Various Plant-based Foods, 
     11 = Products with Sweeteners, 
-    12 = Various Beverages' ;
+    12 = Various Beverages'
+    13 = other foodgroup;
     END IF;
 END; //
 
@@ -156,7 +157,7 @@ DELIMITER ;
 
 
 
---trigger for non consecutive cooks
+--trigger for nonconsecutive cooks
 
 DELIMITER //
 
