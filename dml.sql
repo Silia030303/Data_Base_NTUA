@@ -575,44 +575,44 @@ SET r.classification = CASE
 END;
 
 
-INSERT INTO episode (episode_name, episode_date, season)
+INSERT INTO episode (episode_name, episode_date, season, serial_number)
 VALUES 
-('Season Premiere', '2024-01-10', 1),
-('The Great Bake-Off', '2024-01-17', 1),
-('International Flavors', '2024-01-24', 1),
-('Family Favorites', '2024-01-31', 1),
-('Pressure Cooker Challenge', '2024-02-07', 1),
-('Sweet Treats', '2024-02-14', 1),
-('Restaurant Wars', '2024-02-21', 1),
-('Ultimate BBQ', '2024-02-28', 1),
-('Mystery Box Madness', '2024-03-06', 1),
-('Grand Finale', '2024-03-13', 1);
+('Season Premiere', '2024-01-10', 1,1),
+('The Great Bake-Off', '2024-01-17', 1,2),
+('International Flavors', '2024-01-24', 1,3),
+('Family Favorites', '2024-01-31', 1,4),
+('Pressure Cooker Challenge', '2024-02-07', 1,5),
+('Sweet Treats', '2024-02-14', 1, 6),
+('Restaurant Wars', '2024-02-21', 1,7),
+('Ultimate BBQ', '2024-02-28', 1, 8),
+('Mystery Box Madness', '2024-03-06', 1,9),
+('Grand Finale', '2024-03-13', 1,10);
 
-INSERT INTO episode (episode_name, episode_date, season)
+INSERT INTO episode (episode_name, episode_date, season, serial_number)
 VALUES 
-('Season Premiere: New Challenges', '2025-01-10', 2),
-('Around the World in 80 Dishes', '2025-01-17', 2),
-('Comfort Food Classics', '2025-01-24', 2),
-('Healthy Eating Habits', '2025-01-31', 2),
-('Dessert Extravaganza', '2025-02-07', 2),
-('Gourmet Grilling', '2025-02-14', 2),
-('Baking Bonanza', '2025-02-21', 2),
-('Culinary Showdown', '2025-02-28', 2),
-('Mystery Box Mayhem', '2025-03-06', 2),
-('Season Finale: The Ultimate Cook-Off', '2025-03-13', 2);
+('Season Premiere: New Challenges', '2025-01-10', 2,1),
+('Around the World in 80 Dishes', '2025-01-17', 2, 2),
+('Comfort Food Classics', '2025-01-24', 2,3),
+('Healthy Eating Habits', '2025-01-31', 2,4),
+('Dessert Extravaganza', '2025-02-07', 2,5),
+('Gourmet Grilling', '2025-02-14', 2,6),
+('Baking Bonanza', '2025-02-21', 2,7),
+('Culinary Showdown', '2025-02-28', 2,8),
+('Mystery Box Mayhem', '2025-03-06', 2,9),
+('Season Finale: The Ultimate Cook-Off', '2025-03-13', 2,10);
 
-INSERT INTO episode (episode_name, episode_date, season)
+INSERT INTO episode (episode_name, episode_date, season, serial_number)
 VALUES 
-('Season Premiere: New Beginnings', '2026-01-10', 3),
-('Spicy Sensations', '2026-01-17', 3),
-('Vegetarian Delights', '2026-01-24', 3),
-('Seafood Spectacular', '2026-01-31', 3),
-('Global Fusion', '2026-02-07', 3),
-('Burger Battle', '2026-02-14', 3),
-('Pasta Party', '2026-02-21', 3),
-('Tropical Temptations', '2026-02-28', 3),
-('Sizzling Steaks', '2026-03-06', 3),
-('Season Finale: The Ultimate Showdown', '2026-03-13', 3);
+('Season Premiere: New Beginnings', '2026-01-10', 3,1),
+('Spicy Sensations', '2026-01-17', 3,2),
+('Vegetarian Delights', '2026-01-24', 3,3),
+('Seafood Spectacular', '2026-01-31', 3,4),
+('Global Fusion', '2026-02-07', 3,5),
+('Burger Battle', '2026-02-14', 3,6),
+('Pasta Party', '2026-02-21', 3,7),
+('Tropical Temptations', '2026-02-28', 3,8),
+('Sizzling Steaks', '2026-03-06', 3,9),
+('Season Finale: The Ultimate Showdown', '2026-03-13', 3,10);
 
 
 
