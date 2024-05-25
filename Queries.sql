@@ -241,7 +241,7 @@ FROM (
     FROM judge j
     JOIN cook c ON j.cook_id = c.cook_id
     JOIN evaluation ev ON ev.judge_id = j.judge_id
-    JOIN episode e ON ev.episode_id = e.episode_id
+    JOIN episode e ON j.episode_id = e.episode_id
 ) AS combined
 GROUP BY combined.episode_id
 ORDER BY 
