@@ -235,38 +235,9 @@ CREATE TABLE cook_nat_cuis(
     );
  
     
--- recipe_nutritional_info view ΔΕΝ ΤΡΕΧΕΙ
 
-CREATE VIEW recipe_nutritional_info_vw AS
-SELECT 
-    recipe_id,
-    recipe_name,
-    quantity_of_servings,
-    fat_per_portion,
-    protein_per_portion,
-    carbohydrate_per_portion,
-    CASE
-        WHEN quantity_of_servings = 0 THEN NULL
-        ELSE total_calories / quantity_of_servings
-    END AS calories_per_portion
-FROM 
-    (SELECT 
-        r.recipe_name,
-        r.quantity_of_servings,
-        r.fat_per_portion,
-        r.protein_per_portion,
-        r.carbohydrate_per_portion,
-        SUM(ir.calories) AS total_calories
-    FROM 
-        recipe r
-    JOIN 
-        ingredient_VS_recipe ir 
-    ON 
-        r.recipe_id = ir.recipe_id
-    GROUP BY 
-        r.recipe_id) AS table1;
 
--- recipe_nutritional_info view ΠΟΥ ΤΡΈΧΕΙ 
+-- recipe_nutritional_info view
 
 CREATE VIEW recipe_nutritional_info_vw AS
 SELECT
