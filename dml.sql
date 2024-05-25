@@ -486,7 +486,6 @@ VALUES
 (24, 59, 100, 'g', 10),   -- Lettuce
 (24, 5, 2, 'tbsp', 180),  -- Olive Oil
 -- Rice Pudding
-(25, 21, 200, 'g', 250),  -- Rice
 (25, 6, 500, 'ml', 400),  -- Milk
 (25, 4, 3, 'tbsp', 180),  -- Honey
 -- Carrot Soup
