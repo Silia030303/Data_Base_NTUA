@@ -65,11 +65,9 @@
 
 **1. Δημιουργία της βάσης δεδομένων**
 
-DROP DATABASE IF EXISTS project84_DB_2024;
-
-CREATE database project84_DB_2024;
-
-USE project84_DB_2024;
+*DROP DATABASE IF EXISTS project84_DB_2024;*
+*CREATE database project84_DB_2024;*
+*USE project84_DB_2024;*
 
 Αρχικά, η βάση δεδομένων **project84_DB_2024** διαγράφεται εάν υπάρχει, και στη συνέχεια δημιουργείται εκ νέου και επιλέγεται για χρήση.
 
