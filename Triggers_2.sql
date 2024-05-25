@@ -1,5 +1,5 @@
 DELIMITER //
---PETE : Ξαναλεω το TRIGGER του. 
+--PETE : Ξαναλεω το TRIGGER του.
 --TRIGGER : Cook cannot participate in three consecutive episodes.
 
 --Cook cannot participate in three consecutive episodes.
