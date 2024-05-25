@@ -3,10 +3,12 @@
 --Eugene
 
 --per cook and nat cius
-SELECT c.cook_id,c.first_name, c.last_name, e.grade, e.episode_id, ecr.recipe_id,r.natcuis_id,n.natcuis_name, avg(*)
+
+SELECT c.cook_id,c.first_name, c.last_name,r.natcuis_id,n.natcuis_name,avg(grade)
 FROM cook c
 JOIN evaluation e ON c.cook_id = e.cook_id
-JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND e.episode_id = ecr.episode_id
+JOIN judge j on e.judge_id = j.judge_id 
+JOIN episode_cook_recipe ecr ON e.cook_id = ecr.cook_id AND j.episode_id = ecr.episode_id
 JOIN recipe r on r.recipe_id = ecr.recipe_id
 JOIN national_cuisine n on r.natcuis_id = n.natcuis_id
 GROUP BY cook_id,natcuis_id;
