@@ -616,7 +616,7 @@ VALUES
 
 
 ---------------------------------------------------NEW DATA: ------------------------------------------------------------
-INSERT INTO judge (cook_id, partitipation_number, episode_id)
+INSERT INTO judge (cook_id, participation_number, episode_id)
 VALUES 
 -- Episode 1 judges
 (12, 3, 1),  -- Gino D'Acampo
@@ -659,7 +659,7 @@ VALUES
 (12, 3, 10),  -- Gino D'Acampo
 (41, 2, 10);  -- Amanda Scott
 
-INSERT INTO judge (cook_id, partitipation_number, episode_id)
+INSERT INTO judge (cook_id, participation_number, episode_id)
 VALUES
 -- Episode 11 judges
 (71, 1, 11),  
@@ -702,7 +702,7 @@ VALUES
 (61, 1, 20),  
 (71, 1, 20);  
 
-INSERT INTO judge (cook_id, partitipation_number, episode_id)
+INSERT INTO judge (cook_id, participation_number, episode_id)
 VALUES 
 -- Season 3
 -- Episode 21 judges
