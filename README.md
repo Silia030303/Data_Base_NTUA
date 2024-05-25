@@ -107,40 +107,24 @@
 Ο κώδικας στο αρχείο **Triggers.sql** περιλαμβάνει τη δημιουργία triggers (ενεργοποιητών) στη βάση δεδομένων **project84_DB_2024**. Αυτοί οι triggers εκτελούν συγκεκριμένες ενέργειες πριν την εισαγωγή ή την ενημέρωση δεδομένων σε ορισμένους πίνακες, ώστε να εξασφαλιστεί η ακεραιότητα των δεδομένων και να εφαρμοστούν επιχειρηματικοί κανόνες. Ακολουθεί μια περιγραφή των triggers που δημιουργήθηκαν:
 
 1. **Triggers για τον πίνακα : ingredient_vs_recipe**
-    1. **check_unit_of_measurement_insert:**
+    1. **check_unit_of_measurement_insert:** Αυτός ο trigger ελέγχει αν η τιμή της στήλης unit_of_measurement είναι μία από τις επιτρεπόμενες τιμές πριν την εισαγωγή δεδομένων στον πίνακα ingredient_vs_recipe. Εάν δεν είναι, απορρίπτει την εισαγωγή και εμφανίζει μήνυμα σφάλματος.
 
-Αυτός ο trigger ελέγχει αν η τιμή της στήλης unit_of_measurement είναι μία από τις επιτρεπόμενες τιμές πριν την εισαγωγή δεδομένων στον πίνακα ingredient_vs_recipe. Εάν δεν είναι, απορρίπτει την εισαγωγή και εμφανίζει μήνυμα σφάλματος.
-
-- 1. **check_unit_of_measurement_update:**
-
-Παρόμοιος με τον προηγούμενο, αυτός ο trigger ελέγχει τις επιτρεπόμενες τιμές της unit_of_measurement πριν την ενημέρωση δεδομένων στον πίνακα ingredient_vs_recipe.
+- 1. **check_unit_of_measurement_update:** Παρόμοιος με τον προηγούμενο, αυτός ο trigger ελέγχει τις επιτρεπόμενες τιμές της unit_of_measurement πριν την ενημέρωση δεδομένων στον πίνακα ingredient_vs_recipe.
 
 1. **Triggers για τον πίνακα : foodgroups**
-    1. **check_foodgroups_update:**
-
-Αυτός ο trigger ελέγχει αν το foodgroups_name είναι μία από τις καθορισμένες επιτρεπόμενες τιμές πριν την εισαγωγή δεδομένων στον πίνακα foodgroups.
+    1. **check_foodgroups_update:** Αυτός ο trigger ελέγχει αν το foodgroups_name είναι μία από τις καθορισμένες επιτρεπόμενες τιμές πριν την εισαγωγή δεδομένων στον πίνακα foodgroups.
 
 1. **Triggers για τον πίνακα: ingredient:**
-    1. **check_foodgroups_update_in_ingridient:**
-
-Αυτός ο trigger ελέγχει αν το foodgroups_id είναι ένα από τα καθορισμένα επιτρεπόμενα IDs πριν την εισαγωγή δεδομένων στον πίνακα ingredient.
+    1. **check_foodgroups_update_in_ingridient:** Αυτός ο trigger ελέγχει αν το foodgroups_id είναι ένα από τα καθορισμένα επιτρεπόμενα IDs πριν την εισαγωγή δεδομένων στον πίνακα ingredient.
 
 1. **Triggers για τον πίνακα: episode_cook_recipe**
-    1. **before_episode_cook_recipe_insert**
+    1. **before_episode_cook_recipe_insert** Αυτός ο trigger ελέγχει αν ο αριθμός των συνταγών και μαγείρων ανά επεισόδιο δεν υπερβαίνει τις 10 πριν την εισαγωγή στον πίνακα episode_cook_recipe.
 
-Αυτός ο trigger ελέγχει αν ο αριθμός των συνταγών και μαγείρων ανά επεισόδιο δεν υπερβαίνει τις 10 πριν την εισαγωγή στον πίνακα episode_cook_recipe.
-
-- 1. **before_episode_cook_insert**
-
-Αυτός ο trigger ελέγχει αν ένας μάγειρας δεν συμμετέχει σε τρία συνεχόμενα επεισόδια πριν την εισαγωγή στον πίνακα episode_cook_recipe**.**
+- 1. **before_episode_cook_insert** Αυτός ο trigger ελέγχει αν ένας μάγειρας δεν συμμετέχει σε τρία συνεχόμενα επεισόδια πριν την εισαγωγή στον πίνακα episode_cook_recipe**.**
 
 1. **Triggers για τον πίνακα recipe_step**
-    1. **check_sequential_steps:**
+    1. **check_sequential_steps:** Αυτός ο trigger ελέγχει αν κάθε βήμα μιας συνταγής έχει το αμέσως προηγούμενο βήμα πριν την εισαγωγή του στον πίνακα recipe_step**.**
 
-Αυτός ο trigger ελέγχει αν κάθε βήμα μιας συνταγής έχει το αμέσως προηγούμενο βήμα πριν την εισαγωγή του στον πίνακα recipe_step**.**
-
-- 1. **check_step_serial_number**
-
-Αυτός ο trigger ελέγχει αν υπάρχει ήδη βήμα με τον ίδιο σειριακό αριθμό για μια συγκεκριμένη συνταγή πριν την εισαγωγή του στον πίνακα recipe_step.
+- 1. **check_step_serial_number** Αυτός ο trigger ελέγχει αν υπάρχει ήδη βήμα με τον ίδιο σειριακό αριθμό για μια συγκεκριμένη συνταγή πριν την εισαγωγή του στον πίνακα recipe_step.
 
 
