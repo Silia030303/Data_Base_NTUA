@@ -136,12 +136,13 @@ CREATE TABLE recipe_meal_type (
 );
 
 
+
 CREATE TABLE episode(
    episode_id INT(10) unsigned AUTO_INCREMENT NOT NULL,
-    -- add episode serial number
    episode_name VARCHAR(50) NOT NULL,
    episode_date date NOT NULL,
    season INT NOT NULL CHECK (season >= 0),
+   serial_number INT NOT NULL CHECK (serial_number >= 1),
    image_url text DEFAULT NULL,
    image_description text DEFAULT NULL,
    primary key(episode_id)
