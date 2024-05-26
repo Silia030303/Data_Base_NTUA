@@ -19,7 +19,8 @@
 # Σχεσιακό διάγραμμα της ΒΔ
 
 
-**
+![image](https://github.com/Silia030303/Data_Base_NTUA/assets/160490846/8c6f0331-9f2a-450f-8583-2c0f7e957b34)
+
 
 # Εγκατάστασή Εφαρμογής – Ως Root
 
