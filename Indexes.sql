@@ -14,12 +14,12 @@ CREATE INDEX idx_difficulty_level ON recipe(difficulty_level);
 -----------------------------------------------------------------------------------------------------------
 --2. ΠΙΝΑΚΑΣ cook
 --last_name: Χρησιμοποιείται για φιλτράρισμα και ομαδοποίηση.
--- QUERY 1 :cook_id,last_name
--- QUERY 2 :cook_id,
--- QUERY 3 : WHERE  c.age < 60 , GROUP BY c.cook_id
--- QUERY 4 : cook_id,SELECT c.first_name, c.last_name
+-- QUERY 1 : SELECT c.first_name,last_name
+-- QUERY 2 : SELECT c.first_name,
+-- QUERY 3 : SELECT c.first_name, WHERE  c.age < 30 , 
+-- QUERY 4 : SELECT c.first_name, c.last_name
 -- QUERY 5 : SELECT c.first_name, c.last_name   
--- QUERY 7 : SELECT c.cook_id, c.first_name, c.last_name,
+-- QUERY 7 : SELECT c.first_name, c.last_name,
 
 CREATE INDEX idx_cook_last_name ON cook(first_name);
 
