@@ -243,6 +243,61 @@ DELIMITER ;
 
 
 
+--trigger for no consecutive natcuis 
+DELIMITER //
+
+CREATE TRIGGER before_episode_nat_cuis_insert
+BEFORE INSERT ON episode_cook_recipe
+FOR EACH ROW
+BEGIN
+    DECLARE episode_serial_number INT;
+    DECLARE prev_nat_cuis_id_1 INT;
+    DECLARE prev_nat_cuis_id_2 INT;
+
+    -- Get the serial number of the episode being inserted
+    SELECT serial_number INTO episode_serial_number
+    FROM episode
+    WHERE episode_id = NEW.episode_id;
+
+    -- Only perform the check if the episode serial number is greater than 2
+    IF episode_serial_number > 2 THEN
+        -- Get the nat_cuis_ids of the previous two recipes in the episode
+        SELECT natcuis_id INTO prev_nat_cuis_id_1
+        FROM recipe
+        WHERE recipe_id = (
+            SELECT recipe_id
+            FROM episode_cook_recipe
+            WHERE episode_id = NEW.episode_id
+            ORDER BY sequence_number DESC
+            LIMIT 1 OFFSET 1
+        );
+
+        SELECT natcuis_id INTO prev_nat_cuis_id_2
+        FROM recipe
+        WHERE recipe_id = (
+            SELECT recipe_id
+            FROM episode_cook_recipe
+            WHERE episode_id = NEW.episode_id
+            ORDER BY sequence_number DESC
+            LIMIT 1 OFFSET 2
+        );
+
+        -- If the current nat_cuis_id matches the previous two, prevent the insert
+        IF prev_nat_cuis_id_1 = (
+            SELECT natcuis_id FROM recipe WHERE recipe_id = NEW.recipe_id
+        ) AND prev_nat_cuis_id_2 = (
+            SELECT natcuis_id FROM recipe WHERE recipe_id = NEW.recipe_id
+        ) THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'No three consecutive nat_cuis_ids allowed in one episode.';
+        END IF;
+    END IF;
+END;
+
+//
+DELIMITER ;
+
+
 
 
 --trigger for steps
