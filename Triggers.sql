@@ -241,13 +241,12 @@ DELIMITER ;
 --trigger for no consecutive natcuis 
 DELIMITER //
 
-CREATE TRIGGER before_episode_nat_cuis_insert
+CREATE TRIGGER before_episode_cook_insert_natcuis
 BEFORE INSERT ON episode_cook_recipe
 FOR EACH ROW
 BEGIN
     DECLARE episode_serial_number INT;
-    DECLARE prev_nat_cuis_id_1 INT;
-    DECLARE prev_nat_cuis_id_2 INT;
+    DECLARE prev_episode_count INT;
 
     -- Get the serial number of the episode being inserted
     SELECT serial_number INTO episode_serial_number
@@ -256,41 +255,28 @@ BEGIN
 
     -- Only perform the check if the episode serial number is greater than 2
     IF episode_serial_number > 2 THEN
-        -- Get the nat_cuis_ids of the previous two recipes in the episode
-        SELECT natcuis_id INTO prev_nat_cuis_id_1
-        FROM recipe
-        WHERE recipe_id = (
-            SELECT recipe_id
-            FROM episode_cook_recipe
-            WHERE episode_id = NEW.episode_id
-            ORDER BY sequence_number DESC
-            LIMIT 1 OFFSET 1
-        );
+        -- Check if the natcuis was in the previous two episodes
+        SELECT COUNT(*)
+        INTO prev_episode_count
+        FROM episode_cook_recipe ecr
+        JOIN episode e ON ecr.episode_id = e.episode_id
+        JOIN recipe r ON r.recipe_id = ecr.recipe_id
+        JOIN national_cuisine nc ON nc.nat_cuis_id = r.nat_cuis_id
+        WHERE ecr.recipe_id = NEW.recipe_id
+          AND e.serial_number IN (episode_serial_number - 1, episode_serial_number - 2)
+        GROUP BY nc.nat_cuis_id;
 
-        SELECT natcuis_id INTO prev_nat_cuis_id_2
-        FROM recipe
-        WHERE recipe_id = (
-            SELECT recipe_id
-            FROM episode_cook_recipe
-            WHERE episode_id = NEW.episode_id
-            ORDER BY sequence_number DESC
-            LIMIT 1 OFFSET 2
-        );
-
-        -- If the current nat_cuis_id matches the previous two, prevent the insert
-        IF prev_nat_cuis_id_1 = (
-            SELECT natcuis_id FROM recipe WHERE recipe_id = NEW.recipe_id
-        ) AND prev_nat_cuis_id_2 = (
-            SELECT natcuis_id FROM recipe WHERE recipe_id = NEW.recipe_id
-        ) THEN
+        -- If the natcuis was in both previous episodes, prevent the insert
+        IF prev_episode_count = 2 THEN
             SIGNAL SQLSTATE '45000'
-            SET MESSAGE_TEXT = 'No three consecutive nat_cuis_ids allowed in one episode.';
+            SET MESSAGE_TEXT = 'natcuis cannot participate in three consecutive episodes.';
         END IF;
     END IF;
 END;
-
 //
+
 DELIMITER ;
+
 
 
 --no consecutive 3 judges : 
