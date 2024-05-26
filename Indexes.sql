@@ -13,7 +13,6 @@ CREATE INDEX idx_difficulty_level ON recipe(difficulty_level);
 
 -----------------------------------------------------------------------------------------------------------
 --2. ΠΙΝΑΚΑΣ cook
---last_name: Χρησιμοποιείται για φιλτράρισμα και ομαδοποίηση.
 -- QUERY 1 : SELECT c.first_name, c.last_name
 -- QUERY 2 : SELECT c.first_name, c.last_name
 -- QUERY 3 : SELECT c.first_name, c.last_name, WHERE  c.age < 30 , 
@@ -31,7 +30,6 @@ CREATE INDEX idx_cook_age ON cook(age);
 -----------------------------------------------------------------------------------------------------------
 
 --3. Πίνακας national_cuisine
---natcuis_name: Χρησιμοποιείται για φιλτράρισμα και ομαδοποίηση.
 --QUERY 1 :SELECT natcuis_name, 
 --QUERY 2 :SELECT natcuis_name , where nc.natcuis_name 
 --QUERY 10:SELECT natcuis_name
@@ -40,7 +38,6 @@ CREATE INDEX idx_natcuis_name ON national_cuisine(natcuis_name);
 -----------------------------------------------------------------------------------------------------------
 
 --4. Πίνακας tags
---tag_name: Χρησιμοποιείται για φιλτράρισμα και συνδέσεις με τον πίνακα recipe_tag.
 --QUERY 6:SELECT t1.tag_name
 
 CREATE INDEX idx_tag_name ON tags(tag_name);
@@ -50,7 +47,6 @@ CREATE INDEX idx_tag_name ON tags(tag_name);
 
 -----------------------------------------------------------------------------------------------------------
 --5. Πίνακας episode 
---season:Χρησιμοποιείται σε συνδέσεις και για φιλτράρισμα.
 --QUERY 2 :season, where e.season = 2
 --QUERY 5 :season, 
 --QUERY 8 :SELECT episode_name
@@ -64,8 +60,7 @@ CREATE INDEX idx_episode_episode_name ON episode(episode_name);
 -----------------------------------------------------------------------------------------------------------
 
 --6. Πίνακας foodgroups
---foodgroups_name:Χρησιμοποιείται σε συνδέσεις και για φιλτράρισμα.
---QUERΥ 15 : foodgroups_id, SELECT fg.foodgroups_name ,WHERE fg.foodgroups_id  IS NULL
+--QUERΥ 15 : SELECT fg.foodgroups_name ,WHERE fg.foodgroups_id  IS NULL
 
 
 CREATE INDEX idx_judge_foodgroups_name ON foodgroups(foodgroups_name);
