@@ -79,7 +79,7 @@ CREATE TRIGGER check_foodgroups_insert
 BEFORE INSERT ON  foodgroups
 FOR EACH ROW
 BEGIN
-    IF NEW.foodgroups_name  IN (
+    IF NEW.foodgroups_name NOT IN (
     'Aromatic Herbs and Essential Oils',
     'Coffee, Tea, and Their Products',
     'Preserved Foods',
@@ -115,7 +115,7 @@ CREATE TRIGGER check_foodgroups_insert_in_ingridient
 BEFORE INSERT ON  ingredient
 FOR EACH ROW
 BEGIN
-    IF NEW.foodgroups_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13) THEN
+    IF NEW.foodgroups_id NOT IN (1,2,3,4,5,6,7,8,9,10,11,12,13) THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement_quantity. Allowed values are:
     1 = Aromatic Herbs and Essential Oils,
