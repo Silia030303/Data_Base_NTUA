@@ -118,7 +118,7 @@ ORDER BY
     year;
 -------------------------------------------------------------------------Query 10--------------------------------------------------------------------- 
 
-SELECT table1.natcuis_name, table1.season as name_of_season_of_participation_table1, table2.season as name_of_season_of_participation_table2, 
+SELECT table1.natcuis_name as nat_cuis, table1.season as name_of_season_1, table2.season as name_of_season_2, 
 table1.cuis_count1, table2.cuis_count2,(table1.cuis_count1 + table2.cuis_count2) AS total_count
 FROM 
     (SELECT nc.natcuis_name, e.season, r.natcuis_id, count(ecr.episode_id) as cuis_count1
