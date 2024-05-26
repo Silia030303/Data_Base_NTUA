@@ -202,7 +202,7 @@ DELIMITER ;
 
 DELIMITER //
 
-CREATE TRIGGER before_episode_cook_insert
+CREATE TRIGGER before_episode_recipe_insert
 BEFORE INSERT ON episode_cook_recipe
 FOR EACH ROW
 BEGIN
