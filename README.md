@@ -14,7 +14,7 @@
 # ER Μοντέλο
 
 
-![image](https://github.com/Silia030303/Data_Base_NTUA/assets/160490846/f1301ae1-a5c8-4d34-8b15-3f6b6f509152)
+![image](https://github.com/Silia030303/Data_Base_NTUA/assets/160490846/1a9d80f8-0ad3-4c40-8219-0e00d755ca88)
 
 
 # Σχεσιακό διάγραμμα της ΒΔ
