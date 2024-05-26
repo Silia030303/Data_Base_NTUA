@@ -221,7 +221,7 @@ BEGIN
         INTO prev_episode_count
         FROM episode_cook_recipe ecr
         JOIN episode e ON ecr.episode_id = e.episode_id
-        WHERE ecr.cook_id = NEW.cook_id
+        WHERE ecr.recipe_id = NEW.recipe_id
           AND e.serial_number IN (episode_serial_number - 1, episode_serial_number - 2);
 
         -- If the cook was in both previous episodes, prevent the insert
