@@ -618,7 +618,7 @@ VALUES
 ('Season Finale: The Ultimate Showdown', '2026-03-13', 3,10);
 
 
-
+/*
 ---------------------------------------------------NEW DATA: ------------------------------------------------------------
 INSERT INTO judge (cook_id, participation_number, episode_id)
 VALUES 
@@ -749,7 +749,9 @@ VALUES
 (1, 1, 30),  
 (5, 1, 30),  
 (21, 1, 30);  
+*/
 
+/*
 ---------------------------------------------------------------------------------------------------------------
 INSERT INTO evaluation(cook_id, judge_id, grade) VALUES
 -- Evaluations for Episode 1
@@ -790,7 +792,7 @@ INSERT INTO evaluation(cook_id, judge_id, grade) VALUES
 (12, 3, 1),
 (31, 2, 2),
 (31, 3, 1);  -- no sure if this is valid with all the constraints
-
+*/
 
 /*
 -- Inserting data for Episode 1
