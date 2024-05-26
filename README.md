@@ -71,14 +71,16 @@
 Τρέξε στο terminal σου τον κώδικα του φακέλου : dml_link.sql
 Ύστερα για να περάσεις τα random δεδομένα θα πρέπει να ακολουθήσεις τα εξής βήματα :
 -	Κατέβασε VisualStudio (ή κάποιο άλλο εργαλείο ώστε να τρέχεις python ): Download Visual Studio Code - Mac, Linux, Windows
--	Κατέβασε την python: Download Python | Python.org
+-	Κατέβασε την python:[ Download Python | Python.org](https://www.python.org/downloads/)
 -	Κατέβασε τις παρακάτω βιβλιοθήκες πληκτρολογώντας στον terminal σου τις ακόλουθες εντολές:
 pip install mysql-connector-python
 
--	Κατέβασε τα παρακάτω 3 αρχεία από το github repository και τρέξε τους με την σειρά που δίνετε :
- -	1.	episode_cook_recipe inserts.py
-   2.		judge inserts.py
-      3.		evaluation inserts.py
+
+- Κατέβασε τα παρακάτω 3 αρχεία από το github repository και τρέξε τους με την σειρά που δίνονται :
+  - episode_cook_recipe inserts.py
+  - judge inserts.py
+  - evaluation inserts.py
+
 Τώρα έχουμε γεμίσει την βάση μας με δεδομένα.
 
 
