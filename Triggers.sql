@@ -298,6 +298,56 @@ END;
 DELIMITER ;
 
 
+--no consecutive 3 judges : 
+
+DELIMITER //
+
+CREATE TRIGGER before_episode_judge_insert
+BEFORE INSERT ON judge
+FOR EACH ROW
+BEGIN
+    DECLARE episode_serial_number INT;
+    DECLARE prev_judge_id_1 INT;
+    DECLARE prev_judge_id_2 INT;
+
+    -- Get the serial number of the episode being inserted
+    SELECT serial_number INTO episode_serial_number
+    FROM episode
+    WHERE episode_id = NEW.episode_id;
+
+    -- Only perform the check if the episode serial number is greater than 2
+    IF episode_serial_number > 2 THEN
+        -- Get the judge_id of the previous two episodes
+        SELECT judge_id INTO prev_judge_id_1
+        FROM judge
+        WHERE episode_id = (
+            SELECT episode_id
+            FROM episode
+            WHERE serial_number = episode_serial_number - 1
+        )
+        ORDER BY episode_id DESC
+        LIMIT 1;
+
+        SELECT judge_id INTO prev_judge_id_2
+        FROM judge
+        WHERE episode_id = (
+            SELECT episode_id
+            FROM episode
+            WHERE serial_number = episode_serial_number - 2
+        )
+        ORDER BY episode_id DESC
+        LIMIT 1;
+
+        -- If the current judge_id matches the previous two, prevent the insert
+        IF prev_judge_id_1 = NEW.judge_id AND prev_judge_id_2 = NEW.judge_id THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'No three consecutive episodes with the same judge allowed.';
+        END IF;
+    END IF;
+END;
+
+//
+DELIMITER ;
 
 
 --trigger for steps
