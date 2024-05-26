@@ -52,7 +52,7 @@ CREATE INDEX idx_tag_name ON tags(tag_name);
 --5. Πίνακας episode 
 --season:Χρησιμοποιείται σε συνδέσεις και για φιλτράρισμα.
 --QUERY 2 :season, where e.season = 2
---QUERY 5 :episode_id 
+--QUERY 5 :season, episode_id 
 --QUERY 8 :SELECT episode_name
 --QUERY 10 : SELECT .. e2.season ,episode_id
 --QUERY 12 :episode_id ,SELECT episode_name
