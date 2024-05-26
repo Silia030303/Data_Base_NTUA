@@ -196,15 +196,40 @@ WHERE
 
 -------------------------------------------------------------------------Query 12--------------------------------------------------------------------- 
 
-SELECT season,episode_name, AVG(avg_dif) AS avg_difficulty
-FROM (
-    SELECT season, episode_name, AVG(difficulty_level) AS avg_dif
-    FROM episode_cook_recipe ecr
-    JOIN episode ep ON ep.episode_id = ecr.episode_id
-    JOIN recipe re ON re.recipe_id = ecr.recipe_id
-    GROUP BY ecr.episode_id
-) AS avg_diff_per_episode
-GROUP BY season;
+WITH avg_diff_per_episode AS (
+    SELECT 
+        ep.season, 
+        ep.episode_name, 
+        ep.episode_id,
+        AVG(re.difficulty_level) AS avg_dif
+    FROM 
+        episode_cook_recipe ecr
+    JOIN 
+        episode ep ON ep.episode_id = ecr.episode_id
+    JOIN 
+        recipe re ON re.recipe_id = ecr.recipe_id
+    GROUP BY 
+        ep.season, ep.episode_name, ep.episode_id
+),
+max_avg_diff_per_season AS (
+    SELECT 
+        season, 
+        MAX(avg_dif) AS highest_dif
+    FROM 
+        avg_diff_per_episode
+    GROUP BY 
+        season
+)
+SELECT 
+    adp.season, 
+    adp.episode_name, 
+    mad.highest_dif
+FROM 
+    max_avg_diff_per_season mad
+JOIN 
+    avg_diff_per_episode adp
+    ON mad.season = adp.season 
+    AND mad.highest_dif = adp.avg_dif;
 
 -------------------------------------------------------------------------Query 13--------------------------------------------------------------------- 
 SELECT 
