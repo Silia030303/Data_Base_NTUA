@@ -261,7 +261,7 @@ BEGIN
         FROM episode_cook_recipe ecr
         JOIN episode e ON ecr.episode_id = e.episode_id
         JOIN recipe r ON r.recipe_id = ecr.recipe_id
-        JOIN national_cuisine nc ON nc.nat_cuis_id = r.nat_cuis_id
+        JOIN national_cuisine nc ON nc.natcuis_id= r.natcuis_id
         WHERE ecr.recipe_id = NEW.recipe_id
           AND e.serial_number IN (episode_serial_number - 1, episode_serial_number - 2)
         GROUP BY nc.nat_cuis_id;
