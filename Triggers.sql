@@ -227,7 +227,7 @@ BEGIN
         -- If the cook was in both previous episodes, prevent the insert
         IF prev_episode_count = 2 THEN
             SIGNAL SQLSTATE '45000'
-            SET MESSAGE_TEXT = 'Cook cannot participate in three consecutive episodes.';
+            SET MESSAGE_TEXT = 'recipe cannot participate in three consecutive episodes.';
         END IF;
     END IF;
 END;
