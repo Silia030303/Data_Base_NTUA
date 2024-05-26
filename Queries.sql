@@ -273,12 +273,6 @@ WHERE i.ingredient_id  IS NULL;
 --needs inserts in ingredient and ingredient_VS_recipe  to return smth
 
 
---2
-SELECT fg.foodgroups_name
-FROM foodgroups fg
-LEFT JOIN ingredient i ON fg.foodgroups_id = i.foodgroups_id
-LEFT JOIN ingredient_VS_recipe ir ON i.ingredient_id = ir.ingredient_id
-LEFT JOIN episode_cook_recipe ecr ON ir.recipe_id = ecr.recipe_id
-WHERE i.ingredient_id IS NULL;
+
 
 
