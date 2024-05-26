@@ -196,7 +196,7 @@ WHERE
 
 -------------------------------------------------------------------------Query 12--------------------------------------------------------------------- 
 
-SELECT season, AVG(avg_dif) AS avg_difficulty
+SELECT season,episode_name, AVG(avg_dif) AS avg_difficulty
 FROM (
     SELECT season, episode_name, AVG(difficulty_level) AS avg_dif
     FROM episode_cook_recipe ecr
