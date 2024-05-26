@@ -24,7 +24,7 @@ SELECT c.first_name,c.last_name,e.season
 from cook c 
 JOIN episode_cook_recipe cer on c.cook_id = cer.cook_id
 JOIN episode e on e.episode_id = cer.episode_id
-where e.season = 2 ;  --needs more data in other seasons
+where e.season = 2 ;  
 
 -------------------------------------------------------------------------Query 3--------------------------------------------------------------------- 
 
