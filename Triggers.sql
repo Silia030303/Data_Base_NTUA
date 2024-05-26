@@ -202,13 +202,12 @@ DELIMITER ;
 
 DELIMITER //
 
-CREATE TRIGGER before_episode_cook_insert_recipe
+CREATE TRIGGER before_episode_cook_insert
 BEFORE INSERT ON episode_cook_recipe
 FOR EACH ROW
 BEGIN
     DECLARE episode_serial_number INT;
-    DECLARE prev_cook_id_1 INT;
-    DECLARE prev_cook_id_2 INT;
+    DECLARE prev_episode_count INT;
 
     -- Get the serial number of the episode being inserted
     SELECT serial_number INTO episode_serial_number
@@ -217,31 +216,18 @@ BEGIN
 
     -- Only perform the check if the episode serial number is greater than 2
     IF episode_serial_number > 2 THEN
-        -- Get the cook_ids of the cooks in the previous two episodes
-        SELECT cook_id INTO prev_cook_id_1
-        FROM episode_cook_recipe
-        WHERE episode_id = (
-            SELECT episode_id
-            FROM episode
-            WHERE serial_number = episode_serial_number - 1
-        )
-        ORDER BY episode_cook_recipe_id DESC -- Using primary key for ordering
-        LIMIT 1;
+        -- Check if the cook was in the previous two episodes
+        SELECT COUNT(*)
+        INTO prev_episode_count
+        FROM episode_cook_recipe ecr
+        JOIN episode e ON ecr.episode_id = e.episode_id
+        WHERE ecr.cook_id = NEW.cook_id
+          AND e.serial_number IN (episode_serial_number - 1, episode_serial_number - 2);
 
-        SELECT cook_id INTO prev_cook_id_2
-        FROM episode_cook_recipe
-        WHERE episode_id = (
-            SELECT episode_id
-            FROM episode
-            WHERE serial_number = episode_serial_number - 2
-        )
-        ORDER BY episode_cook_recipe_id DESC -- Using primary key for ordering
-        LIMIT 1;
-
-        -- If the current cook_id matches the previous two, prevent the insert
-        IF prev_cook_id_1 = NEW.cook_id AND prev_cook_id_2 = NEW.cook_id THEN
+        -- If the cook was in both previous episodes, prevent the insert
+        IF prev_episode_count = 2 THEN
             SIGNAL SQLSTATE '45000'
-            SET MESSAGE_TEXT = 'No three consecutive episodes with the same cook_id allowed.';
+            SET MESSAGE_TEXT = 'Cook cannot participate in three consecutive episodes.';
         END IF;
     END IF;
 END;
