@@ -128,7 +128,7 @@ BEGIN
     9 = Cereals and Their Products, 
     10 = Various Plant-based Foods, 
     11 = Products with Sweeteners, 
-    12 = Various Beverages'
+    12 = Various Beverages,
     13 = other foodgroup;
     END IF;
 END; //
