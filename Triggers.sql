@@ -75,7 +75,7 @@ END //
 
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
-CREATE TRIGGER check_foodgroups_update
+CREATE TRIGGER check_foodgroups_insert
 BEFORE INSERT ON  foodgroups
 FOR EACH ROW
 BEGIN
@@ -91,9 +91,10 @@ BEGIN
     'Cereals and Their Products',
     'Various Plant-based Foods',
     'Products with Sweeteners', 
-    'Various Beverages', 'other foodgroup') THEN
+    'Various Beverages', 
+    'other foodgroup') THEN
         SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Invalid value for unit_of_measurement_quantity. Allowed values are
+        SET MESSAGE_TEXT = 'Invalid value for unit_of_foodgroups. Allowed values are
     Aromatic Herbs and Essential Oils, 
     Coffee, Tea, and Their Products,
     Preserved Foods,
@@ -110,7 +111,7 @@ BEGIN
 END; //
 
 -- Trigger για την ενημέρωση δεδομένων στο foodgroups
-CREATE TRIGGER check_foodgroups_update_in_ingridient
+CREATE TRIGGER check_foodgroups_insert_in_ingridient
 BEFORE INSERT ON  ingredient
 FOR EACH ROW
 BEGIN
