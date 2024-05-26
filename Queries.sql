@@ -293,7 +293,6 @@ JOIN ingredient i ON i.ingredient_id = ir.ingredient_id
 JOIN episode_cook_recipe ecr ON ecr.recipe_id= ir.recipe_id
 RIGHT JOIN foodgroups fg ON fg.foodgroups_id = i.foodgroups_id
 WHERE i.ingredient_id  IS NULL;
---needs inserts in ingredient and ingredient_VS_recipe  to return smth
 
 
 
