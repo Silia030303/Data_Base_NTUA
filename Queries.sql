@@ -22,7 +22,7 @@ JOIN cook_nat_cuis cn on c.cook_id = cn.cook_id
 JOIN national_cuisine nc on cn.natcuis_id = nc.natcuis_id
 where nc.natcuis_name = 'Afghan cuisine';
 
-SELECT c.first_name,c.last_name
+SELECT c.first_name,c.last_name,e.season
 from cook c 
 JOIN episode_cook_recipe cer on c.cook_id = cer.cook_id
 JOIN episode e on e.episode_id = cer.episode_id
