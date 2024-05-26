@@ -41,7 +41,7 @@ CREATE INDEX idx_natcuis_name ON national_cuisine(natcuis_name);
 
 --4. Πίνακας tags
 --tag_name: Χρησιμοποιείται για φιλτράρισμα και συνδέσεις με τον πίνακα recipe_tag.
---QUERY 6:SELECT t1.tag_name...,tag_id
+--QUERY 6:SELECT t1.tag_name
 
 CREATE INDEX idx_tag_name ON tags(tag_name);
 
