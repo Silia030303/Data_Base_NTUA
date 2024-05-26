@@ -37,7 +37,7 @@ FROM
 JOIN 
     episode_cook_recipe ecr ON c.cook_id = ecr.cook_id
 WHERE 
-    c.age < 60
+    c.age < 30
 GROUP BY 
     c.cook_id
 ORDER BY 
