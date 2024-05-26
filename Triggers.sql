@@ -129,13 +129,12 @@ BEGIN
     10 = Various Plant-based Foods, 
     11 = Products with Sweeteners, 
     12 = Various Beverages,
-    13 = other foodgroup;
+    13 = other foodgroup';
     END IF;
 END; //
 
 -- trigger for only 10 cooks and recipes in each episode
-
-
+    
 CREATE TRIGGER before_episode_cook_recipe_insert
 BEFORE INSERT ON episode_cook_recipe
 FOR EACH ROW
