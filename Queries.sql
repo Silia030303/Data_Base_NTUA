@@ -16,7 +16,7 @@ GROUP BY cook_id,natcuis_id;
 
 -------------------------------------------------------------------------Query 2--------------------------------------------------------------------- 
 
-SELECT c.first_name,c.last_name
+SELECT c.first_name,c.last_name, nc.natcuis_name
 from cook c 
 JOIN cook_nat_cuis cn on c.cook_id = cn.cook_id
 JOIN national_cuisine nc on cn.natcuis_id = nc.natcuis_id
