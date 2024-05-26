@@ -1,7 +1,5 @@
 -------------------------------------------------------------------------Query 1---------------------------------------------------------------------
 
---Eugene
-
 --per cook and nat cius
 
 SELECT c.cook_id,c.first_name, c.last_name,r.natcuis_id,n.natcuis_name,avg(grade)
