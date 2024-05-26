@@ -53,7 +53,7 @@ conn = mysql.connector.connect(
     database="project84_DB_2024"
 )
 
-max_retries = 15  # Maximum number of retries
+max_retries = 1500  # Maximum number of retries
 insert_counts = {}  # Dictionary to store the number of successful inserts for each episode_id
 
 for episode_id in range(1, 31):
