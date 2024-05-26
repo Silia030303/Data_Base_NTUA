@@ -73,7 +73,7 @@
 -	Κατέβασε VisualStudio (ή κάποιο άλλο εργαλείο ώστε να τρέχεις python ): Download Visual Studio Code - Mac, Linux, Windows
 -	Κατέβασε την python:[ Download Python | Python.org](https://www.python.org/downloads/)
 -	Κατέβασε τις παρακάτω βιβλιοθήκες πληκτρολογώντας στον terminal σου τις ακόλουθες εντολές:
--	- pip install mysql-connector-python
+	- pip install mysql-connector-python
     
 
 
