@@ -5,14 +5,7 @@
 -----------------------------------------------------------------------------------------------------------
 -- 1. ΠΙΝΑΚΑΣ recipe
 
---natcuis_id: Χρησιμοποιείται συχνά σε συνδέσεις (joins) και φιλτράρισμα.
---prim_ingredient_id: Χρησιμοποιείται για συνδέσεις με τον πίνακα ingredient.
---recipe_category: Χρησιμοποιείται σε ερωτήματα που φιλτράρουν ανά κατηγορία.
---difficulty_level: Χρησιμοποιείται σε ερωτήματα που φιλτράρουν ή υπολογίζουν μέσες δυσκολίες.
--- QUERY 1 :recipe_id,natcuis_id
--- QUERY 10 :recipe_id, natcuis_id
--- QUERY 12 :recipe_id
-
+-- QUERY 12 :difficulty_level
 
 CREATE INDEX idx_recipe_category ON recipe(recipe_category);
 CREATE INDEX idx_difficulty_level ON recipe(difficulty_level);
