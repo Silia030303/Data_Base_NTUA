@@ -32,8 +32,9 @@ CREATE INDEX idx_cook_age ON cook(age);
 
 --3. Πίνακας national_cuisine
 --natcuis_name: Χρησιμοποιείται για φιλτράρισμα και ομαδοποίηση.
---QUERY 1 :natcuis_name, 
---QUERY 2 :natcuis_name , where nc.natcuis_name 
+--QUERY 1 :SELECT natcuis_name, 
+--QUERY 2 :SELECT natcuis_name , where nc.natcuis_name 
+--QUERY 10:SELECT natcuis_name
 
 CREATE INDEX idx_natcuis_name ON national_cuisine(natcuis_name);
 -----------------------------------------------------------------------------------------------------------
