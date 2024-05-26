@@ -792,7 +792,7 @@ INSERT INTO evaluation(cook_id, judge_id, grade) VALUES
 (31, 3, 1);  -- no sure if this is valid with all the constraints
 
 
-
+/*
 -- Inserting data for Episode 1
 INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (12, 1, 1),  -- Gino D'Acampo - Grilled Salmon
@@ -890,7 +890,7 @@ INSERT INTO episode_cook_recipe (cook_id, episode_id, recipe_id) VALUES
 (31, 21, 1),  -- Yannis Andreadis - Grilled Salmon
 (12, 21, 2),  -- Petros Kokkinos - Chocolate Cake
 (45, 21, 3);
-
+*/
  INSERT INTO cook_nat_cuis (cook_id, natcuis_id) VALUES
 (1, 1),
 (1, 4),
