@@ -59,14 +59,18 @@ insert_counts = {}  # Dictionary to store the number of successful inserts for e
 for episode_id in range(1, 31):
     insert_counts[episode_id] = 0  # Initialize insert count for each episode_id
     retries = 0
+    picked_national_cuisines = set()  # Track picked national cuisines for each episode
     while retries < max_retries and insert_counts[episode_id] < 10:
         try:
+            # Pick new data until we have enough unique entries
             cuisine_cook_map, cuisine_recipe_map = pick_episode_data(conn)
-
             cursor = conn.cursor()
             success = False  # Flag to indicate a successful insert
 
             for natcuis_id, cook_id in cuisine_cook_map.items():
+                if natcuis_id in picked_national_cuisines:
+                    continue  # Skip already picked national cuisines
+
                 recipe = cuisine_recipe_map.get(natcuis_id)
                 if recipe:
                     recipe_id = recipe[0]
@@ -77,31 +81,27 @@ for episode_id in range(1, 31):
                         conn.commit()
                         print(f"Inserted: Episode ID: {episode_id}, National Cuisine ID: {natcuis_id}, Cook ID: {cook_id}, Recipe ID: {recipe_id}")
                         insert_counts[episode_id] += 1  # Update insert count for the episode_id
+                        picked_national_cuisines.add(natcuis_id)  # Add to picked national cuisines
                         success = True  # Mark the insert as successful
                         if insert_counts[episode_id] >= 10:
                             break  # Exit the inner for-loop if reached 10 inserts
                     except mysql.connector.IntegrityError as e:
                         if e.sqlstate == '45000':  # Custom error code for SIGNAL SQLSTATE
                             print(f"Insert failed for Episode ID {episode_id}: {e.msg}. Retrying...")
-                            # Retry by calling pick_episode_data again
-                            cuisine_cook_map, cuisine_recipe_map = pick_episode_data(conn)
-                            break  # Exit the inner for-loop to retry with new data
                         else:
                             print(f"Insert failed for Episode ID {episode_id}: {e.msg}. Retrying...")
-                            # If there's a duplicate entry, pick new random national cuisine, cook, and recipe
-                            cuisine_cook_map, cuisine_recipe_map = pick_episode_data(conn)
-                            break  # Exit the inner for-loop to retry with new data
                 else:
                     print(f"No recipe found for National Cuisine ID {natcuis_id}")
 
             cursor.close()
             if success:
-                break  # Exit the while-loop if an insert was successful
+                retries = 0  # Reset retries after a successful insert
+            else:
+                retries += 1  # Only increment retries if no successful insert
 
         except mysql.connector.Error as err:
             print(f"Error: {err}")
             conn.rollback()
-        finally:
-            retries += 1
+            retries += 1  # Increment retries on error
 
 conn.close()
