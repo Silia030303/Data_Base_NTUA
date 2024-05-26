@@ -55,8 +55,8 @@ CREATE INDEX idx_tag_name ON tags(tag_name);
 --QUERY 5 :season, episode_id 
 --QUERY 8 :SELECT episode_name
 --QUERY 9: season
---QUERY 10 : SELECT .. e2.season ,episode_id
---QUERY 12 :episode_id ,SELECT episode_name
+--QUERY 10 : SELECT e2.season ,episode_id
+--QUERY 12 : season, episode_id ,SELECT episode_name
 
 CREATE INDEX idx_episode_season ON episode(season);
 CREATE INDEX idx_episode_episode_name ON episode(episode_name);
