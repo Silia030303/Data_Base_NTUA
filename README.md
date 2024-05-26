@@ -70,7 +70,7 @@
 
 Τρέξε στο terminal σου τον κώδικα του φακέλου : dml_link.sql
 Ύστερα για να περάσεις τα random δεδομένα θα πρέπει να ακολουθήσεις τα εξής βήματα :
--	Κατέβασε VisualStudio (ή κάποιο άλλο εργαλείο ώστε να τρέχεις python ): Download Visual Studio Code - Mac, Linux, Windows
+-	Κατέβασε VisualStudio (ή κάποιο άλλο εργαλείο ώστε να τρέχεις python ): https://code.visualstudio.com/Download 
 -	Κατέβασε την python:[ Download Python | Python.org](https://www.python.org/downloads/)
 -	Κατέβασε τις παρακάτω βιβλιοθήκες πληκτρολογώντας στον terminal σου τις ακόλουθες εντολές:
 	- pip install mysql-connector-python
